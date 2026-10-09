@@ -8,8 +8,8 @@
   },
   "rewrites": [
     { "source": "/", "destination": "/api/page?p=index" },
-    { "source": "/:p(index|how-it-is-done|about-us|fue-candidate|fue-results|contact|privacy|terms|thank-you).html", "destination": "/api/page?p=:p" },
-    { "source": "/:p(how-it-is-done|about-us|fue-candidate|fue-results|contact|privacy|terms|thank-you)", "destination": "/api/page?p=:p" },
+    { "source": "/:p(index|how-it-is-done|about-us|fue-candidate|fue-results|contact|privacy|terms|thank-you|hair-transplant-singapore).html", "destination": "/api/page?p=:p" },
+    { "source": "/:p(how-it-is-done|about-us|fue-candidate|fue-results|contact|privacy|terms|thank-you|hair-transplant-singapore)", "destination": "/api/page?p=:p" },
     { "source": "/admin", "destination": "/admin/index.html" }
   ],
   "headers": [

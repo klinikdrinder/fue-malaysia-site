@@ -10,6 +10,8 @@ On the **Pictures** tab click **Edit details** under any picture. You get the pi
 - **File URL + Copy URL to clipboard:** the picture's web address.
 - **Change picture:** replace it with a new photo. **Save** stores the details. **Delete from website** hides the picture on every page where it is used; nothing is erased, and the same button becomes **Restore to website**.
 
+The **Singapore ads landing** page is the Hair Transplant Singapore ads page. Change its pictures and Google text the same way as every other page (filter Pictures by that page).
+
 ## Replace a picture
 1. **Pictures** tab. Search by name, or filter by page.
 2. Click **Replace** under the picture, choose the new photo from your computer.
