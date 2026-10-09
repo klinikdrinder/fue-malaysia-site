@@ -696,6 +696,41 @@ footer .powered .pw-logo{width:20px;height:20px;color:#8fe6ff;filter:drop-shadow
 /* ===== v4: one photo on all six equal faces, rotating left > front > right > middle ===== */
 
 /* ===== v5 real favicon */
+/* ===== v8 compact layout */
+:root{--gutter:clamp(22px,calc((100vw - 1000px)/2),9999px)}
+.sec-head{gap:clamp(16px,4vw,48px)}
+.h-xl{font-size:clamp(40px,6.4vw,92px)}
+.h-l{font-size:clamp(30px,4vw,54px)}
+.h-m{font-size:clamp(24px,2.5vw,34px)}
+@media (min-width:821px){
+  .sec-head{padding-top:82px;padding-bottom:41px}
+  .intro{padding-top:94px;padding-bottom:82px}
+  .split{padding-top:76px;padding-bottom:76px}
+  .results,.cost,.care{padding-bottom:82px}
+  .consult{padding-top:82px;padding-bottom:82px}
+  .chap{padding-top:75px;padding-bottom:75px}
+  .page-hero{padding-top:110px;padding-bottom:68px}
+  .trio{padding-bottom:75px}
+  .cta-wrap{padding-bottom:75px}
+  footer{padding-top:68px}
+}
+@media (max-width:820px){
+  .sec-head{padding-top:72px;padding-bottom:32px}
+  .intro,.split,.consult{padding-top:72px;padding-bottom:72px}
+  .chap{padding-top:64px;padding-bottom:64px}
+  .page-hero{padding-top:100px;padding-bottom:48px}
+}
+.nav{padding-left:clamp(22px,4vw,56px);padding-right:clamp(22px,4vw,56px)}
+/* pictures: reasonable, smaller sizes inside the 1100px column */
+.split .photo{max-width:340px;width:100%}
+.split .photo:last-child{justify-self:end}
+.results .frame{max-width:440px;justify-self:end;width:100%}
+.frame:has(.ba.tall),figure.frame:has(.ba.tall){max-width:390px;width:100%}
+.care .side .photo{max-width:300px}
+
+html{font-size:15px}
+
+/* ===== /v8 */
 </style>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"MedicalClinic","name":"FUE Malaysia","url":"https://www.fuemalaysia.com/","telephone":"+60 12-558 8572","email":"fue.malaysia@gmail.com","description":"Hair transplant clinic in Malaysia specialising in FUE hair transplant and hair loss treatment.","address":{"@type":"PostalAddress","streetAddress":"Level 33 Ilham Tower, No 8, Jalan Binjai","postalCode":"50450","addressLocality":"Kuala Lumpur","addressCountry":"MY"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"09:00","closes":"18:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"09:00","closes":"14:00"}],"priceRange":"RM 7,500 – RM 20,000"}
@@ -995,9 +1030,8 @@ function initSite() {
     if (!name || !phone) { (name ? f.elements.phone : f.elements.name).focus(); return; }
     const extra = [...f.elements].filter(x => x.name && !['name', 'phone'].includes(x.name) && x.value).map(x => `${x.name[0].toUpperCase() + x.name.slice(1)}: ${x.value}`).join('\n');
     const msg = `Hello FUE Malaysia, I'd like a free consultation.\nName: ${name}\nPhone: ${phone}${extra ? '\n' + extra : ''}`;
-    const ok = $('.form-ok', f);
-    ok.innerHTML = `Thank you, ${name.replace(/[<>&"]/g, '')}. <a class="link-u" href="https://wa.me/60125588572?text=${encodeURIComponent(msg)}" target="_blank" rel="noopener">Send your details on WhatsApp</a> to reach our team directly.`;
-    ok.style.display = 'block';
+    try{sessionStorage.setItem('fue_name',name);sessionStorage.setItem('fue_msg',msg);}catch(_){}
+    location.href = '/thank-you';
   }));
 
   /* video: play when in view, pause when not */
