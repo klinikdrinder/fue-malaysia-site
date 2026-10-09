@@ -51,8 +51,8 @@ async function call(action, body, opt = {}) {
 
   // ---- galleries & extra pictures ----
   r = await call('state'); const gs = r.j.galleries; const pairs = gs.find((g) => g.id === 'pairs');
-  ok(gs.length === 7 && pairs.items.length === 8 && pairs.tplImages === 2, 'state lists 7 galleries (pairs has 8 items, 2 pictures each)');
-  ok(Object.keys(r.j.sections).length === 10 && r.j.sections.index.length > 5 && r.j.sections['hair-transplant-singapore'], 'state lists page sections');
+  ok(gs.length === 11 && pairs.items.length === 8 && pairs.tplImages === 2, 'state lists 11 galleries (pairs has 8 items, 2 pictures each)');
+  ok(Object.keys(r.j.sections).length === 11 && r.j.sections.index.length > 5 && r.j.sections['hair-transplant-singapore'] && r.j.sections['best-hair-transplant-in-malaysia'], 'state lists page sections');
   r = await call('upload', undefined, { raw: png, q: 'free=1' }); ok(r.s === 200 && r.j.url, 'free upload returns an address'); const fu = r.j.url;
   const order = pairs.items.map((i) => i.id).filter((id) => id !== 'o1').concat(['nabc1']);
   const addedItem = { nabc1: { images: [{ src: fu, alt: 'A <b>before</b>' }, { src: fu, alt: 'After' }], texts: ['Case 99', 'Before · After'] } };
@@ -117,9 +117,11 @@ async function call(action, body, opt = {}) {
   r = await call('state', undefined, { cookie: '' }); ok(r.s === 401, 'no cookie = no access');
   for (let i = 0; i < 9; i++) r = await call('login', { email: 'owner@x.com', password: 'nope-nope-1' }, { cookie: '' });
   ok(r.s === 429, 'brute-force login is rate limited');
-  for (const p of ['/how-it-is-done', '/fue-results.html', '/privacy.html', '/terms', '/contact', '/hair-transplant-singapore']) { const x = await fetch(B + p); ok(x.status === 200, p + ' renders'); }
+  for (const p of ['/how-it-is-done', '/fue-results.html', '/privacy.html', '/terms', '/contact', '/hair-transplant-singapore', '/best-hair-transplant-in-malaysia']) { const x = await fetch(B + p); ok(x.status === 200, p + ' renders'); }
   const sg = await (await fetch(B + '/hair-transplant-singapore')).text();
   ok(sg.includes('From SGD 4,999') && sg.includes('images/sg-'), 'singapore ads landing renders with its own images');
+  const my = await (await fetch(B + '/best-hair-transplant-in-malaysia')).text();
+  ok(my.includes('From RM 8,999') && my.includes('images/my-') && !my.includes('promoPop'), 'malaysia ads landing renders with its own images and no promo popup');
   ok((await fetch(B + '/admin')).status === 200 && (await fetch(B + '/images/about.webp')).status === 200, 'admin page and static images are served');
   srv.kill(); console.log(fails ? fails + ' FAILED' : 'ALL PASSED'); process.exit(fails ? 1 : 0);
 })().catch((e) => { console.error(e); srv.kill(); process.exit(1); });

@@ -10,7 +10,7 @@ On the **Pictures** tab click **Edit details** under any picture. You get the pi
 - **File URL + Copy URL to clipboard:** the picture's web address.
 - **Change picture:** replace it with a new photo. **Save** stores the details. **Delete from website** hides the picture on every page where it is used; nothing is erased, and the same button becomes **Restore to website**.
 
-The **Singapore ads landing** page is the Hair Transplant Singapore ads page. Change its pictures and Google text the same way as every other page (filter Pictures by that page).
+The **Singapore ads landing** page is the Hair Transplant Singapore ads page. The **Malaysia ads landing** page is the Best Hair Transplant in Malaysia ads page. Change their pictures and Google text the same way as every other page (filter Pictures by that page).
 
 ## Replace a picture
 1. **Pictures** tab. Search by name, or filter by page.
@@ -21,7 +21,7 @@ The **Singapore ads landing** page is the Hair Transplant Singapore ads page. Ch
 - Use real, recent clinic photos, clear and well lit. Very large photos are shrunk automatically.
 
 ## Add, remove or re-order photos in a gallery
-**Photo galleries** tab. These are the sections with several photos (before/after pairs, patient cases, recovery progress, Norwood stages, instruments, main process).
+**Photo galleries** tab. These are the sections with several photos (before/after pairs, patient cases, recovery progress, Norwood stages, instruments, main process, and galleries on the Malaysia ads landing).
 - **+ Add item:** choose the picture(s), fill in the text (for example “Case 09”) and click Add item.
 - **←  →** move an item earlier or later. **Remove** takes it off the website. Removed originals can be put back with **Restore**.
 - Nothing is public until you press **Save**. **Discard** drops your unsaved changes and **Reset to original** puts the whole gallery back as it was built.

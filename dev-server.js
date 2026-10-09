@@ -4,7 +4,7 @@ process.env.LOCAL_DEV = process.env.LOCAL_DEV || '1';
 const http = require('http'), fs = require('fs'), path = require('path');
 const PORT = process.env.PORT || 3000;
 const MIME = { '.html': 'text/html; charset=utf-8', '.js': 'text/javascript', '.css': 'text/css', '.json': 'application/json', '.webp': 'image/webp', '.png': 'image/png', '.jpg': 'image/jpeg', '.jpeg': 'image/jpeg', '.svg': 'image/svg+xml', '.ico': 'image/x-icon', '.mp4': 'video/mp4', '.txt': 'text/plain', '.xml': 'application/xml' };
-const PAGES = '(index|how-it-is-done|about-us|fue-candidate|fue-results|contact|privacy|terms|thank-you|hair-transplant-singapore)';
+const PAGES = '(index|how-it-is-done|about-us|fue-candidate|fue-results|contact|privacy|terms|thank-you|hair-transplant-singapore|best-hair-transplant-in-malaysia)';
 
 function serveFile(res, file) {
   if (!file.startsWith(process.cwd()) || !fs.existsSync(file) || fs.statSync(file).isDirectory()) return false;

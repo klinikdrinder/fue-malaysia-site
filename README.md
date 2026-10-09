@@ -19,7 +19,7 @@ On the **Pictures** tab click **Edit details** under any picture. You get the pi
 - Use real, recent clinic photos, clear and well lit. Very large photos are shrunk automatically.
 
 ## Add, remove or re-order photos in a gallery
-**Photo galleries** tab. These are the sections with several photos (before/after pairs, patient cases, recovery progress, Norwood stages, instruments, main process).
+**Photo galleries** tab. These are the sections with several photos (before/after pairs, patient cases, recovery progress, Norwood stages, instruments, main process, and galleries on the Malaysia ads landing).
 - **+ Add item:** choose the picture(s), fill in the text (for example “Case 09”) and click Add item.
 - **←  →** move an item earlier or later. **Remove** takes it off the website. Removed originals can be put back with **Restore**.
 - Nothing is public until you press **Save**. **Discard** drops your unsaved changes and **Reset to original** puts the whole gallery back as it was built.
