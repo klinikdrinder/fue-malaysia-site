@@ -13,7 +13,7 @@
 <link rel="icon" href="favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin><link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
 :root{
@@ -733,6 +733,61 @@ footer .powered .pw-logo{width:20px;height:20px;color:#8fe6ff;filter:drop-shadow
 html{font-size:15px}
 
 /* ===== /v8 */
+/* ===== v9 bar + quick contact */
+.topbar{position:fixed;left:0;right:0;top:0;z-index:60;height:34px;background:var(--ink);color:var(--bg);overflow:hidden;display:flex;align-items:center;transition:transform .35s var(--ease)}
+.topbar a{display:flex;align-items:center;width:100%;height:100%;color:inherit}
+.tb-track{display:flex;width:max-content;animation:tbmove 32s linear infinite;will-change:transform}
+.topbar:hover .tb-track{animation-play-state:paused}
+.tb-grp{display:flex;align-items:center;flex:none}
+.tb-grp span{font-size:11px;letter-spacing:.2em;text-transform:uppercase;font-weight:500;white-space:nowrap;padding:0 22px}
+.tb-grp span b{font-weight:600;color:#fff}
+.tb-grp i{width:4px;height:4px;border-radius:50%;background:currentColor;opacity:.5;flex:none}
+@keyframes tbmove{to{transform:translateX(-50%)}}
+html.bar-off .topbar{transform:translateY(-100%)}
+.nav{top:34px!important;transition:top .35s var(--ease),background .5s,transform .5s}
+html.bar-off .nav{top:0!important}
+.mobile-menu{padding-top:144px!important}
+.page-hero{padding-top:calc(var(--ph-top,130px) + 34px)}
+@media (min-width:821px){.page-hero{--ph-top:130px}}
+@media (max-width:820px){.page-hero{--ph-top:100px}}
+.qbar{display:none}
+@media (max-width:820px){
+  .qbar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:42;gap:6px;align-items:center;padding:9px 12px calc(9px + env(safe-area-inset-bottom,0px));background:rgba(247,246,242,.95);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border-top:1px solid var(--line)}
+  body{padding-bottom:66px}
+  .wa-float{display:none!important}
+  .qb{display:inline-flex;align-items:center;justify-content:center;gap:7px;height:44px;border-radius:999px;border:1px solid var(--ink);font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:500;color:var(--ink);padding:0 12px;flex:none}
+  .qb svg{width:16px;height:16px}
+  .qb.wa{background:var(--ink);color:var(--bg);flex:1;min-width:0}
+  .qb.ig{width:44px;padding:0}
+  .qr{display:flex;flex:none;margin-right:2px}
+  .qr img{width:34px;height:34px;border-radius:50%;object-fit:cover;object-position:50% 30%;border:2px solid var(--bg);margin-left:-11px;background:var(--surface)}
+  .qr img:first-child{margin-left:0}
+  .hx-copy{bottom:calc(7vh + 10px)!important}
+}
+.hx-strip{display:none}
+@media (min-width:821px){
+  .hx-strip{display:flex;position:absolute;left:50%;bottom:22px;transform:translateX(-50%);z-index:5;align-items:center;gap:20px;padding:10px 14px 10px 24px;background:rgba(247,246,242,.93);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border:1px solid var(--line);border-radius:999px;max-width:calc(100vw - 48px);box-shadow:0 18px 40px -26px rgba(0,0,0,.35)}
+  .hx-copy{bottom:calc(9vh + 54px)!important}
+  .hero-meta{display:none}
+}
+.hxs-price{display:flex;flex-direction:column;line-height:1.1;flex:none}
+.hxs-price small{font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-3)}
+.hxs-price strong{font-family:var(--serif);font-weight:400;font-size:26px;letter-spacing:-.01em;white-space:nowrap}
+.hxs-res{display:flex;align-items:center;gap:8px;flex:none}
+.hxs-res .pair{display:flex;border-radius:8px;overflow:hidden;border:1px solid var(--line)}
+.hxs-res .pair img{width:40px;height:44px;object-fit:cover;object-position:50% 35%;display:block}
+.hxs-res .pair img+img{border-left:1px solid #fff}
+.hxs-res em{font-style:normal;font-size:10px;letter-spacing:.16em;text-transform:uppercase;margin-left:6px;line-height:1.3;white-space:nowrap}
+.hxs-res em u{text-decoration:none;display:block;color:var(--ink-3)}
+.hxs-rate{font-size:10px;letter-spacing:.16em;text-transform:uppercase;white-space:nowrap;color:var(--ink-2);flex:none}
+.hxs-btns{display:flex;gap:8px;flex:none}
+.hxs-btns .qd{display:inline-flex;align-items:center;gap:8px;height:42px;padding:0 18px;border:1px solid var(--ink);border-radius:999px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:500;color:var(--ink);white-space:nowrap}
+.hxs-btns .qd svg{width:15px;height:15px}
+.hxs-btns .qd.wa{background:var(--ink);color:var(--bg)}
+.hxs-btns .qd.ig{width:42px;padding:0;justify-content:center}
+@media (min-width:821px) and (max-width:1180px){.hxs-res,.hxs-rate{display:none}}
+@media (prefers-reduced-motion:reduce){.tb-track{animation:none}.tb-grp+.tb-grp{display:none}}
+/* ===== /v9 */
 </style>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"MedicalClinic","name":"FUE Malaysia","url":"https://www.fuemalaysia.com/","telephone":"+60 12-558 8572","email":"fue.malaysia@gmail.com","description":"Hair transplant clinic in Malaysia specialising in FUE hair transplant and hair loss treatment.","address":{"@type":"PostalAddress","streetAddress":"Level 33 Ilham Tower, No 8, Jalan Binjai","postalCode":"50450","addressLocality":"Kuala Lumpur","addressCountry":"MY"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"09:00","closes":"18:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"09:00","closes":"14:00"}],"priceRange":"RM 7,500 – RM 20,000"}
@@ -749,12 +804,13 @@ addEventListener('pageshow',function(e){if(!e.persisted)top();});})();</script>
 <body>
 
 <div class="cursor" aria-hidden="true"><span>View</span></div>
+<div class="topbar" id="topbar"><a href="https://wa.me/60125588572?text=Hello%20FUE%20Malaysia%2C%20I%20saw%20the%20offer%20from%20RM%208%2C999.%20I%27d%20like%20a%20free%20consultation." target="_blank" rel="noopener" aria-label="Starts from RM 8,999. Message us on WhatsApp"><div class="tb-track"><div class="tb-grp"><span><b>Starts from RM 8,999</b></span><i></i><span>Grab yours now!</span><i></i><span>Deal ends soon!</span><i></i><span>Free consultation &middot; WhatsApp +60 12-558 8572</span><i></i></div><div class="tb-grp" aria-hidden="true"><span><b>Starts from RM 8,999</b></span><i></i><span>Grab yours now!</span><i></i><span>Deal ends soon!</span><i></i><span>Free consultation &middot; WhatsApp +60 12-558 8572</span><i></i></div></div></a></div>
 <header class="nav" id="nav">
   <nav class="left" aria-label="Primary">
     <ul><li><a class="link-u" href="index.html">Home</a></li><li><a class="link-u active" href="how-it-is-done.html" aria-current=page>How It’s Done</a></li><li><a class="link-u" href="about-us.html">About Us</a></li><li><a class="link-u" href="fue-candidate.html">FUE Candidate</a></li><li><a class="link-u" href="fue-results.html">FUE Results</a></li></ul>
     <button class="burger" aria-label="Open menu" aria-expanded="false" id="burger"><span></span><span></span></button>
   </nav>
-  <a class="logo" href="index.html" aria-label="FUE Malaysia home"><img src="images/logo.webp" alt="FUE Malaysia" width="667" height="266"></a>
+  <a class="logo" href="index.html" aria-label="FUE Malaysia home"><img src="images/logo.webp" alt="FUE Malaysia" width="667" height="266" decoding="async"></a>
   <div class="right">
     <a class="cta neon" href="contact.html">Free Consultation</a>
   </div>
@@ -763,6 +819,7 @@ addEventListener('pageshow',function(e){if(!e.persisted)top();});})();</script>
   <a href="index.html">Home</a><a href="how-it-is-done.html" class=active>How It’s Done</a><a href="about-us.html">About Us</a><a href="fue-candidate.html">FUE Candidate</a><a href="fue-results.html">FUE Results</a><a href="contact.html">Contact &amp; Consultation</a>
   <span class="label" style="font-family:var(--sans);font-size:12px;border:0;margin-top:auto">Call +60 12-558 8572</span>
 </div>
+<div class="qbar" id="qbar"><a class="qr" href="fue-results.html" aria-label="See real patient results"><img src="images/res-08.webp" alt="" width="38" height="38" loading="lazy" decoding="async"><img src="images/res-10.webp" alt="" width="38" height="38" loading="lazy" decoding="async"><img src="images/res-16.webp" alt="" width="38" height="38" loading="lazy" decoding="async"></a><a class="qb wa" href="https://wa.me/60125588572" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.8-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3c-.2.3-.9.9-.9 2.2s.9 2.5 1 2.7c.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3z" fill="currentColor"/></svg>WhatsApp</a><a class="qb" href="tel:+60125588572"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15 15 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.6a1 1 0 0 1-.25 1z" fill="currentColor"/></svg>Call</a><a class="qb ig" href="https://www.instagram.com/fuemalaysia/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor"/></svg></a></div>
 <main id="top">
 
 <section class="hero" id="hero" aria-labelledby="ph-h">
@@ -832,28 +889,28 @@ addEventListener('pageshow',function(e){if(!e.persisted)top();});})();</script>
 
 <div class="rail-wrap">
   <div class="rail" data-gallery="instruments" data-gallery-label="Hair transplant instruments" data-cursor="Drag" aria-label="Hair transplant instruments" tabindex="0"><article class="card " data-tilt="5">
-  <div class="media"><img loading="lazy" src="images/how-02.webp" alt="Electric chilling device"></div>
+  <div class="media"><img loading="lazy" src="images/how-02.webp" alt="Electric chilling device" decoding="async"></div>
   <span class="num">01</span><h3>Electric chilling device</h3><p>Maintains the temperature of the grafts during hair transplant surgery.</p>
 </article><article class="card " data-tilt="5">
-  <div class="media"><img loading="lazy" src="images/how-03.webp" alt="Powered Cole Isolation Device (PCID)"></div>
+  <div class="media"><img loading="lazy" src="images/how-03.webp" alt="Powered Cole Isolation Device (PCID)" decoding="async"></div>
   <span class="num">02</span><h3>Powered Cole Isolation Device (PCID)</h3><p>Used for harvesting grafts in hair transplant surgery.</p>
 </article><article class="card " data-tilt="5">
-  <div class="media"><img loading="lazy" src="images/how-04.webp" alt="Graft storage plate"></div>
+  <div class="media"><img loading="lazy" src="images/how-04.webp" alt="Graft storage plate" decoding="async"></div>
   <span class="num">03</span><h3>Graft storage plate</h3><p>Used for storing hair grafts during hair transplant surgery.</p>
 </article><article class="card " data-tilt="5">
-  <div class="media"><img loading="lazy" src="images/how-05.webp" alt="Self Filling Device (SFD)"></div>
+  <div class="media"><img loading="lazy" src="images/how-05.webp" alt="Self Filling Device (SFD)" decoding="async"></div>
   <span class="num">04</span><h3>Self Filling Device (SFD)</h3><p>Used to inject tumescent fluid into the donor area.</p>
 </article><article class="card " data-tilt="5">
-  <div class="media"><img loading="lazy" src="images/how-06.webp" alt="DrUGraft"></div>
+  <div class="media"><img loading="lazy" src="images/how-06.webp" alt="DrUGraft" decoding="async"></div>
   <span class="num">05</span><h3>DrUGraft</h3><p>Used for harvesting grafts from the donor area, scalp or body.</p>
 </article><article class="card " data-tilt="5">
-  <div class="media"><img loading="lazy" src="images/how-07.webp" alt="Donor template"></div>
+  <div class="media"><img loading="lazy" src="images/how-07.webp" alt="Donor template" decoding="async"></div>
   <span class="num">06</span><h3>Donor template</h3><p>Used for marking the donor area.</p>
 </article><article class="card " data-tilt="5">
-  <div class="media"><img loading="lazy" src="images/how-08.webp" alt="CID counting incision device"></div>
+  <div class="media"><img loading="lazy" src="images/how-08.webp" alt="CID counting incision device" decoding="async"></div>
   <span class="num">07</span><h3>CID counting incision device</h3><p>Used to pre-make incision slits and count the number of slits.</p>
 </article><article class="card " data-tilt="5">
-  <div class="media"><img loading="lazy" src="images/how-09.webp" alt="OKT implanter"></div>
+  <div class="media"><img loading="lazy" src="images/how-09.webp" alt="OKT implanter" decoding="async"></div>
   <span class="num">08</span><h3>OKT implanter</h3><p>Used for planting the hair grafts.</p>
 </article></div>
   <div class="rail-ctrl"><button class="rail-btn" data-rail-step="-1" aria-label="Previous">&larr;</button><div class="rail-progress"><i></i></div><button class="rail-btn" data-rail-step="1" aria-label="Next">&rarr;</button></div>
@@ -874,13 +931,13 @@ addEventListener('pageshow',function(e){if(!e.persisted)top();});})();</script>
 
 <section aria-label="Main process of hair transplantation" style="padding-top:40px">
   <div class="trio" data-gallery="main-process" data-gallery-label="Main process of hair transplantation"><article class="card rv" data-tilt="5">
-  <div class="media"><img loading="lazy" src="images/how-harvest.webp" alt="Tweezers lifting a harvested follicular unit from a dish of grafts" style="object-fit:cover;padding:0;object-position:50% 52%"></div>
+  <div class="media"><img loading="lazy" src="images/how-harvest.webp" alt="Tweezers lifting a harvested follicular unit from a dish of grafts" style="object-fit:cover;padding:0;object-position:50% 52%" decoding="async"></div>
   <span class="num">01</span><h3>Harvesting of the grafts</h3><p>Donor hair is carefully harvested, paying close attention to protecting blood supply and nerves while maximising harvest yield.</p>
 </article><article class="card rv" data-tilt="5">
-  <div class="media duo"><img loading="lazy" src="images/how-recipient-a.webp" alt="Recipient sites freshly created in the hairline area"><img loading="lazy" src="images/how-recipient-b.webp" alt="Back of the head showing the donor area"></div>
+  <div class="media duo"><img loading="lazy" src="images/how-recipient-a.webp" alt="Recipient sites freshly created in the hairline area" decoding="async"><img loading="lazy" src="images/how-recipient-b.webp" alt="Back of the head showing the donor area" decoding="async"></div>
   <span class="num">02</span><h3>Recipient site creation</h3><p>Recipient sites are chosen with perfect angles, direction, pattern and graft-to-site fit in mind, to create the most natural results.</p>
 </article><article class="card rv" data-tilt="5">
-  <div class="media"><img loading="lazy" src="images/how-place.webp" alt="Tweezers placing a graft into a recipient site" style="object-fit:cover;padding:0"></div>
+  <div class="media"><img loading="lazy" src="images/how-place.webp" alt="Tweezers placing a graft into a recipient site" style="object-fit:cover;padding:0" decoding="async"></div>
   <span class="num">03</span><h3>Hair graft placement</h3><p>Our experienced team expertly places all hair grafts so they are not too deep or too high, and to prevent trauma upon placement.</p>
 </article></div>
 </section>
@@ -905,10 +962,10 @@ addEventListener('pageshow',function(e){if(!e.persisted)top();});})();</script>
     <p class="lede rv">Our hair transplant doctors listen to you, understand your expectations and advise on the best approach for optimal results.</p>
   </div>
   <div class="chap-body">
-  <figure class="figure rv"><img loading="lazy" src="images/how-13.webp" alt="Scalp analysis done by hair transplant doctors at FUE Malaysia" width="1232" height="692"><figcaption><span><b>Scalp analysis</b><br>Done by hair transplant doctors at FUE Malaysia.</span></figcaption></figure>
+  <figure class="figure rv"><img loading="lazy" src="images/how-13.webp" alt="Scalp analysis done by hair transplant doctors at FUE Malaysia" width="1232" height="692" decoding="async"><figcaption><span><b>Scalp analysis</b><br>Done by hair transplant doctors at FUE Malaysia.</span></figcaption></figure>
   <div class="fig-row" style="margin-top:20px">
-    <figure class="figure rv"><img loading="lazy" src="images/how-14.webp" alt="Densitometer used for hair transplant assessment" width="1600" height="936"><figcaption><span><b>Densitometer</b><br><span style="color:var(--ink-3)">Densitometer use for hair transplant.</span></span></figcaption></figure>
-    <figure class="figure rv"><img loading="lazy" src="images/how-15.webp" alt="Magnified view of hair follicles through a densitometer" width="1600" height="936"><figcaption><span><b>Densitometer</b><br><span style="color:var(--ink-3)">Densitometer use for hair transplant.</span></span></figcaption></figure>
+    <figure class="figure rv"><img loading="lazy" src="images/how-14.webp" alt="Densitometer used for hair transplant assessment" width="1600" height="936" decoding="async"><figcaption><span><b>Densitometer</b><br><span style="color:var(--ink-3)">Densitometer use for hair transplant.</span></span></figcaption></figure>
+    <figure class="figure rv"><img loading="lazy" src="images/how-15.webp" alt="Magnified view of hair follicles through a densitometer" width="1600" height="936" decoding="async"><figcaption><span><b>Densitometer</b><br><span style="color:var(--ink-3)">Densitometer use for hair transplant.</span></span></figcaption></figure>
   </div></div>
 </section>
 
@@ -943,7 +1000,7 @@ addEventListener('pageshow',function(e){if(!e.persisted)top();});})();</script>
 <section class="consult cta-sec" id="cta" aria-labelledby="cta-h">
   <div class="media">
     <div class="avatar-row rv" style="display:flex;align-items:center;gap:16px;margin-top:22px">
-      <img src="images/appointment.webp" alt="FUE Malaysia patient coordinator" width="48" height="48" style="width:48px;height:48px;border-radius:50%;object-fit:cover;filter:saturate(.7)"><i class="dot-live" aria-hidden="true"></i>
+      <img src="images/appointment.webp" alt="FUE Malaysia patient coordinator" width="48" height="48" style="width:48px;height:48px;border-radius:50%;object-fit:cover;filter:saturate(.7)" decoding="async" loading="lazy"><i class="dot-live" aria-hidden="true"></i>
       <p style="font-size:13px;color:var(--ink-2)">We respond to 95% of messages within 1 business day.<br>Mon–Fri 9:00–18:00 · Sat 9:00–14:00</p>
     </div>
   </div>
@@ -967,7 +1024,7 @@ addEventListener('pageshow',function(e){if(!e.persisted)top();});})();</script>
 </main>
 <footer>
   <div class="top">
-    <div><img class="flogo" src="images/logo-white.webp" alt="FUE Malaysia" width="300" height="143" loading="lazy"><p style="margin-top:26px;max-width:34ch;color:rgba(237,235,230,.7)">Hair transplant and hair loss clinic in Malaysia, with 25 years of experience.</p></div>
+    <div><img class="flogo" src="images/logo-white.webp" alt="FUE Malaysia" width="300" height="143" loading="lazy" decoding="async"><p style="margin-top:26px;max-width:34ch;color:rgba(237,235,230,.7)">Hair transplant and hair loss clinic in Malaysia, with 25 years of experience.</p></div>
     <div><span class="label">Visit</span><p>Level 33, Ilham Tower<br>No 8, Jalan Binjai<br>50450 Kuala Lumpur</p><p style="margin-top:12px">Mon – Fri · 9:00 – 18:00<br>Sat · 9:00 – 14:00<br><span style="color:rgba(237,235,230,.5)">Sun &amp; public holidays closed</span></p></div>
     <div><span class="label">Contact</span><p><a class="link-u" href="tel:+60125588572">+60 12-558 8572</a><br><a class="link-u" href="tel:+60379321818">+603 7932 1818</a><br><span style="user-select:all">fue.malaysia@gmail.com</span><br><a class="link-u" href="https://wa.me/60125588572" target="_blank" rel="noopener">WhatsApp</a></p></div>
     <div><span class="label">Pages</span><p><a class="link-u" href="index.html">Home</a><br><a class="link-u" href="how-it-is-done.html">How It’s Done</a><br><a class="link-u" href="about-us.html">About Us</a><br><a class="link-u" href="fue-candidate.html">FUE Candidate</a><br><a class="link-u" href="fue-results.html">FUE Results</a><br><a class="link-u" href="contact.html">Contact Us</a></p></div>
@@ -1003,7 +1060,7 @@ function initSite() {
   /* smooth scroll */
   let lenis = null;
   if (!reduced && window.Lenis) {
-    lenis = new window.Lenis({ duration: 1.25, easing: t => 1 - Math.pow(1 - t, 4), smoothWheel: true });
+    lenis = new window.Lenis({ duration: .7, easing: t => 1 - Math.pow(1 - t, 3), smoothWheel: true, wheelMultiplier: 1.15 });
     window.__lenis = lenis; lenis.on('scroll', ScrollTrigger.update);
     gsap.ticker.add(t => lenis.raf(t * 1000));
     gsap.ticker.lagSmoothing(0);
@@ -1034,15 +1091,15 @@ function initSite() {
     closeMenu();
     if (!el && id !== '#top') return;
     e.preventDefault();
-    if (lenis) lenis.scrollTo(id === '#top' ? 0 : el, { offset: -70, duration: 1.6 });
+    if (lenis) lenis.scrollTo(id === '#top' ? 0 : el, { offset: -70, duration: .8 });
     else (id === '#top' ? document.body : el).scrollIntoView({ behavior: reduced ? 'auto' : 'smooth' });
   }));
   $$('.mobile-menu a').forEach(a => a.addEventListener('click', closeMenu));
 
   /* reveals — content is visible at rest; motion only adds to it */
   if (!reduced) {
-    $$('.rv').forEach(el => gsap.from(el, { opacity: 0, y: 28, duration: 1.3, ease: 'expo.out', scrollTrigger: { trigger: el, start: 'top 92%', once: true } }));
-    $$('.page-hero .ph-line > span').forEach((el, i) => gsap.from(el, { yPercent: 110, duration: 1.4, ease: 'expo.out', delay: .15 + i * .1 }));
+    $$('.rv').forEach(el => gsap.from(el, { opacity: 0, y: 20, duration: .55, ease: 'expo.out', scrollTrigger: { trigger: el, start: 'top 92%', once: true } }));
+    $$('.page-hero .ph-line > span').forEach((el, i) => gsap.from(el, { yPercent: 110, duration: .6, ease: 'expo.out', delay: .05 + i * .06 }));
     $$('[data-parallax]').forEach(el => gsap.to(el, { yPercent: +el.dataset.parallax, ease: 'none', scrollTrigger: { trigger: el.parentElement, start: 'top bottom', end: 'bottom top', scrub: true } }));
   }
 
@@ -1315,15 +1372,15 @@ function initCloud({ canvas, trigger, copy, meta, keys, cards, byTime }) {
   gsap.to(copy, { yPercent: -18, opacity: 0, ease: 'none', scrollTrigger: { trigger, start: 'top top', end: '35% top', scrub: true } });
   if (meta) gsap.to(meta, { opacity: 0, ease: 'none', scrollTrigger: { trigger, start: 'top top', end: '15% top', scrub: true } });
   const intro = { t: 0 };
-  if (byTime) gsap.to(intro, { t: 1, duration: 3.2, ease: 'expo.out', delay: .1 });
-  else ScrollTrigger.create({ trigger, start: 'top 92%', end: 'top 8%', scrub: true, onUpdate: s => { intro.t = easeIO(s.progress); } });
+  if (byTime) gsap.to(intro, { t: 1, duration: .9, ease: 'expo.out', delay: 0 });
+  else ScrollTrigger.create({ trigger, start: 'top 96%', end: 'top 40%', scrub: true, onUpdate: s => { intro.t = easeIO(s.progress); } });
   let visible = true;
   ScrollTrigger.create({ trigger, start: 'top bottom', end: 'bottom top', onToggle: s => visible = s.isActive });
 
   let pSm = 0;
   return t => {
     if (!visible) return;
-    pSm = lerp(pSm, st.p, .08);
+    pSm = lerp(pSm, st.p, .22);
     const fly = easeIO(pSm);
     camera.position.z = CAMZ - fly * 21 + (1 - intro.t) * 10;
     camera.position.x = lerp(camera.position.x, mouse.sx * .35, .05);
@@ -1365,10 +1422,10 @@ function liteCloud(host, keys, urls) {
   /* headline lines rise in as each stage arrives */
   const rise = (sec, delay = 0) => {
     const lines = gsap.utils.toArray(sec + ' .hero-copy .line > span'), rest = gsap.utils.toArray(sec + ' .hero-copy .hc');
-    gsap.fromTo(lines, { yPercent: 110 }, { yPercent: 0, duration: 1.5, ease: 'expo.out', stagger: .12, delay, scrollTrigger: delay ? null : { trigger: sec, start: 'top 55%', once: true } });
-    gsap.fromTo(rest, { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 1.2, ease: 'power2.out', stagger: .1, delay: delay + .5, scrollTrigger: delay ? null : { trigger: sec, start: 'top 55%', once: true } });
+    gsap.fromTo(lines, { yPercent: 110 }, { yPercent: 0, duration: .7, ease: 'expo.out', stagger: .07, delay, scrollTrigger: delay ? null : { trigger: sec, start: 'top 55%', once: true } });
+    gsap.fromTo(rest, { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: .5, ease: 'power2.out', stagger: .06, delay: delay + .25, scrollTrigger: delay ? null : { trigger: sec, start: 'top 55%', once: true } });
   };
-  rise('#hero', .15); rise('#inst-hero'); rise('#proc-hero');
+  rise('#hero', .05); rise('#inst-hero'); rise('#proc-hero');
 
   try { await document.fonts.ready; } catch (e) {}
   const need = [...new Set(stages.flatMap(s => s.keys))];
@@ -1414,7 +1471,7 @@ function liteCloud(host, keys, urls) {
 (function(){
   function name(u){var f=u.pathname.replace(/\/+$/,'').split('/').pop()||'index';return f.replace(/\.html$/,'');}
   function toTop(){var l=window.__lenis,r=matchMedia('(prefers-reduced-motion: reduce)').matches;
-    if(l&&!r)l.scrollTo(0,{duration:1.4});else window.scrollTo({top:0,behavior:r?'auto':'smooth'});}
+    if(l&&!r)l.scrollTo(0,{duration:.8});else window.scrollTo({top:0,behavior:r?'auto':'smooth'});}
   document.addEventListener('click',function(e){
     if(e.defaultPrevented||e.button||e.metaKey||e.ctrlKey||e.shiftKey||e.altKey)return;
     var a=e.target.closest&&e.target.closest('header.nav a,.mobile-menu a,footer a');
@@ -1428,5 +1485,18 @@ function liteCloud(host, keys, urls) {
   });
 })();
 </script>
+<script>/* v9 */
+(function(){var d=document.documentElement,t=0;
+function s(){var o=(window.scrollY||pageYOffset)>60;if(o!==t){t=o;d.classList.toggle('bar-off',o);}}
+addEventListener('scroll',s,{passive:true});s();
+var r=document.getElementById('hxs-rate');if(r){var a=r.dataset.rating,c=r.dataset.count;if(a)r.innerHTML='\u2605 '+a+(c?' \u00b7 '+c+' Google reviews':' on Google')+' \u2197';}
+var st=document.getElementById('hx-strip');
+if(st&&window.gsap&&window.ScrollTrigger&&!matchMedia('(prefers-reduced-motion:reduce)').matches){
+ gsap.to(st,{opacity:0,ease:'none',scrollTrigger:{trigger:'#hero',start:'top top',end:'15% top',scrub:true,onUpdate:function(x){st.style.pointerEvents=x.progress>.5?'none':'auto';}}});}
+/* ad tracking: GA4 / Google Ads / Meta Pixel events fire only if those tags exist */
+function ev(n,m){try{window.dataLayer=window.dataLayer||[];dataLayer.push({event:n});if(window.gtag)gtag('event',n);if(window.fbq)fbq('track',m,{});}catch(e){}}
+document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href]');if(!a)return;var h=a.getAttribute('href')||'';
+ if(h.indexOf('wa.me')>-1)ev('whatsapp_click','Contact');else if(h.indexOf('tel:')===0)ev('phone_click','Contact');else if(h.indexOf('instagram.com')>-1)ev('instagram_click','Contact');},true);
+})();</script>
 </body>
 </html>

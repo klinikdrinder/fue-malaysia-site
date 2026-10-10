@@ -4,8 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 
-<title>Hair Transplant Malaysia | FUE Hair Transplant Clinic — FUE Malaysia</title>
-<meta name="description" content="FUE Malaysia is a hair transplant clinic in Malaysia with 25 years of experience. Natural-looking, permanent FUE results. Book your free consultation.">
+<title>Hair Transplant Malaysia | FUE Clinic Kuala Lumpur — FUE Malaysia</title>
+<meta name="description" content="FUE hair transplant clinic in Kuala Lumpur, Malaysia. 25 years of experience, natural-looking permanent results, no stitches. See real patient results and book a free consultation.">
 <!-- v3: the live homepage meta description also claims "over 10,000 FUE hair transplants" and "RM 7,500 – 15,000". Neither appears in the live visible copy, so both were removed here. Clinic to confirm the real figures. -->
 <link rel="canonical" href="https://www.fuemalaysia.com/">
 <meta property="og:title" content="Hair Transplant Malaysia | FUE Hair Transplant Clinic — FUE Malaysia">
@@ -15,7 +15,7 @@
 <link rel="icon" href="favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin><link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
 :root{
@@ -790,6 +790,61 @@ footer .powered .pw-logo{width:20px;height:20px;color:#8fe6ff;filter:drop-shadow
 html{font-size:15px}
 
 /* ===== /v8 */
+/* ===== v9 bar + quick contact */
+.topbar{position:fixed;left:0;right:0;top:0;z-index:60;height:34px;background:var(--ink);color:var(--bg);overflow:hidden;display:flex;align-items:center;transition:transform .35s var(--ease)}
+.topbar a{display:flex;align-items:center;width:100%;height:100%;color:inherit}
+.tb-track{display:flex;width:max-content;animation:tbmove 32s linear infinite;will-change:transform}
+.topbar:hover .tb-track{animation-play-state:paused}
+.tb-grp{display:flex;align-items:center;flex:none}
+.tb-grp span{font-size:11px;letter-spacing:.2em;text-transform:uppercase;font-weight:500;white-space:nowrap;padding:0 22px}
+.tb-grp span b{font-weight:600;color:#fff}
+.tb-grp i{width:4px;height:4px;border-radius:50%;background:currentColor;opacity:.5;flex:none}
+@keyframes tbmove{to{transform:translateX(-50%)}}
+html.bar-off .topbar{transform:translateY(-100%)}
+.nav{top:34px!important;transition:top .35s var(--ease),background .5s,transform .5s}
+html.bar-off .nav{top:0!important}
+.mobile-menu{padding-top:144px!important}
+.page-hero{padding-top:calc(var(--ph-top,130px) + 34px)}
+@media (min-width:821px){.page-hero{--ph-top:130px}}
+@media (max-width:820px){.page-hero{--ph-top:100px}}
+.qbar{display:none}
+@media (max-width:820px){
+  .qbar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:42;gap:6px;align-items:center;padding:9px 12px calc(9px + env(safe-area-inset-bottom,0px));background:rgba(247,246,242,.95);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border-top:1px solid var(--line)}
+  body{padding-bottom:66px}
+  .wa-float{display:none!important}
+  .qb{display:inline-flex;align-items:center;justify-content:center;gap:7px;height:44px;border-radius:999px;border:1px solid var(--ink);font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:500;color:var(--ink);padding:0 12px;flex:none}
+  .qb svg{width:16px;height:16px}
+  .qb.wa{background:var(--ink);color:var(--bg);flex:1;min-width:0}
+  .qb.ig{width:44px;padding:0}
+  .qr{display:flex;flex:none;margin-right:2px}
+  .qr img{width:34px;height:34px;border-radius:50%;object-fit:cover;object-position:50% 30%;border:2px solid var(--bg);margin-left:-11px;background:var(--surface)}
+  .qr img:first-child{margin-left:0}
+  .hx-copy{bottom:calc(7vh + 10px)!important}
+}
+.hx-strip{display:none}
+@media (min-width:821px){
+  .hx-strip{display:flex;position:absolute;left:50%;bottom:22px;transform:translateX(-50%);z-index:5;align-items:center;gap:20px;padding:10px 14px 10px 24px;background:rgba(247,246,242,.93);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border:1px solid var(--line);border-radius:999px;max-width:calc(100vw - 48px);box-shadow:0 18px 40px -26px rgba(0,0,0,.35)}
+  .hx-copy{bottom:calc(9vh + 54px)!important}
+  .hero-meta{display:none}
+}
+.hxs-price{display:flex;flex-direction:column;line-height:1.1;flex:none}
+.hxs-price small{font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-3)}
+.hxs-price strong{font-family:var(--serif);font-weight:400;font-size:26px;letter-spacing:-.01em;white-space:nowrap}
+.hxs-res{display:flex;align-items:center;gap:8px;flex:none}
+.hxs-res .pair{display:flex;border-radius:8px;overflow:hidden;border:1px solid var(--line)}
+.hxs-res .pair img{width:40px;height:44px;object-fit:cover;object-position:50% 35%;display:block}
+.hxs-res .pair img+img{border-left:1px solid #fff}
+.hxs-res em{font-style:normal;font-size:10px;letter-spacing:.16em;text-transform:uppercase;margin-left:6px;line-height:1.3;white-space:nowrap}
+.hxs-res em u{text-decoration:none;display:block;color:var(--ink-3)}
+.hxs-rate{font-size:10px;letter-spacing:.16em;text-transform:uppercase;white-space:nowrap;color:var(--ink-2);flex:none}
+.hxs-btns{display:flex;gap:8px;flex:none}
+.hxs-btns .qd{display:inline-flex;align-items:center;gap:8px;height:42px;padding:0 18px;border:1px solid var(--ink);border-radius:999px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:500;color:var(--ink);white-space:nowrap}
+.hxs-btns .qd svg{width:15px;height:15px}
+.hxs-btns .qd.wa{background:var(--ink);color:var(--bg)}
+.hxs-btns .qd.ig{width:42px;padding:0;justify-content:center}
+@media (min-width:821px) and (max-width:1180px){.hxs-res,.hxs-rate{display:none}}
+@media (prefers-reduced-motion:reduce){.tb-track{animation:none}.tb-grp+.tb-grp{display:none}}
+/* ===== /v9 */
 </style>
 </head>
 <body>
@@ -808,12 +863,13 @@ addEventListener('pageshow',function(e){if(!e.persisted)top();});})();</script>
 
 
 <div class="cursor" aria-hidden="true"><span>View</span></div>
+<div class="topbar" id="topbar"><a href="https://wa.me/60125588572?text=Hello%20FUE%20Malaysia%2C%20I%20saw%20the%20offer%20from%20RM%208%2C999.%20I%27d%20like%20a%20free%20consultation." target="_blank" rel="noopener" aria-label="Starts from RM 8,999. Message us on WhatsApp"><div class="tb-track"><div class="tb-grp"><span><b>Starts from RM 8,999</b></span><i></i><span>Grab yours now!</span><i></i><span>Deal ends soon!</span><i></i><span>Free consultation &middot; WhatsApp +60 12-558 8572</span><i></i></div><div class="tb-grp" aria-hidden="true"><span><b>Starts from RM 8,999</b></span><i></i><span>Grab yours now!</span><i></i><span>Deal ends soon!</span><i></i><span>Free consultation &middot; WhatsApp +60 12-558 8572</span><i></i></div></div></a></div>
 <header class="nav" id="nav">
   <nav class="left" aria-label="Primary">
     <ul><li><a class="link-u active" href="index.html" aria-current=page>Home</a></li><li><a class="link-u" href="how-it-is-done.html">How It’s Done</a></li><li><a class="link-u" href="about-us.html">About Us</a></li><li><a class="link-u" href="fue-candidate.html">FUE Candidate</a></li><li><a class="link-u" href="fue-results.html">FUE Results</a></li></ul>
     <button class="burger" aria-label="Open menu" aria-expanded="false" id="burger"><span></span><span></span></button>
   </nav>
-  <a class="logo" href="index.html" aria-label="FUE Malaysia home"><img src="images/logo.webp" alt="FUE Malaysia" width="667" height="266"></a>
+  <a class="logo" href="index.html" aria-label="FUE Malaysia home"><img src="images/logo.webp" alt="FUE Malaysia" width="667" height="266" decoding="async"></a>
   <div class="right">
     <a class="cta neon" href="contact.html">Free Consultation</a>
   </div>
@@ -822,6 +878,7 @@ addEventListener('pageshow',function(e){if(!e.persisted)top();});})();</script>
   <a href="index.html" class=active>Home</a><a href="how-it-is-done.html">How It’s Done</a><a href="about-us.html">About Us</a><a href="fue-candidate.html">FUE Candidate</a><a href="fue-results.html">FUE Results</a><a href="contact.html">Contact &amp; Consultation</a>
   <span class="label" style="font-family:var(--sans);font-size:12px;border:0;margin-top:auto">Call +60 12-558 8572</span>
 </div>
+<div class="qbar" id="qbar"><a class="qr" href="fue-results.html" aria-label="See real patient results"><img src="images/res-08.webp" alt="" width="38" height="38" loading="lazy" decoding="async"><img src="images/res-10.webp" alt="" width="38" height="38" loading="lazy" decoding="async"><img src="images/res-16.webp" alt="" width="38" height="38" loading="lazy" decoding="async"></a><a class="qb wa" href="https://wa.me/60125588572" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.8-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3c-.2.3-.9.9-.9 2.2s.9 2.5 1 2.7c.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3z" fill="currentColor"/></svg>WhatsApp</a><a class="qb" href="tel:+60125588572"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15 15 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.6a1 1 0 0 1-.25 1z" fill="currentColor"/></svg>Call</a><a class="qb ig" href="https://www.instagram.com/fuemalaysia/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor"/></svg></a></div>
 <main id="top">
   <section class="hero" id="hero" aria-label="Introduction">
     <div class="hero-stage">
@@ -831,7 +888,7 @@ addEventListener('pageshow',function(e){if(!e.persisted)top();});})();</script>
         <p class="hx-blur b3">FUE Malaysia is your hair transplant clinic in Kuala Lumpur.</p>
       </div>
       <canvas id="hero-gl" aria-hidden="true"></canvas>
-      <div class="hx-lite" aria-hidden="true"><div class="hxl-phone"><i class="hxl-island"></i><div class="hxl-bar"><span>9:41</span></div><div class="hxl-row"><i></i><img src="images/logo.webp" alt=""><i></i></div><div class="hxl-bubbles" id="hxl-bubbles"></div></div></div>
+      <div class="hx-lite" aria-hidden="true"><div class="hxl-phone"><i class="hxl-island"></i><div class="hxl-bar"><span>9:41</span></div><div class="hxl-row"><i></i><img src="images/logo.webp" alt="" decoding="async"><i></i></div><div class="hxl-bubbles" id="hxl-bubbles"></div></div></div>
       <p class="hx-feel" aria-hidden="true">Some confidence is worth growing back.</p>
       <div class="hx-copy" id="hx-copy">
         <h1 class="hx-h1"><span class="line"><span>Transform your hairline.</span></span><span class="line"><span class="it">Transform your life.</span></span></h1>
@@ -850,6 +907,7 @@ addEventListener('pageshow',function(e){if(!e.persisted)top();});})();</script>
         <p>No stitches. Natural-looking, permanent results. Just your hairline, restored.</p>
         <a class="btn" href="contact.html#form">Free consultation <span class="arr"></span></a>
       </div>
+      <div class="hx-strip" id="hx-strip"><div class="hxs-price"><small>Starts from</small><strong>RM 8,999</strong></div><a class="hxs-res" href="fue-results.html" aria-label="See real patient results"><span class="pair"><img src="images/res-07.webp" alt="Before" width="40" height="44" decoding="async"><img src="images/res-08.webp" alt="After" width="40" height="44" decoding="async"></span><span class="pair"><img src="images/res-09.webp" alt="Before" width="40" height="44" decoding="async"><img src="images/res-10.webp" alt="After" width="40" height="44" decoding="async"></span><span class="pair"><img src="images/res-15.webp" alt="Before" width="40" height="44" decoding="async"><img src="images/res-16.webp" alt="After" width="40" height="44" decoding="async"></span><em>Real patient results<u>See all &rarr;</u></em></a><a class="hxs-rate" id="hxs-rate" href="https://share.google/JWkb5j8PLXx6ELbm7" target="_blank" rel="noopener" data-rating="" data-count="">Google reviews &nearr;</a><div class="hxs-btns"><a class="qd wa" href="https://wa.me/60125588572" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.8-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3c-.2.3-.9.9-.9 2.2s.9 2.5 1 2.7c.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3z" fill="currentColor"/></svg>WhatsApp</a><a class="qd" href="tel:+60125588572"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15 15 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.6a1 1 0 0 1-.25 1z" fill="currentColor"/></svg>Call</a><a class="qd ig" href="https://www.instagram.com/fuemalaysia/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor"/></svg></a></div></div>
       <div class="hero-meta">
         <span class="label hide-m">FUE Malaysia · Hair Transplant Clinic</span>
         <div class="scroll-ind"><span class="label">Scroll</span><i></i></div>
@@ -900,7 +958,7 @@ addEventListener('pageshow',function(e){if(!e.persisted)top();});})();</script>
   </section>
 
   <section class="split" id="women" aria-labelledby="women-h">
-    <div class="photo rv" style="grid-column:1/6;aspect-ratio:4/5"><img loading="lazy" src="images/about.webp" alt="FUE Malaysia doctor marking a patient’s scalp before a hair transplant" width="581" height="581"></div>
+    <div class="photo rv" style="grid-column:1/6;aspect-ratio:4/5"><img loading="lazy" src="images/about.webp" alt="FUE Malaysia doctor marking a patient’s scalp before a hair transplant" width="581" height="581" decoding="async"></div>
     <div style="grid-column:7/12;align-self:center">
       <p class="label rv">(03) &nbsp; FUE Malaysia</p>
       <h2 class="h-l rv" id="women-h" style="margin:22px 0 28px">Women’s hair <span class="it">transplantation.</span></h2>
@@ -916,11 +974,11 @@ addEventListener('pageshow',function(e){if(!e.persisted)top();});})();</script>
       <p class="lede rv">Hair loss treatment covers the medical and cosmetic options used to slow, stop or reverse hair loss and thinning hair (alopecia). Depending on the cause and stage, this can include medication such as minoxidil or finasteride, scalp and laser therapies, PRP (platelet-rich plasma), and, for permanent hair loss, a hair transplant. A doctor first diagnoses the cause of your hair loss and recommends the right treatment for you.</p>
       <a class="btn rv" style="margin-top:36px" href="fue-candidate.html">Are you a candidate? <span class="arr"></span></a>
     </div>
-    <div class="photo rv" style="grid-column:8/13;aspect-ratio:4/5;grid-row:1"><img loading="lazy" src="images/hairloss.webp" alt="FUE Malaysia doctor examining a female patient’s scalp" width="607" height="607"></div>
+    <div class="photo rv" style="grid-column:8/13;aspect-ratio:4/5;grid-row:1"><img loading="lazy" src="images/hairloss.webp" alt="FUE Malaysia doctor examining a female patient’s scalp" width="607" height="607" decoding="async"></div>
   </section>
 
   <div class="appt rv">
-    <div class="t"><img src="images/appointment.webp" alt="FUE Malaysia patient coordinator" width="98" height="98" loading="lazy"><p>Call for more information and to make an appointment.</p></div>
+    <div class="t"><img src="images/appointment.webp" alt="FUE Malaysia patient coordinator" width="98" height="98" loading="lazy" decoding="async"><p>Call for more information and to make an appointment.</p></div>
     <a class="btn solid" href="tel:+60125588572">+60 12-558 8572 <span class="arr"></span></a>
   </div>
 
@@ -937,8 +995,8 @@ addEventListener('pageshow',function(e){if(!e.persisted)top();});})();</script>
       </div>
       <figure class="frame rv">
         <div class="ba tall" role="slider" aria-label="Before and after: FUE patient, 3,700 grafts, top view" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" tabindex="0">
-  <img src="images/res-25.webp" alt="Before: FUE patient, 3,700 grafts, top view" loading="lazy">
-  <div class="after-layer"><img src="images/res-26.webp" alt="After: FUE patient, 3,700 grafts, top view" loading="lazy"></div>
+  <img src="images/res-25.webp" alt="Before: FUE patient, 3,700 grafts, top view" loading="lazy" decoding="async">
+  <div class="after-layer"><img src="images/res-26.webp" alt="After: FUE patient, 3,700 grafts, top view" loading="lazy" decoding="async"></div>
   <div class="handle"></div>
   <span class="tag l label">Before</span><span class="tag r label">7 months</span>
 </div>
@@ -971,19 +1029,19 @@ addEventListener('pageshow',function(e){if(!e.persisted)top();});})();</script>
     <div class="care">
       <div class="side">
         <p class="lede rv">These are the things we ask of you around the day of your procedure. If anything is unclear, call us.</p>
-        <div class="photo rv frame"><img id="care-img" src="images/before.webp" alt="Before hair transplantation icon" width="76" height="72"></div>
+        <div class="photo rv frame"><img id="care-img" src="images/before.webp" alt="Before hair transplantation icon" width="76" height="72" decoding="async" loading="lazy"></div>
       </div>
       <div class="acc" data-img="#care-img">
       <div class="acc-item open" data-src="images/before.webp" data-alt="Before hair transplantation icon">
-        <button class="acc-btn" aria-expanded="true" aria-controls="acc-0" id="accb-0"><span class="num">01</span><img src="images/before.webp" alt="" width="26" height="26"><span class="h-s">Before your procedure</span><span class="pm" aria-hidden="true"></span></button>
+        <button class="acc-btn" aria-expanded="true" aria-controls="acc-0" id="accb-0"><span class="num">01</span><img src="images/before.webp" alt="" width="26" height="26" decoding="async" loading="lazy"><span class="h-s">Before your procedure</span><span class="pm" aria-hidden="true"></span></button>
         <div class="acc-panel" id="acc-0" role="region" aria-labelledby="accb-0"><p style="padding:0 0 14px 100px;color:var(--ink-3);font-size:14px" class="acc-desc">What to do in the days before your procedure.</p><ol><li>Wash your hair before the operation. Please don’t apply any external solution or hair gel.</li><li>Stop using aspirin or other blood-thinning (anticoagulant) medicines one week before.</li><li>Stop drinking alcohol three days before, and stop smoking one day before.</li><li>If you have a heart condition, diabetes or high blood pressure, tell your doctor about the medicines you use.</li><li>Bring an adjustable cap to wear after the operation.</li></ol></div>
       </div>
       <div class="acc-item" data-src="images/after.webp" data-alt="After hair transplantation icon">
-        <button class="acc-btn" aria-expanded="false" aria-controls="acc-1" id="accb-1"><span class="num">02</span><img src="images/after.webp" alt="" width="26" height="26"><span class="h-s">After your procedure</span><span class="pm" aria-hidden="true"></span></button>
+        <button class="acc-btn" aria-expanded="false" aria-controls="acc-1" id="accb-1"><span class="num">02</span><img src="images/after.webp" alt="" width="26" height="26" decoding="async" loading="lazy"><span class="h-s">After your procedure</span><span class="pm" aria-hidden="true"></span></button>
         <div class="acc-panel" id="acc-1" role="region" aria-labelledby="accb-1"><p style="padding:0 0 14px 100px;color:var(--ink-3);font-size:14px" class="acc-desc">What to do in the weeks after your procedure.</p><ol><li>Return to the clinic where the operation was done for the medical dressing and the first wash. Please don’t touch the bandaged area yourself.</li><li>For one week, prefer to lie on your back, and don’t itch or rub the transplanted area. Sexual activity should also be avoided during this period.</li><li>For one month, avoid public baths, pools, the sea and strenuous sport, and don’t expose your scalp to direct sunlight.</li></ol></div>
       </div>
       <div class="acc-item" data-src="images/washing.webp" data-alt="Washing operation icon">
-        <button class="acc-btn" aria-expanded="false" aria-controls="acc-2" id="accb-2"><span class="num">03</span><img src="images/washing.webp" alt="" width="26" height="26"><span class="h-s">Washing your hair</span><span class="pm" aria-hidden="true"></span></button>
+        <button class="acc-btn" aria-expanded="false" aria-controls="acc-2" id="accb-2"><span class="num">03</span><img src="images/washing.webp" alt="" width="26" height="26" decoding="async" loading="lazy"><span class="h-s">Washing your hair</span><span class="pm" aria-hidden="true"></span></button>
         <div class="acc-panel" id="acc-2" role="region" aria-labelledby="accb-2"><p style="padding:0 0 14px 100px;color:var(--ink-3);font-size:14px" class="acc-desc">How to wash your hair after the procedure.</p><ol><li>Start washing only on the day advised by your doctor. This is usually the third day after the first wash at the clinic.</li><li>Wash with warm water. Avoid water that is too hot or too cold.</li><li>Use the care lotions and shampoo recommended by your doctor for the first two weeks.</li><li>Don’t rub the transplanted area while lathering. Lather the shampoo lightly, then rinse.</li><li>Dry with a hair dryer on a warm setting, held at a distance. Never rub with a towel; only press it lightly to take away excess water.</li><li>Don’t apply any solution, hair gel or other product unless your doctor recommends it.</li></ol></div>
       </div>
       </div>
@@ -994,9 +1052,9 @@ addEventListener('pageshow',function(e){if(!e.persisted)top();});})();</script>
     <div class="chap-body">
       <div class="sec-head" style="padding:0 0 50px;border-top:0"><p class="label rv">(08) &nbsp; Hair Transplant Malaysia</p><h2 class="h-l rv" id="vid-h">Watch our patient <span class="it">video testimonials.</span></h2></div>
       <div class="yt-grid">
-        <a class="yt yt-t rv" href="https://www.youtube.com/shorts/ZXkeT711pTI" target="_blank" rel="noopener" data-cursor="Play" aria-label="Hair Transplant Malaysia | Nazrief Nazri 4 Months After Hair Transplant! (opens YouTube in a new tab)"><span class="yt-media"><img src="images/testimonials/ZXkeT711pTI.webp" alt="Video thumbnail: Hair Transplant Malaysia | Nazrief Nazri 4 Months After Hair Transplant!" width="640" height="360" loading="lazy"><span class="play"></span></span><span class="yt-cap"><b>Hair Transplant Malaysia | Nazrief Nazri 4 Months After Hair Transplant!</b><span>Nazrief Nazri · YouTube Shorts · FUE Malaysia</span></span></a>
-        <a class="yt yt-t rv" href="https://www.youtube.com/shorts/H6HEkOKkAWE" target="_blank" rel="noopener" data-cursor="Play" aria-label="Happy Patient - After 5 Years of Hair Transplant - Natural &amp; Permanent Result (opens YouTube in a new tab)"><span class="yt-media"><img src="images/testimonials/H6HEkOKkAWE.webp" alt="Video thumbnail: Happy Patient - After 5 Years of Hair Transplant - Natural &amp; Permanent Result" width="640" height="360" loading="lazy"><span class="play"></span></span><span class="yt-cap"><b>Happy Patient - After 5 Years of Hair Transplant - Natural &amp; Permanent Result</b><span>YouTube Shorts · FUE Malaysia</span></span></a>
-        <a class="yt yt-t rv" href="https://www.youtube.com/shorts/kDD_-BARaUE" target="_blank" rel="noopener" data-cursor="Play" aria-label="FUE Malaysia - Happy Patient After 5 Month Hair Transplant Procedure (opens YouTube in a new tab)"><span class="yt-media"><img src="images/testimonials/kDD_-BARaUE.webp" alt="Video thumbnail: FUE Malaysia - Happy Patient After 5 Month Hair Transplant Procedure" width="640" height="360" loading="lazy"><span class="play"></span></span><span class="yt-cap"><b>FUE Malaysia - Happy Patient After 5 Month Hair Transplant Procedure</b><span>YouTube Shorts · FUE Malaysia</span></span></a>
+        <a class="yt yt-t rv" href="https://www.youtube.com/shorts/ZXkeT711pTI" target="_blank" rel="noopener" data-cursor="Play" aria-label="Hair Transplant Malaysia | Nazrief Nazri 4 Months After Hair Transplant! (opens YouTube in a new tab)"><span class="yt-media"><img src="images/testimonials/ZXkeT711pTI.webp" alt="Video thumbnail: Hair Transplant Malaysia | Nazrief Nazri 4 Months After Hair Transplant!" width="640" height="360" loading="lazy" decoding="async"><span class="play"></span></span><span class="yt-cap"><b>Hair Transplant Malaysia | Nazrief Nazri 4 Months After Hair Transplant!</b><span>Nazrief Nazri · YouTube Shorts · FUE Malaysia</span></span></a>
+        <a class="yt yt-t rv" href="https://www.youtube.com/shorts/H6HEkOKkAWE" target="_blank" rel="noopener" data-cursor="Play" aria-label="Happy Patient - After 5 Years of Hair Transplant - Natural &amp; Permanent Result (opens YouTube in a new tab)"><span class="yt-media"><img src="images/testimonials/H6HEkOKkAWE.webp" alt="Video thumbnail: Happy Patient - After 5 Years of Hair Transplant - Natural &amp; Permanent Result" width="640" height="360" loading="lazy" decoding="async"><span class="play"></span></span><span class="yt-cap"><b>Happy Patient - After 5 Years of Hair Transplant - Natural &amp; Permanent Result</b><span>YouTube Shorts · FUE Malaysia</span></span></a>
+        <a class="yt yt-t rv" href="https://www.youtube.com/shorts/kDD_-BARaUE" target="_blank" rel="noopener" data-cursor="Play" aria-label="FUE Malaysia - Happy Patient After 5 Month Hair Transplant Procedure (opens YouTube in a new tab)"><span class="yt-media"><img src="images/testimonials/kDD_-BARaUE.webp" alt="Video thumbnail: FUE Malaysia - Happy Patient After 5 Month Hair Transplant Procedure" width="640" height="360" loading="lazy" decoding="async"><span class="play"></span></span><span class="yt-cap"><b>FUE Malaysia - Happy Patient After 5 Month Hair Transplant Procedure</b><span>YouTube Shorts · FUE Malaysia</span></span></a>
       </div>
     </div>
   </section>
@@ -1005,7 +1063,7 @@ addEventListener('pageshow',function(e){if(!e.persisted)top();});})();</script>
 <section class="consult cta-sec" id="cta" aria-labelledby="cta-h">
   <div class="media">
     <div class="avatar-row rv" style="display:flex;align-items:center;gap:16px;margin-top:22px">
-      <img src="images/appointment.webp" alt="FUE Malaysia patient coordinator" width="48" height="48" style="width:48px;height:48px;border-radius:50%;object-fit:cover;filter:saturate(.7)"><i class="dot-live" aria-hidden="true"></i>
+      <img src="images/appointment.webp" alt="FUE Malaysia patient coordinator" width="48" height="48" style="width:48px;height:48px;border-radius:50%;object-fit:cover;filter:saturate(.7)" decoding="async" loading="lazy"><i class="dot-live" aria-hidden="true"></i>
       <p style="font-size:13px;color:var(--ink-2)">We respond to 95% of messages within 1 business day.<br>Mon–Fri 9:00–18:00 · Sat 9:00–14:00</p>
     </div>
   </div>
@@ -1029,7 +1087,7 @@ addEventListener('pageshow',function(e){if(!e.persisted)top();});})();</script>
 </main>
 <footer>
   <div class="top">
-    <div><img class="flogo" src="images/logo-white.webp" alt="FUE Malaysia" width="300" height="143" loading="lazy"><p style="margin-top:26px;max-width:34ch;color:rgba(237,235,230,.7)">Hair transplant and hair loss clinic in Malaysia, with 25 years of experience.</p></div>
+    <div><img class="flogo" src="images/logo-white.webp" alt="FUE Malaysia" width="300" height="143" loading="lazy" decoding="async"><p style="margin-top:26px;max-width:34ch;color:rgba(237,235,230,.7)">Hair transplant and hair loss clinic in Malaysia, with 25 years of experience.</p></div>
     <div><span class="label">Visit</span><p>Level 33, Ilham Tower<br>No 8, Jalan Binjai<br>50450 Kuala Lumpur</p><p style="margin-top:12px">Mon – Fri · 9:00 – 18:00<br>Sat · 9:00 – 14:00<br><span style="color:rgba(237,235,230,.5)">Sun &amp; public holidays closed</span></p></div>
     <div><span class="label">Contact</span><p><a class="link-u" href="tel:+60125588572">+60 12-558 8572</a><br><a class="link-u" href="tel:+60379321818">+603 7932 1818</a><br><span style="user-select:all">fue.malaysia@gmail.com</span><br><a class="link-u" href="https://wa.me/60125588572" target="_blank" rel="noopener">WhatsApp</a></p></div>
     <div><span class="label">Pages</span><p><a class="link-u" href="index.html">Home</a><br><a class="link-u" href="how-it-is-done.html">How It’s Done</a><br><a class="link-u" href="about-us.html">About Us</a><br><a class="link-u" href="fue-candidate.html">FUE Candidate</a><br><a class="link-u" href="fue-results.html">FUE Results</a><br><a class="link-u" href="contact.html">Contact Us</a></p></div>
@@ -1066,7 +1124,7 @@ function initSite() {
   /* smooth scroll */
   let lenis = null;
   if (!reduced && window.Lenis) {
-    lenis = new window.Lenis({ duration: 1.6, easing: t => 1 - Math.pow(1 - t, 4), smoothWheel: true, wheelMultiplier: .9 });
+    lenis = new window.Lenis({ duration: .7, easing: t => 1 - Math.pow(1 - t, 3), smoothWheel: true, wheelMultiplier: 1.15 });
     window.__lenis = lenis; lenis.on('scroll', ScrollTrigger.update);
     gsap.ticker.add(t => lenis.raf(t * 1000));
     gsap.ticker.lagSmoothing(0);
@@ -1098,15 +1156,15 @@ function initSite() {
     closeMenu();
     if (!el && id !== '#top') return;
     e.preventDefault();
-    if (lenis) lenis.scrollTo(id === '#top' ? 0 : el, { offset: -70, duration: 1.6 });
+    if (lenis) lenis.scrollTo(id === '#top' ? 0 : el, { offset: -70, duration: .8 });
     else (id === '#top' ? document.body : el).scrollIntoView({ behavior: reduced ? 'auto' : 'smooth' });
   }));
   $$('.mobile-menu a').forEach(a => a.addEventListener('click', closeMenu));
 
   /* reveals — content is visible at rest; motion only adds to it */
   if (!reduced) {
-    $$('.rv').forEach(el => gsap.from(el, { opacity: 0, y: 28, duration: 1.3, ease: 'expo.out', scrollTrigger: { trigger: el, start: 'top 92%', once: true } }));
-    $$('.page-hero .ph-line > span').forEach((el, i) => gsap.from(el, { yPercent: 110, duration: 1.4, ease: 'expo.out', delay: .15 + i * .1 }));
+    $$('.rv').forEach(el => gsap.from(el, { opacity: 0, y: 20, duration: .55, ease: 'expo.out', scrollTrigger: { trigger: el, start: 'top 92%', once: true } }));
+    $$('.page-hero .ph-line > span').forEach((el, i) => gsap.from(el, { yPercent: 110, duration: .6, ease: 'expo.out', delay: .05 + i * .06 }));
     $$('[data-parallax]').forEach(el => gsap.to(el, { yPercent: +el.dataset.parallax, ease: 'none', scrollTrigger: { trigger: el.parentElement, start: 'top bottom', end: 'bottom top', scrub: true } }));
   }
 
@@ -1312,15 +1370,15 @@ function buildDOM() {
       <p class="label line-in">${s.label}</p>
       <h3 class="h-m line-in">${s.title.replace(/<i>/g, '<span class="it">').replace(/<\/i>/g, '</span>')}</h3>
       <p class="line-in">${s.text}</p>
-      ${s.extra ? `<img class="line-in" src="${IMG[s.extra].src}" alt="" width="40" height="40" style="width:40px;margin-top:24px;filter:grayscale(1) brightness(.35)">` : ''}
+      ${s.extra ? `<img class="line-in" src="${IMG[s.extra].src}" alt="" width="40" height="40" style="width:40px;margin-top:24px;filter:grayscale(1) brightness(.35)" decoding="async" loading="lazy">` : ''}
     </article>`).join('');
 
   // benefits
   $('#benefits').innerHTML = BENEFITS.map((b, i) => `
-    <div class="benefit rv"><img src="${IMG[b.icon].src}" alt="" width="40" height="40" loading="lazy">
+    <div class="benefit rv"><img src="${IMG[b.icon].src}" alt="" width="40" height="40" loading="lazy" decoding="async">
       <div><span class="num">${String(i + 1).padStart(2, '0')}</span><h3>${b.t}</h3><p>${b.d}</p>${b.x ? `<p class="x">${b.x}</p>` : ''}</div></div>`).join('') +
     `<div class="trust rv" style="grid-column:1/-1;display:flex;flex-wrap:wrap;gap:18px 42px;padding:34px 0;justify-content:space-between">` +
-    TRUST.map(([k, t]) => `<span class="label" style="display:flex;align-items:center;gap:12px"><img src="${IMG[k].src}" alt="" width="22" height="22" style="width:22px;opacity:.75;filter:grayscale(1)">${t}</span>`).join('') + `</div>`;
+    TRUST.map(([k, t]) => `<span class="label" style="display:flex;align-items:center;gap:12px"><img src="${IMG[k].src}" alt="" width="22" height="22" style="width:22px;opacity:.75;filter:grayscale(1)" decoding="async" loading="lazy">${t}</span>`).join('') + `</div>`;
 
 }
 
@@ -1521,7 +1579,7 @@ function initHero(cards) {
 
   // intro: cloud gathers in from depth
   const intro = { t: 0 };
-  gsap.to(intro, { t: 1, duration: 3.2, ease: 'expo.out', delay: .1 });
+  gsap.to(intro, { t: 1, duration: .9, ease: 'expo.out', delay: 0 });
 
   let visible = true;
   ScrollTrigger.create({ trigger: '#hero', start: 'top bottom', end: 'bottom top', onToggle: s => visible = s.isActive });
@@ -1529,7 +1587,7 @@ function initHero(cards) {
   let pSm = 0;
   return (t) => {
     if (!visible) return;
-    pSm = lerp(pSm, st.p, .08);
+    pSm = lerp(pSm, st.p, .22);
     const fly = easeIO(pSm);
     camera.position.z = CAMZ - fly * 21 + (1 - intro.t) * 10;
     camera.position.x = lerp(camera.position.x, mouse.sx * .35, .05);
@@ -1878,18 +1936,18 @@ function initHeroIntro() {
   gsap.set(rest, { opacity: 0, y: 16 });
   if (!HERO3D) {
     E.e = E.bg = 1;
-    const tl = gsap.timeline({ delay: .2 });
-    tl.to(lines, { yPercent: 0, duration: 1.4, ease: 'expo.out', stagger: .12 }).to(rest, { opacity: 1, y: 0, duration: 1.1, ease: 'power2.out', stagger: .1 }, .5);
+    const tl = gsap.timeline({ delay: .05 });
+    tl.to(lines, { yPercent: 0, duration: .7, ease: 'expo.out', stagger: .07 }).to(rest, { opacity: 1, y: 0, duration: .5, ease: 'power2.out', stagger: .06 }, .25);
     return { E, tl };
   }
   gsap.set(feel, { opacity: 0, y: 16 });
-  const tl = gsap.timeline({ delay: .15 });
-  tl.to(feel, { opacity: 1, y: 0, duration: 1.4, ease: 'power3.out' }, .2)
-    .to(feel, { opacity: 0, y: -18, duration: .9, ease: 'power2.in' }, 2.35)
-    .to(E, { e: 1, duration: 2.6, ease: 'power3.out' }, 2.6)
-    .to(E, { bg: 1, duration: 1.6, ease: 'power1.inOut' }, 3.4)
-    .to(lines, { yPercent: 0, duration: 1.6, ease: 'expo.out', stagger: .14 }, 3.6)
-    .to(rest, { opacity: 1, y: 0, duration: 1.3, ease: 'power2.out', stagger: .12 }, 4.1);
+  const tl = gsap.timeline({ delay: 0 });
+  tl.to(feel, { opacity: 1, y: 0, duration: .3, ease: 'power3.out' }, 0)
+    .to(feel, { opacity: 0, y: -18, duration: .25, ease: 'power2.in' }, .3)
+    .to(E, { e: 1, duration: 1, ease: 'power3.out' }, .15)
+    .to(E, { bg: 1, duration: .8, ease: 'power1.inOut' }, .3)
+    .to(lines, { yPercent: 0, duration: .7, ease: 'expo.out', stagger: .07 }, .3)
+    .to(rest, { opacity: 1, y: 0, duration: .5, ease: 'power2.out', stagger: .06 }, .5);
   const skip = () => tl.timeScale(5);
   ['wheel', 'touchstart', 'keydown', 'pointerdown'].forEach(ev => addEventListener(ev, skip, { once: true, passive: true }));
   return { E, tl };
@@ -2272,7 +2330,7 @@ function startHeroLite() {
 (function(){
   function name(u){var f=u.pathname.replace(/\/+$/,'').split('/').pop()||'index';return f.replace(/\.html$/,'');}
   function toTop(){var l=window.__lenis,r=matchMedia('(prefers-reduced-motion: reduce)').matches;
-    if(l&&!r)l.scrollTo(0,{duration:1.4});else window.scrollTo({top:0,behavior:r?'auto':'smooth'});}
+    if(l&&!r)l.scrollTo(0,{duration:.8});else window.scrollTo({top:0,behavior:r?'auto':'smooth'});}
   document.addEventListener('click',function(e){
     if(e.defaultPrevented||e.button||e.metaKey||e.ctrlKey||e.shiftKey||e.altKey)return;
     var a=e.target.closest&&e.target.closest('header.nav a,.mobile-menu a,footer a');
@@ -2286,4 +2344,17 @@ function startHeroLite() {
   });
 })();
 </script>
+<script>/* v9 */
+(function(){var d=document.documentElement,t=0;
+function s(){var o=(window.scrollY||pageYOffset)>60;if(o!==t){t=o;d.classList.toggle('bar-off',o);}}
+addEventListener('scroll',s,{passive:true});s();
+var r=document.getElementById('hxs-rate');if(r){var a=r.dataset.rating,c=r.dataset.count;if(a)r.innerHTML='\u2605 '+a+(c?' \u00b7 '+c+' Google reviews':' on Google')+' \u2197';}
+var st=document.getElementById('hx-strip');
+if(st&&window.gsap&&window.ScrollTrigger&&!matchMedia('(prefers-reduced-motion:reduce)').matches){
+ gsap.to(st,{opacity:0,ease:'none',scrollTrigger:{trigger:'#hero',start:'top top',end:'15% top',scrub:true,onUpdate:function(x){st.style.pointerEvents=x.progress>.5?'none':'auto';}}});}
+/* ad tracking: GA4 / Google Ads / Meta Pixel events fire only if those tags exist */
+function ev(n,m){try{window.dataLayer=window.dataLayer||[];dataLayer.push({event:n});if(window.gtag)gtag('event',n);if(window.fbq)fbq('track',m,{});}catch(e){}}
+document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href]');if(!a)return;var h=a.getAttribute('href')||'';
+ if(h.indexOf('wa.me')>-1)ev('whatsapp_click','Contact');else if(h.indexOf('tel:')===0)ev('phone_click','Contact');else if(h.indexOf('instagram.com')>-1)ev('instagram_click','Contact');},true);
+})();</script>
 </body></html>
