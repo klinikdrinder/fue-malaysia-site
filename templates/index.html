@@ -121,36 +121,21 @@ section{position:relative}
 .intro .stat b{display:block;font-family:var(--serif);font-weight:400;font-size:clamp(44px,5vw,76px);line-height:1}
 .intro .stat span{font-size:13px;color:var(--ink-2)}
 
-/* process / gallery */
+/* process: static step grid (scroll-pinned 3D gallery removed) */
 .process{position:relative}
-.process-pin{position:relative;height:100vh;height:100svh;overflow:hidden;background:var(--bg)}
-.process-head{position:absolute;top:96px;left:var(--gutter);right:var(--gutter);display:flex;justify-content:space-between;z-index:3}
-.step-text{position:absolute;top:50%;width:min(36vw,470px);transform:translateY(-50%);z-index:3;opacity:0;pointer-events:none}
-.step-text.left{left:calc(var(--gutter) + 3vw)}
-.step-text.right{right:calc(var(--gutter) + 3vw)}
-.step-text .big{font-family:var(--serif);font-size:clamp(80px,10vw,160px);line-height:.8;color:#D3D1CB;display:block;margin-bottom:18px}
-.step-text h3{margin:14px 0 18px}
-.step-text p{color:var(--ink-2);max-width:40ch}
-.step-text .line-in{display:block;will-change:transform,opacity}
-.progress-rail{position:absolute;right:calc(var(--gutter) * .5);top:50%;transform:translateY(-50%);height:42vh;width:1px;background:var(--line);z-index:4}
-.progress-rail i{position:absolute;left:0;top:0;width:1px;height:100%;background:var(--ink);transform-origin:top;transform:scaleY(0)}
-.step-counter{position:absolute;left:var(--gutter);bottom:34px;z-index:4;display:flex;align-items:baseline;gap:6px}
-.step-counter b{font-family:var(--serif);font-weight:400;font-size:42px;line-height:1;min-width:1.2em}
-.step-counter span{color:var(--ink-3);font-size:13px}
-.step-caption{position:absolute;right:calc(var(--gutter) + 70px);bottom:36px;z-index:4}
-
-.lite .process-pin{height:auto;overflow:visible}
-.lite #gallery-canvas,.lite .progress-rail,.lite .step-counter,.lite .step-caption{display:none}
-.lite .process-head{position:relative;top:auto;left:auto;right:auto;padding:120px var(--gutter) 30px}
-.lite-steps{display:none}
-.lite .lite-steps{display:block;padding:0 var(--gutter) 60px;perspective:1000px}
-.lite .step-text{display:none}
-.lite-step{padding:40px 0 60px;border-top:1px solid var(--line)}
-.lite-step .card{aspect-ratio:4/5;background:var(--surface) center/cover no-repeat;border-radius:6px;margin-bottom:28px;transform:rotateY(-18deg) translateZ(-60px);opacity:0;transition:transform 1.3s var(--ease),opacity 1.3s var(--ease);filter:saturate(.78) contrast(.94) sepia(.08)}
-.lite-step.in .card{transform:none;opacity:1}
-.lite-step .big{font-family:var(--serif);font-size:72px;line-height:.8;opacity:.14}
-.lite-step h3{margin:12px 0 12px}
-.lite-step p{color:var(--ink-2)}
+.process-head{display:flex;justify-content:space-between;gap:24px;padding:120px var(--gutter) 30px}
+.process-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:48px 28px;padding:0 var(--gutter) 60px}
+.process-step{padding-top:24px;border-top:1px solid var(--line)}
+.process-step .card{aspect-ratio:4/5;background:var(--surface) center/cover no-repeat;border-radius:6px;margin-bottom:20px;filter:saturate(.78) contrast(.94) sepia(.08);opacity:0;transition:opacity .5s ease}
+.process-step.in .card,.reduced .process-step .card,.no-js .process-step .card{opacity:1}
+.process-step .big{font-family:var(--serif);font-size:44px;line-height:.8;opacity:.18;display:block}
+.process-step h3{margin:10px 0 10px;font-size:clamp(22px,2vw,28px);line-height:1.15}
+.process-step p{color:var(--ink-2)}
+@media (max-width:1024px){.process-steps{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:820px){.process-head{flex-direction:column;gap:8px;padding-top:90px}.process-steps{grid-template-columns:1fr;gap:0}
+  .process-step{display:grid;grid-template-columns:34% 1fr;column-gap:18px;align-items:start;padding:20px 0}
+  .process-step .card{grid-row:1/5;margin:0}
+  .process-step .big{font-size:30px}.process-step h3{font-size:20px;margin:6px 0}.process-step p{font-size:14px}}
 
 /* benefits */
 .benefits-grid{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);margin:0 var(--gutter)}
@@ -864,6 +849,7 @@ html.bar-off .nav{top:0!important}
 @media (max-width:820px){.says.gr{padding-bottom:72px}}
 /* ===== /v9 */
 </style>
+<link rel="stylesheet" href="/theme.css">
 </head>
 <body>
 <script type="application/ld+json">
@@ -950,18 +936,11 @@ addEventListener('pageshow',function(e){if(!e.persisted)top();});})();</script>
   </section>
 
   <section class="process" id="process" aria-labelledby="process-h">
-    <div class="process-pin" id="process-pin">
-      <canvas id="gallery-canvas" aria-hidden="true"></canvas>
-      <div class="process-head">
-        <p class="label">(01) &nbsp; FUE Hair Transplant</p>
-        <h2 class="label" id="process-h">The procedure, step by step</h2>
-      </div>
-      <div id="steps"></div>
-      <div class="progress-rail" aria-hidden="true"><i id="rail"></i></div>
-      <div class="step-counter" aria-hidden="true"><b id="step-now">01</b><span>/ 08</span></div>
-      <p class="label step-caption" aria-hidden="true">Scroll to continue</p>
-      <div class="lite-steps" id="lite-steps"></div>
+    <div class="process-head">
+      <p class="label">(01) &nbsp; FUE Hair Transplant</p>
+      <h2 class="label" id="process-h">The procedure, step by step</h2>
     </div>
+    <div class="process-steps" id="process-steps"></div>
   </section>
 
   <section aria-labelledby="ben-h">
@@ -1381,17 +1360,6 @@ const loadImg = src => new Promise((res, rej) => { const i = new Image(); i.deco
 
 /* ---------- build DOM from data ---------- */
 function buildDOM() {
-  // steps (desktop overlay)
-  const steps = $('#steps');
-  steps.innerHTML = STEPS.map((s, i) => `
-    <article class="step-text ${i % 2 === 0 ? 'right' : 'left'}" data-i="${i}">
-      <span class="big line-in">${String(i + 1).padStart(2, '0')}</span>
-      <p class="label line-in">${s.label}</p>
-      <h3 class="h-m line-in">${s.title.replace(/<i>/g, '<span class="it">').replace(/<\/i>/g, '</span>')}</h3>
-      <p class="line-in">${s.text}</p>
-      ${s.extra ? `<img class="line-in" src="${IMG[s.extra].src}" alt="" width="40" height="40" style="width:40px;margin-top:24px;filter:grayscale(1) brightness(.35)" decoding="async" loading="lazy">` : ''}
-    </article>`).join('');
-
   // benefits
   $('#benefits').innerHTML = BENEFITS.map((b, i) => `
     <div class="benefit rv"><img src="${IMG[b.icon].src}" alt="" width="40" height="40" loading="lazy" decoding="async">
@@ -1634,107 +1602,12 @@ function initHero(cards) {
   };
 }
 
-/* ---------- PROCESS GALLERY (WebGL, pinned) ---------- */
-function initGallery(cards) {
-  const canvas = $('#gallery-canvas');
-  const renderer = makeRenderer(canvas);
-  const scene = new THREE.Scene();
-  const camera = new THREE.PerspectiveCamera(35, 1, .1, 80);
-  camera.position.z = 7;
-  const tanH = Math.tan(THREE.MathUtils.degToRad(17.5));
-  const halfH = tanH * 7;
-  const n = STEPS.length;
-
-  const planes = STEPS.map((s, i) => {
-    const cv = cards['g_' + s.img];
-    const aspect = cv.width / cv.height, h = halfH * 1.38;
-    const m = new THREE.Mesh(new THREE.PlaneGeometry(h * aspect, h, 32, 32), planeMat(canvasTex(cv, renderer), aspect, { fogNear: 9, fogFar: 26, nearFade: .8, sat: .78 }));
-    m.userData.side = i % 2 === 0 ? -1 : 1;           // even: image left, text right
-    scene.add(m); return m;
-  });
-  // ghost prints drifting far behind for depth
-  const R = rng(21);
-  const ghosts = HERO_ORDER.filter(k => !['step1', 'step2', 'step3', 'face', 'restoration'].includes(k) && !STEPS.some(s => s.img === k)) /* keep the same background prints as before steps 03–07 got new images */.slice(0, 12).map((k, i) => {
-    const cv = cards[k], aspect = cv.width / cv.height, h = 1.6 + R() * .8;
-    const m = new THREE.Mesh(new THREE.PlaneGeometry(h * aspect, h, 8, 8), planeMat(canvasTex(cv, renderer), aspect, { fogNear: 8, fogFar: 30 }));
-    const a = i / 12 * Math.PI * 2;
-    m.userData = { a, r: 5 + R() * 3, z: -12 - R() * 10, sp: .02 + R() * .02 };
-    m.material.uniforms.uOpacity.value = .55;
-    scene.add(m); return m;
-  });
-
-  let aspect = 1;
-  const resize = () => { const w = canvas.clientWidth, h = canvas.clientHeight; renderer.setSize(w, h, false); camera.aspect = w / h; aspect = camera.aspect; camera.updateProjectionMatrix(); };
-  resize(); addEventListener('resize', resize);
-
-  const texts = [...document.querySelectorAll('.step-text')];
-  const rail = $('#rail'), now = $('#step-now');
-  const st = { p: 0, active: false };
-  ScrollTrigger.create({
-    trigger: '#process-pin', start: 'top top', end: () => '+=' + innerHeight * n * .95, pin: true, scrub: true, anticipatePin: 1,
-    onUpdate: s => { st.p = s.progress; },
-    onToggle: s => st.active = s.isActive,
-  });
-  let vis = false;
-  ScrollTrigger.create({ trigger: '#process', start: 'top bottom', end: 'bottom top', onToggle: s => vis = s.isActive });
-
-  let pSm = 0, lastStep = -1;
-  return (t) => {
-    if (!vis) return;
-    pSm = lerp(pSm, st.p, .09);
-    const P = pSm * n;                                   // 0..n
-    const halfW = halfH * aspect;
-    planes.forEach((m, i) => {
-      const d = P - i - .5;
-      const e = i === 0 ? 1 : ease((d + .82) / .6);     // arrive (after the previous text has left)
-      const l = i === n - 1 ? 0 : easeIO((d - .3) / .75); // depart
-      const side = m.userData.side;
-      const baseX = side * Math.min(halfW * .4, 2.2);
-      m.position.x = baseX * (1 + .35 * (1 - e)) + side * 1.3 * l + mouse.sx * .08;
-      m.position.y = (1 - e) * -.5 + l * .4 - mouse.sy * .05;
-      m.position.z = -15 * (1 - e) - 10 * l;
-      m.rotation.y = -side * .95 * (1 - e) + side * 1.1 * l + mouse.sx * .06;
-      m.rotation.x = .22 * (1 - e) - .12 * l + mouse.sy * .04;
-      m.rotation.z = -side * .06 * (1 - e) + side * .04 * l;
-      const u = m.material.uniforms;
-      u.uTime.value = t;
-      u.uWave.value = .25 + (1 - e) * 1.4 + l * 1.4;
-      u.uBlur.value = ((1 - e) + l) * .009;
-      u.uOpacity.value = (i === 0 ? 1 : sstep(.12, .6, e)) * (1 - sstep(.55, 1, l));
-      m.visible = u.uOpacity.value > .002;
-      // text
-      const tx = texts[i];
-      const tin = i === 0 ? 1 : sstep(-.62, -.22, d), tout = i === n - 1 ? 0 : sstep(.28, .6, d);
-      const op = tin * (1 - tout);
-      tx.style.opacity = op;
-      tx.style.pointerEvents = op > .5 ? 'auto' : 'none';
-      tx.querySelectorAll('.line-in').forEach((ln, k) => {
-        const li = i === 0 ? 1 : sstep(-.62 + k * .05, -.2 + k * .05, d);
-        ln.style.transform = `translate3d(0,${(1 - li) * 42 - tout * 30}px,0)`;
-        ln.style.opacity = li;
-      });
-    });
-    ghosts.forEach((g, i) => {
-      const u = g.userData, a = u.a + t * u.sp + pSm * 1.2;
-      g.position.set(Math.cos(a) * u.r * Math.min(1.4, aspect / 1.4), Math.sin(a) * u.r * .55, u.z);
-      g.rotation.y = Math.sin(t * .1 + i) * .3; g.rotation.z = Math.sin(t * .07 + i) * .05;
-      g.material.uniforms.uTime.value = t;
-      g.material.uniforms.uBlur.value = .012;
-    });
-    rail.style.transform = `scaleY(${pSm})`;
-    const step = Math.min(n - 1, Math.max(0, Math.round(P - .5)));
-    if (step !== lastStep) { now.textContent = String(step + 1).padStart(2, '0'); lastStep = step; }
-    renderer.render(scene, camera);
-  };
-}
-
-/* ---------- LITE (mobile / reduced motion / no WebGL) ---------- */
-function initLite(cards) {
+/* ---------- PROCESS STEPS (static grid, all devices) ---------- */
+function initSteps(cards) {
   const urls = {};
   const url = k => urls[k] || (urls[k] = cards[k].toDataURL('image/webp', .82));
-  // stacked steps
-  $('#lite-steps').innerHTML = STEPS.map((s, i) => `
-    <article class="lite-step">
+  $('#process-steps').innerHTML = STEPS.map((s, i) => `
+    <article class="process-step">
       <div class="card" role="img" aria-label="${s.label}" style="background-image:url(${url('g_' + s.img)})"></div>
       <span class="big">${String(i + 1).padStart(2, '0')}</span>
       <p class="label">${s.label}</p>
@@ -1742,7 +1615,7 @@ function initLite(cards) {
       <p>${s.text}</p>
     </article>`).join('');
   const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: .2 });
-  document.querySelectorAll('.lite-step').forEach(el => io.observe(el));
+  document.querySelectorAll('.process-step').forEach(el => io.observe(el));
 }
 
 /* ------------------------------------------------------------------ *
@@ -2309,9 +2182,9 @@ function startHeroLite() {
   keys.forEach((k, i) => { if (imgs[i]) cards[k] = makeCard(imgs[i], IMG[k], HERO_ORDER.indexOf(k)); });
   STEPS.forEach((s, i) => { const im = imgs[keys.indexOf(s.img)]; if (im) cards['g_' + s.img] = makeCard(im, { ...IMG[s.img], cap: s.cardLabel === false ? '' : s.label }, i); });
 
-  if (LITE) initLite(cards);
+  initSteps(cards);
 
-  const loops = LITE ? [] : [initGallery(cards)];
+  const loops = [];
   const heroLoop = await heroP;
   if (heroLoop) {
     let ok = true;
