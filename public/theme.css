@@ -72,3 +72,27 @@ h1 .it,h2 .it,h3 .it,.h-xl .it,.h-l .it,.h-m .it,.h-s .it,.hx-h1 .it,.hx-h1 em,h
 footer{background:var(--forest)}
 footer .big{color:#F2F7F3}
 footer a:hover{color:var(--lime)}
+
+/* ---------- Headline font: Fraunces ----------
+   Semibold (600) for big, short headlines; medium (500) for long sentence-style headings.
+   SOFT 50 = slightly rounded edges, WONK 0 = no quirky letter shapes. */
+:root{--serif:"Fraunces",Georgia,serif}
+html{font-variation-settings:'SOFT' 50,'WONK' 0}
+
+/* big, short headlines */
+.h-xl,.h-l,.hx-h1,.page-hero h1,.cta-card h2,.cloud-sec .hero-copy h2,.hx-vid h2,.hx-what h2,
+footer .big,.price,.gr-big b,.intro .stat b,.hxs-price strong,.case h3,.cta-card .tel-big{font-weight:600;letter-spacing:-.022em}
+.h-xl .it,.h-l .it,.hx-h1 .it,.hx-h1 em,.page-hero h1 .it,.cta-card h2 .it,footer .big .it,footer .big em{font-weight:500}
+
+/* long or smaller headings */
+.h-m,.h-s,.appt p,.says blockquote,.benefit h3,.card h3,.igrid h3,.ngrid h3,.contact-grid h3,.partner h3,
+.legal-body article h2,.yt b,.mobile-menu a,.pull,.signs b,.dl dt,.figure figcaption b,.compare thead th,.case .meta b{font-weight:500;letter-spacing:-.01em}
+
+/* Fraunces is wider than the old narrow font, so the largest sizes come down a little */
+.h-xl{font-size:clamp(36px,5.4vw,78px)}
+.h-l{font-size:clamp(28px,3.4vw,46px)}
+.h-m{font-size:clamp(22px,2.2vw,30px);line-height:1.15}
+footer .big{font-size:clamp(40px,7vw,120px);line-height:.95}
+.price{font-size:clamp(40px,5vw,78px)}
+.hx-h1{font-size:min(5.8vh,4.6vw)}
+@media (max-width:820px){.hx-h1{font-size:min(5.6vh,7.4vw)}}
