@@ -121,35 +121,67 @@ h3{font-size:22px;font-weight:500;letter-spacing:-.01em;line-height:1.2}
 .mmenu .btn{margin-top:24px;font-family:var(--sans);font-size:15px}
 .menu-open .mmenu{opacity:1;pointer-events:auto}
 
-/* ---------- hero ---------- */
-.hero{background:var(--night);color:var(--on-dark);overflow:hidden;padding:clamp(48px,6vw,80px) 0 0}
+/* ---------- hero (phone mockup, light: no WebGL, no scroll-locking) ---------- */
+.hero{background:var(--night);color:var(--on-dark);overflow:hidden;padding:clamp(40px,5vw,64px) 0 0}
 .hero:before{content:"";position:absolute;right:-10%;top:-20%;width:70%;height:120%;background:radial-gradient(closest-side,rgba(61,190,110,.16),rgba(61,190,110,0));pointer-events:none}
 .hero:after{content:"";position:absolute;left:-15%;bottom:-30%;width:60%;height:80%;background:radial-gradient(closest-side,rgba(90,33,96,.32),rgba(90,33,96,0));pointer-events:none}
-.hero .wrap{position:relative;z-index:1;display:grid;grid-template-columns:1.08fr .92fr;gap:clamp(30px,5vw,70px);align-items:center}
-.hero h1{font-size:clamp(42px,5.2vw,74px);color:var(--on-dark);line-height:1.03;letter-spacing:-.025em}
+.hero .wrap{position:relative;z-index:1;display:grid;grid-template-columns:1.02fr .98fr;gap:clamp(30px,5vw,70px);align-items:center}
+.hero h1{font-size:clamp(42px,5vw,72px);color:var(--on-dark);line-height:1.03;letter-spacing:-.025em}
 .hero h1 .em{color:var(--leaf);display:block}
 .hero .lede{font-size:clamp(16px,1.25vw,18.5px);margin:24px 0 34px;max-width:52ch}
 .hero .ctas{display:flex;gap:14px;flex-wrap:wrap}
 .chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:30px}
 .chip{font-size:13px;padding:7px 14px;border-radius:999px;border:1px solid var(--hair-dark);color:var(--on-dark-2);transition:border-color .3s,color .3s}
 .chip:hover{border-color:var(--leaf);color:var(--on-dark)}
-.hero-art{position:relative;justify-self:center;width:min(100%,460px)}
-.arch{position:relative;aspect-ratio:46/58;border-radius:260px 260px 26px 26px;overflow:hidden;background:
-  radial-gradient(80% 60% at 50% 30%,rgba(61,190,110,.35),rgba(61,190,110,0) 70%),
-  linear-gradient(180deg,#14422F 0%,#0C3022 60%,#0A291E 100%)}
-.arch:after{content:"";position:absolute;inset:14px;border:1px solid rgba(217,199,167,.45);border-radius:248px 248px 16px 16px;pointer-events:none}
-.arch img{position:absolute;left:50%;bottom:0;transform:translateX(-50%);height:96%;width:auto;max-width:none;filter:drop-shadow(0 30px 40px rgba(0,0,0,.35))}
-.glass{position:absolute;background:rgba(7,31,23,.62);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid rgba(243,241,234,.18);border-radius:16px;padding:14px 18px;color:var(--on-dark);box-shadow:0 24px 50px -20px rgba(0,0,0,.6)}
+.stage{position:relative;justify-self:center;width:min(100%,520px);display:grid;place-items:center;padding:24px 0 40px}
+.ghost{position:absolute;left:50%;top:46%;transform:translate(-50%,-50%);font-family:var(--serif);font-weight:600;font-size:clamp(90px,11vw,170px);line-height:.9;letter-spacing:-.03em;color:rgba(243,241,234,.06);white-space:nowrap;text-align:center;filter:blur(1.5px);pointer-events:none;user-select:none}
+.phone{position:relative;z-index:2;width:min(300px,68vw);aspect-ratio:9/19;border-radius:48px;padding:10px;background:linear-gradient(145deg,#f1f3f1 0%,#c9d1cc 45%,#eef1ef 100%);box-shadow:0 60px 90px -40px rgba(0,0,0,.75),0 0 0 1px rgba(255,255,255,.35) inset,0 0 0 1px rgba(0,0,0,.25);animation:phoneIn 1.2s var(--ease) both}
+@keyframes phoneIn{from{opacity:0;transform:translateY(40px) rotate(-2deg)}}
+.screen{position:relative;width:100%;height:100%;border-radius:38px;overflow:hidden;background:#06140f}
+.island{position:absolute;top:11px;left:50%;transform:translateX(-50%);width:92px;height:26px;border-radius:20px;background:#000;z-index:5}
+.slide{position:absolute;inset:0;opacity:0;transition:opacity 1s ease}
+.slide.on{opacity:1}
+.slide img{width:100%;height:100%;object-fit:cover}
+.slide.on img{animation:kb 6s ease-out both}
+@keyframes kb{from{transform:scale(1.12)}to{transform:scale(1)}}
+.screen:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(6,20,15,.75) 0%,rgba(6,20,15,0) 26%,rgba(6,20,15,0) 52%,rgba(6,20,15,.92) 100%);pointer-events:none;z-index:2}
+.sbars{position:absolute;top:48px;left:16px;right:16px;display:flex;gap:4px;z-index:4}
+.sbars i{flex:1;height:3px;border-radius:2px;background:rgba(255,255,255,.3);overflow:hidden}
+.sbars i b{display:block;height:100%;width:0;background:#fff}
+.sbars i.done b{width:100%}
+.sbars i.cur b{animation:fill var(--dur,4.5s) linear forwards}
+.paused .sbars i.cur b{animation-play-state:paused}
+@keyframes fill{to{width:100%}}
+.app{position:absolute;top:62px;left:16px;right:16px;display:flex;align-items:center;justify-content:space-between;z-index:4}
+.app img{height:26px;width:auto}
+.app span{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.75);border:1px solid rgba(255,255,255,.3);border-radius:999px;padding:4px 9px}
+.cap{position:absolute;left:18px;right:18px;bottom:22px;z-index:4;color:#fff}
+.cap small{display:block;font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--lime);margin-bottom:6px;font-weight:600}
+.cap b{display:block;font-family:var(--serif);font-weight:600;font-size:21px;line-height:1.12;letter-spacing:-.01em}
+.cap p{font-size:12.5px;color:rgba(255,255,255,.75);margin-top:6px;line-height:1.45}
+.tapzone{position:absolute;inset:0;z-index:3;cursor:pointer;background:none}
+.bub{position:absolute;z-index:3;border-radius:50%;overflow:hidden;border:3px solid rgba(243,241,234,.75);box-shadow:0 20px 40px -18px rgba(0,0,0,.7);animation:float 7s ease-in-out infinite}
+.bub img{width:100%;height:100%;object-fit:cover}
+.b1{width:92px;height:92px;left:4%;top:12%}
+.b2{width:70px;height:70px;right:6%;top:58%;animation-delay:-2.5s}
+.b3{width:58px;height:58px;right:12%;bottom:8%;animation-delay:-4s}
+.glass{position:absolute;background:rgba(7,31,23,.62);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid rgba(243,241,234,.18);border-radius:16px;padding:14px 18px;color:var(--on-dark);box-shadow:0 24px 50px -20px rgba(0,0,0,.6);z-index:4}
 .glass b{display:block;font-family:var(--serif);font-weight:600;font-size:17px;letter-spacing:-.01em}
 .glass small{font-size:12.5px;color:var(--on-dark-2)}
 .glass .pulse{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--leaf);box-shadow:0 0 0 0 rgba(61,190,110,.6);animation:pulse 2.4s infinite;margin-right:8px;vertical-align:1px}
 @keyframes pulse{70%{box-shadow:0 0 0 10px rgba(61,190,110,0)}100%{box-shadow:0 0 0 0 rgba(61,190,110,0)}}
-.g1{left:-34px;bottom:52px;max-width:270px;animation:float 7s ease-in-out infinite}
-.g2{right:-22px;top:64px;text-align:center;padding:12px 16px;animation:float 8s ease-in-out -3s infinite}
+@keyframes float{50%{transform:translateY(-8px)}}
+.g1{animation:float 7s ease-in-out infinite}
+.g2{text-align:center;padding:12px 16px;animation:float 8s ease-in-out -3s infinite}
 .g2 b{font-size:26px;line-height:1}
 .g2 .st{color:var(--lime);letter-spacing:.12em;font-size:12px}
-@keyframes float{50%{transform:translateY(-8px)}}
-.hero-foot{position:relative;z-index:1;margin-top:clamp(48px,6vw,72px);border-top:1px solid var(--hair-dark);overflow:hidden}
+.hero .g1{left:-6%;top:56%;display:flex;align-items:center;gap:12px;padding:10px 16px 10px 10px;max-width:280px}
+.hero .g1 img{width:46px;height:46px;border-radius:50%;object-fit:cover;border:2px solid var(--leaf);flex:none}
+.hero .g2{right:0;top:20%}
+.arch{position:relative;aspect-ratio:46/58;border-radius:260px 260px 26px 26px;overflow:hidden}
+.arch:after{content:"";position:absolute;inset:14px;border:1px solid rgba(217,199,167,.45);border-radius:248px 248px 16px 16px;pointer-events:none}
+.arch img{position:absolute;left:50%;bottom:0;transform:translateX(-50%);height:96%;width:auto;max-width:none}
+.hero-foot{position:relative;z-index:1;margin-top:clamp(30px,4vw,48px);border-top:1px solid var(--hair-dark);overflow:hidden}
 .marq{display:flex;width:max-content;animation:marq 42s linear infinite}
 .marq>span{display:inline-flex;align-items:center;gap:18px;padding:20px 18px;font-size:14px;color:var(--on-dark-2);white-space:nowrap}
 .marq>span:before{content:"";width:6px;height:6px;transform:rotate(45deg);background:var(--leaf)}
@@ -336,7 +368,7 @@ h3{font-size:22px;font-weight:500;letter-spacing:-.01em;line-height:1.2}
 .pill[aria-pressed="true"]{background:var(--green);border-color:var(--green);color:#fff}
 .fld{width:100%;height:50px;border:1px solid var(--line);border-radius:12px;padding:0 14px;font:inherit;font-size:15px;color:var(--ink);background:var(--cream);transition:border-color .3s,background .3s}
 .fld:focus{outline:none;border-color:var(--green);background:#fff}
-.phone{display:grid;grid-template-columns:104px 1fr;gap:8px}
+.ph-row{display:grid;grid-template-columns:104px 1fr;gap:8px}
 select.fld{appearance:none;-webkit-appearance:none;background:var(--cream) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2386857F' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E") right 10px center/16px no-repeat;padding-right:30px}
 .consent{display:flex;gap:10px;align-items:flex-start;font-size:13px;color:var(--ink-3);margin-top:14px;line-height:1.5}
 .consent input{width:18px;height:18px;accent-color:var(--green);margin-top:1px;flex:none}
@@ -389,13 +421,17 @@ footer{background:var(--night);color:var(--on-dark-2);padding:80px 0 30px;border
   .nav .wrap{height:66px}.nav .logo img{height:36px}
   .topbar .wrap{justify-content:flex-start;gap:16px;font-size:12px}
   .hero .wrap,.doc .wrap,.faq .wrap,.book .wrap{grid-template-columns:1fr}
-  .hero-art{order:-1;width:min(86%,360px)}
-  .hero{padding-top:34px}
-  .g1{left:-12px;bottom:26px;max-width:230px;padding:11px 14px}
-  .g1 b{font-size:15px}
-  .g2{right:-10px;top:40px}
+  .stage{width:100%;padding:10px 0 10px}
+  .hero{padding-top:26px}
+  .phone{width:min(250px,64vw)}
+  .ghost{font-size:24vw}
+  .b1{width:66px;height:66px;left:0;top:10%}.b2{width:54px;height:54px;right:2%}.b3{display:none}
+  .hero .g1{position:relative;left:auto;top:auto;margin-top:-18px;max-width:none;padding:8px 14px 8px 8px}.hero .g1 img{width:38px;height:38px}
+  .hero .g1 b{font-size:15px}.hero .g1 small{font-size:11.5px}
+  .hero .g2{display:none}
+  .cap b{font-size:19px}
   .doc-art{width:min(86%,360px)}
-  .doc .g1{right:-12px}
+  .doc .g1{right:-12px;bottom:26px;padding:11px 14px}
   .faq .side{position:static}
   .areas{grid-template-columns:repeat(2,1fr)}
   .wa-fab{display:none}
@@ -470,13 +506,13 @@ footer{background:var(--night);color:var(--on-dark-2);padding:80px 0 30px;border
 
 <main id="main">
 
-<!-- 1. HERO -->
+<!-- 1. HERO — phone mockup (light version of the original hero) -->
 <section class="hero dark" id="hero" aria-labelledby="hero-h">
   <div class="wrap">
     <div>
       <p class="eyebrow rv">FUE hair transplant · Kuala Lumpur</p>
-      <h1 id="hero-h" class="rv">Natural hairlines. <span class="em">Permanent confidence.</span></h1>
-      <p class="lede rv">FUE hair transplants planned and led by Datuk Dr Inder, an ABHRS-certified hair restoration surgeon with over 30 years in practice. Welcoming patients from Malaysia, Singapore and Australia.</p>
+      <h1 id="hero-h" class="rv">Transform your hairline. <span class="em">Transform your life.</span></h1>
+      <p class="lede rv">Natural-looking FUE hair transplants planned and led by Datuk Dr Inder, an ABHRS-certified hair restoration surgeon with over 30 years in practice. Welcoming patients from Malaysia, Singapore and Australia.</p>
       <div class="ctas rv">
         <a class="btn btn-g" href="#book">Book a free assessment <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
         <a class="btn btn-o" href="#results">See real results</a>
@@ -485,9 +521,22 @@ footer{background:var(--night);color:var(--on-dark-2);padding:80px 0 30px;border
         <a class="chip" href="#treatments">Hairline</a><a class="chip" href="#treatments">Crown</a><a class="chip" href="#treatments">Beard &amp; moustache</a><a class="chip" href="#treatments">Eyebrows</a><a class="chip" href="#treatments">Repair</a>
       </div>
     </div>
-    <div class="hero-art rv">
-      <div class="arch"><img src="images/dr-inder-scrubs.webp" alt="Datuk Dr Inder in surgical scrubs and loupes, FUE Malaysia's lead hair restoration surgeon" width="820" height="1325" fetchpriority="high" decoding="async"></div>
-      <div class="glass g1"><b><span class="pulse"></span>Datuk Dr Inder</b><small>ABHRS Diplomate · FISHRS · 30+ years</small></div>
+    <div class="stage" id="stage">
+      <div class="ghost" aria-hidden="true">Transform<br>your hairline.</div>
+      <div class="bub b1"><img src="images/res-20.webp" alt="" loading="lazy" decoding="async"></div>
+      <div class="bub b2"><img src="images/res-26.webp" alt="" loading="lazy" decoding="async"></div>
+      <div class="bub b3"><img src="images/res-22.webp" alt="" loading="lazy" decoding="async"></div>
+      <div class="phone" role="region" aria-roledescription="carousel" aria-label="Inside an FUE hair transplant, step by step">
+        <div class="screen" id="screen">
+          <span class="island" aria-hidden="true"></span>
+          <div class="slide on" data-i="0" data-cap="Step 1 · Design|Your hairline, drawn by hand|Planned to suit your face, your age and how your hair will change."><img src="images/hero/s07.webp" alt="Your hairline, drawn by hand" fetchpriority="high" decoding="async"></div><div class="slide" data-i="1" data-cap="Step 2 · Planning|Every detail mapped out|Donor and recipient areas are checked before anything begins."><img src="images/hero/s05.webp" alt="Every detail mapped out" loading="lazy" decoding="async"></div><div class="slide" data-i="2" data-cap="Step 3 · Extraction|One follicle at a time|No strip, no stitches. Tiny openings that heal within days."><img src="images/hero/s12.webp" alt="One follicle at a time" loading="lazy" decoding="async"></div><div class="slide" data-i="3" data-cap="Step 4 · Checking|Every graft examined|Follicles are inspected under magnification to protect each one."><img src="images/hero/h20.webp" alt="Every graft examined" loading="lazy" decoding="async"></div><div class="slide" data-i="4" data-cap="Step 5 · Placement|Set at a natural angle|Grafts follow your own growth pattern for density and realism."><img src="images/hero/s18.webp" alt="Set at a natural angle" loading="lazy" decoding="async"></div><div class="slide" data-i="5" data-cap="Result|Natural, permanent hair|New growth from around 3 months, full result by 6 to 12 months."><img src="images/hero/s03.webp" alt="Natural, permanent hair" loading="lazy" decoding="async"></div>
+          <div class="sbars" aria-hidden="true"><i class="cur"><b></b></i><i class=""><b></b></i><i class=""><b></b></i><i class=""><b></b></i><i class=""><b></b></i><i class=""><b></b></i></div>
+          <div class="app"><img src="images/logo-white.webp" alt="FUE Malaysia" width="300" height="143" decoding="async"></div>
+          <div class="cap" aria-live="polite"><small>Step 1 · Design</small><b>Your hairline, drawn by hand</b><p>Planned to suit your face, your age and how your hair will change.</p></div>
+          <button type="button" class="tapzone" aria-label="Next step"></button>
+        </div>
+      </div>
+      <div class="glass g1"><img src="images/dr-inder-avatar.webp" alt="" width="160" height="160" decoding="async"><div><b><span class="pulse"></span>Datuk Dr Inder</b><small>ABHRS Diplomate · 30+ years</small></div></div>
       <div class="glass g2"><b>4.8</b><div class="st">&#9733;&#9733;&#9733;&#9733;&#9733;</div><small>29 Google reviews</small></div>
     </div>
   </div>
@@ -764,7 +813,7 @@ footer{background:var(--night);color:var(--on-dark-2);padding:80px 0 30px;border
         <input class="fld" id="f-name" name="name" autocomplete="name" placeholder="Ahmad Rizal">
         <p class="err" id="e-name"></p>
         <label class="lab" for="f-phone">Phone or WhatsApp</label>
-        <div class="phone"><select class="fld" id="f-cc" aria-label="Country code"><option value="+60">MY +60</option><option value="+65">SG +65</option><option value="+61">AU +61</option><option value="+">Other</option></select><input class="fld" id="f-phone" name="phone" type="tel" autocomplete="tel-national" placeholder="12-345 6789"></div>
+        <div class="ph-row"><select class="fld" id="f-cc" aria-label="Country code"><option value="+60">MY +60</option><option value="+65">SG +65</option><option value="+61">AU +61</option><option value="+">Other</option></select><input class="fld" id="f-phone" name="phone" type="tel" autocomplete="tel-national" placeholder="12-345 6789"></div>
         <p class="err" id="e-phone"></p>
         <label class="consent"><input type="checkbox" id="f-ok">I agree that FUE Malaysia may contact me about my enquiry, as described in the <a href="privacy.html">privacy policy</a>.</label>
         <p class="err" id="e-ok"></p>
@@ -803,6 +852,29 @@ footer{background:var(--night);color:var(--on-dark-2);padding:80px 0 30px;border
     const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.1,rootMargin:'0px 0px -40px 0px'});
     $$('.rv').forEach(el=>{const g=el.parentElement&&el.parentElement.matches('.res-grid,.reasons,.awards-grid,.tr-grid,.quotes,.vids');if(g)el.style.transitionDelay=([...el.parentElement.children].indexOf(el)%4)*80+'ms';io.observe(el)});
   }else $$('.rv').forEach(el=>el.classList.add('in'));
+
+
+  /* hero phone: story-style slideshow (pauses off-screen, on hover, and for reduced motion) */
+  (function(){
+    const scr=$('#screen'); if(!scr)return;
+    const slides=$$('.slide',scr), bars=$$('.sbars i',scr), cap=$('.cap',scr), DUR=4500;
+    let i=0, t=null, visible=true, hover=false;
+    function show(n){
+      i=(n+slides.length)%slides.length;
+      slides.forEach((s,k)=>s.classList.toggle('on',k===i));
+      bars.forEach((b,k)=>{b.className=k<i?'done':k===i?'cur':'';});
+      const [a,b,c]=slides[i].dataset.cap.split('|');
+      cap.innerHTML=`<small>${a}</small><b>${b}</b><p>${c}</p>`;
+      const nx=slides[(i+1)%slides.length].querySelector('img'); if(nx&&nx.loading==='lazy')nx.loading='eager';
+    }
+    function tick(){clearTimeout(t);if(reduce||!visible||hover){scr.classList.add('paused');return}scr.classList.remove('paused');t=setTimeout(()=>{show(i+1);tick()},DUR)}
+    $('.tapzone',scr).addEventListener('click',()=>{show(i+1);tick()});
+    scr.addEventListener('mouseenter',()=>{hover=true;tick()});scr.addEventListener('mouseleave',()=>{hover=false;show(i);tick()});
+    if('IntersectionObserver' in window)new IntersectionObserver(es=>{visible=es[0].isIntersecting;if(visible)show(i);tick()},{threshold:.2}).observe(scr);
+    document.addEventListener('visibilitychange',()=>{visible=!document.hidden;tick()});
+    if(reduce)$$('.sbars',scr).forEach(x=>x.style.display='none');
+    show(0);tick();
+  })();
 
   /* mobile menu */
   const burger=$('#burger'), mm=$('#mmenu');
