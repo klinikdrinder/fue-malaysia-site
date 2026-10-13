@@ -9,133 +9,123 @@
 <meta property="og:title" content="FUE Malaysia — Natural hair transplants led by Datuk Dr Inder">
 <meta property="og:description" content="Natural FUE hair transplants in Kuala Lumpur, led by an ABHRS-certified surgeon. Real results, award-winning care, free hair assessment.">
 <meta property="og:image" content="images/banner.webp">
-<meta name="theme-color" content="#071F17">
+<meta name="theme-color" content="#F5F8F3">
 <link rel="icon" href="favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,400..600,0..100,0..1;1,9..144,400..600,0..100,0..1&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 /* =========================================================
-   FUE Malaysia — premium homepage
-   Sister system to klinikdrinder.com, in FUE Malaysia's own
-   colours: deep forest + leaf green + plum, on cream and mint.
+   FUE Malaysia — homepage
+   Own identity: light cream + mint, deep leaf green, plum from
+   the logo lettering, Outfit headlines, leaf-shaped frames.
    ========================================================= */
 :root{
-  --night:#071F17;      /* hero, footer */
-  --forest:#0A291E;     /* dark sections */
-  --forest-2:#103828;   /* dark cards */
-  --green:#0B6B45;      /* buttons, links */
-  --green-d:#08553A;
-  --leaf:#3DBE6E;       /* bright accent on dark */
-  --lime:#9BD94A;       /* tiny highlights */
-  --plum:#3B1240;       /* headings on light */
-  --plum-2:#5A2160;
-  --cream:#F7F6F1;
-  --paper:#FFFFFF;
-  --mint:#E8F1EA;
-  --mint-2:#D3E6D9;
-  --champ:#D9C7A7;      /* eyebrows on dark */
-  --ink:#1D1C1A; --ink-2:#4A4A47; --ink-3:#86857F;
-  --line:#E4E2DA;
-  --on-dark:#F3F1EA; --on-dark-2:rgba(243,241,234,.72); --on-dark-3:rgba(243,241,234,.48);
-  --hair-dark:rgba(243,241,234,.14);
-  --serif:"Fraunces",Georgia,serif; --sans:"Inter","Helvetica Neue",Arial,sans-serif;
+  --green:#0B6B45; --green-d:#08553A; --green-2:#0E5C3E;
+  --leafc:#2FAE62;               /* bright leaf from the logo */
+  --lime:#8CC63F;                /* logo stem */
+  --plum:#2E0F33;                /* logo lettering, headings */
+  --plum-2:#4A1C50;
+  --cream:#FAF9F5; --paper:#FFFFFF;
+  --mint:#EAF3EC; --mint-2:#D6E8DB; --mint-3:#BFDCC8;
+  --forest:#0A2A1E;
+  --ink:#1E1F1C; --ink-2:#4B4D48; --ink-3:#83857F;
+  --line:#E3E6DF;
+  --display:"Outfit","Helvetica Neue",Arial,sans-serif; --sans:"Inter","Helvetica Neue",Arial,sans-serif;
+  --leaf-lg:160px 26px 160px 26px; /* signature leaf shape for photos */
+  --leaf-md:34px 10px 34px 10px;   /* leaf shape for cards */
+  --leaf-sm:18px 6px 18px 6px;
+  --shadow:0 24px 50px -30px rgba(11,60,40,.45);
   --ease:cubic-bezier(.16,1,.3,1);
   --wrap:1180px; --gutter:clamp(18px,4vw,40px);
 }
 *{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;font-variation-settings:'SOFT' 50,'WONK' 0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
 body{font-family:var(--sans);font-size:16px;line-height:1.65;color:var(--ink);background:var(--cream);-webkit-font-smoothing:antialiased;overflow-x:hidden}
 img{max-width:100%;display:block}
 a{color:inherit;text-decoration:none}
 button{font:inherit;color:inherit;cursor:pointer;background:none;border:0}
-:focus-visible{outline:2px solid var(--leaf);outline-offset:3px;border-radius:6px}
+:focus-visible{outline:2px solid var(--green);outline-offset:3px;border-radius:6px}
 .wrap{max-width:var(--wrap);margin:0 auto;padding:0 var(--gutter)}
 section{position:relative}
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 .todo{text-decoration:underline dotted 1.5px;text-decoration-color:#C9A227;text-underline-offset:3px}
 
 /* type */
-h1,h2,h3{font-family:var(--serif);font-weight:600;letter-spacing:-.02em;color:var(--plum);line-height:1.08}
-h2{font-size:clamp(32px,3.8vw,52px)}
-h3{font-size:22px;font-weight:500;letter-spacing:-.01em;line-height:1.2}
-.em{font-style:italic;font-weight:500;color:var(--green)}
-.eyebrow{display:inline-flex;align-items:center;gap:12px;font-size:12px;letter-spacing:.22em;text-transform:uppercase;font-weight:600;color:var(--green);margin-bottom:18px}
-.eyebrow:before{content:"";width:34px;height:1px;background:currentColor}
+h1,h2,h3,h4{font-family:var(--display);font-weight:600;letter-spacing:-.025em;color:var(--plum);line-height:1.08}
+h2{font-size:clamp(32px,3.9vw,52px)}
+h3{font-size:21px;font-weight:600;letter-spacing:-.015em;line-height:1.22}
+.hl{color:var(--green)}
+.tagp{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:600;color:var(--green);background:var(--mint);border:1px solid var(--mint-2);padding:6px 14px 6px 10px;border-radius:999px;margin-bottom:18px}
+.tagp svg{width:16px;height:16px;flex:none}
 .lede{font-size:17px;color:var(--ink-2);max-width:56ch}
-.dark h2,.dark h3{color:var(--on-dark)}
-.dark .em{color:var(--leaf)}
-.dark .eyebrow{color:var(--champ)}
-.dark .eyebrow:before{background:var(--leaf)}
-.dark .lede{color:var(--on-dark-2)}
-.sec{padding:clamp(80px,9vw,120px) 0}
-.sec-head{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;margin-bottom:clamp(36px,5vw,56px);flex-wrap:wrap}
+.sec{padding:clamp(80px,9vw,116px) 0}
+.sec-head{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;margin-bottom:clamp(34px,5vw,54px);flex-wrap:wrap}
 .sec-head.c{flex-direction:column;align-items:center;text-align:center}
 .sec-head.c .lede{margin:14px auto 0}
+.on-green h2,.on-green h3{color:#fff}
+.on-green .hl{color:var(--lime)}
+.on-green .tagp{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.18);color:#D9F0C4}
+.on-green .lede{color:rgba(255,255,255,.78)}
 
 /* buttons */
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;height:54px;padding:0 28px;border-radius:999px;font-size:15px;font-weight:600;letter-spacing:.01em;transition:transform .4s var(--ease),background .3s,border-color .3s,color .3s;white-space:nowrap}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;height:54px;padding:0 28px;border-radius:16px 6px 16px 6px;font-family:var(--display);font-size:16px;font-weight:600;letter-spacing:.005em;transition:transform .4s var(--ease),background .3s,border-color .3s,color .3s,box-shadow .3s;white-space:nowrap}
 .btn svg{width:18px;height:18px;flex:none}
-.btn-g{background:var(--green);color:#fff}
+.btn-g{background:var(--green);color:#fff;box-shadow:0 14px 30px -16px rgba(11,107,69,.7)}
 .btn-g:hover{background:var(--green-d);transform:translateY(-2px)}
-.dark .btn-g{background:var(--leaf);color:var(--night)}
-.dark .btn-g:hover{background:#56d184}
-.btn-o{border:1px solid var(--green);color:var(--green)}
+.btn-o{border:1.5px solid var(--green);color:var(--green);background:transparent}
 .btn-o:hover{background:var(--green);color:#fff;transform:translateY(-2px)}
-.dark .btn-o{border-color:rgba(243,241,234,.4);color:var(--on-dark)}
-.dark .btn-o:hover{background:var(--on-dark);color:var(--night);border-color:var(--on-dark)}
-.link{display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:15px;color:var(--green);border-bottom:1px solid transparent;transition:border-color .3s,gap .3s}
-.link:hover{border-color:currentColor;gap:12px}
-.dark .link{color:var(--leaf)}
+.link{display:inline-flex;align-items:center;gap:8px;font-family:var(--display);font-weight:600;font-size:16px;color:var(--green);transition:gap .3s}
+.link:hover{gap:12px}
 
 /* reveal */
-.rv{opacity:0;transform:translateY(22px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
+.rv{opacity:0;transform:translateY(20px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
 .rv.in{opacity:1;transform:none}
 .no-js .rv{opacity:1;transform:none}
 
-/* ---------- top bar + nav ---------- */
-.topbar{background:var(--night);color:var(--on-dark-2);font-size:13px;border-bottom:1px solid var(--hair-dark)}
-.topbar .wrap{display:flex;justify-content:center;gap:26px;height:38px;align-items:center;flex-wrap:nowrap;overflow:hidden;white-space:nowrap}
-.topbar b{color:var(--on-dark);font-weight:600}
-.topbar .dot{width:4px;height:4px;border-radius:50%;background:var(--leaf);flex:none}
-.topbar a:hover{color:var(--on-dark)}
-.nav{position:sticky;top:0;z-index:50;background:rgba(7,31,23,.92);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--hair-dark);transition:background .4s}
-.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:76px;gap:24px}
-.nav .logo img{height:42px;width:auto}
-.nav ul{display:flex;gap:30px;list-style:none}
-.nav ul a{font-size:14px;color:var(--on-dark-2);font-weight:500;transition:color .3s}
-.nav ul a:hover,.nav ul a[aria-current]{color:var(--on-dark)}
-.nav .right{display:flex;align-items:center;gap:14px}
-.nav .btn{height:44px;padding:0 20px;font-size:14px}
+/* ---------- top bar + nav (light) ---------- */
+.topbar{background:var(--green);color:rgba(255,255,255,.85);font-size:13px}
+.topbar .wrap{display:flex;justify-content:center;gap:24px;height:38px;align-items:center;overflow:hidden;white-space:nowrap}
+.topbar b{color:#fff;font-weight:600}
+.topbar .dot{width:5px;height:5px;border-radius:5px 1px 5px 1px;background:var(--lime);flex:none}
+.nav{position:sticky;top:0;z-index:50;background:rgba(250,249,245,.9);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:78px;gap:24px}
+.nav .logo img{height:46px;width:auto}
+.nav ul{display:flex;gap:28px;list-style:none}
+.nav ul a{font-family:var(--display);font-size:15.5px;color:var(--ink-2);font-weight:500;transition:color .3s;position:relative}
+.nav ul a:hover,.nav ul a[aria-current]{color:var(--green)}
+.nav ul a[aria-current]:after{content:"";position:absolute;left:0;right:0;bottom:-6px;height:3px;border-radius:3px 1px 3px 1px;background:var(--lime)}
+.nav .right{display:flex;align-items:center;gap:12px}
+.nav .btn{height:46px;padding:0 20px;font-size:15px}
 .soc{display:flex;gap:8px}
-.soc a{width:40px;height:40px;border-radius:50%;border:1px solid var(--hair-dark);display:grid;place-items:center;color:var(--on-dark-2);transition:border-color .3s,color .3s}
-.soc a:hover{border-color:var(--leaf);color:var(--leaf)}
+.soc a{width:40px;height:40px;border-radius:12px 4px 12px 4px;background:var(--mint);display:grid;place-items:center;color:var(--green);transition:background .3s,color .3s}
+.soc a:hover{background:var(--green);color:#fff}
 .soc svg{width:16px;height:16px}
-.burger{display:none;width:44px;height:44px;border-radius:50%;border:1px solid var(--hair-dark);place-items:center}
-.burger span{display:block;width:18px;height:1.5px;background:var(--on-dark);margin:3px auto;transition:transform .4s var(--ease)}
-.menu-open .burger span:first-child{transform:translateY(4.5px) rotate(45deg)}
-.menu-open .burger span:last-child{transform:translateY(-4.5px) rotate(-45deg)}
-.mmenu{position:fixed;inset:0;z-index:45;background:var(--night);padding:140px var(--gutter) 40px;display:flex;flex-direction:column;gap:6px;opacity:0;pointer-events:none;transition:opacity .4s}
-.mmenu a{font-family:var(--serif);font-size:32px;font-weight:500;color:var(--on-dark);padding:6px 0;border-bottom:1px solid var(--hair-dark)}
-.mmenu .btn{margin-top:24px;font-family:var(--sans);font-size:15px}
+.burger{display:none;width:46px;height:46px;border-radius:14px 4px 14px 4px;background:var(--mint);place-items:center}
+.burger span{display:block;width:20px;height:2px;border-radius:2px;background:var(--green);margin:3px auto;transition:transform .4s var(--ease)}
+.menu-open .burger span:first-child{transform:translateY(4px) rotate(45deg)}
+.menu-open .burger span:last-child{transform:translateY(-4px) rotate(-45deg)}
+.mmenu{position:fixed;inset:0;z-index:45;background:var(--cream);padding:140px var(--gutter) 40px;display:flex;flex-direction:column;gap:4px;opacity:0;pointer-events:none;transition:opacity .4s}
+.mmenu a{font-family:var(--display);font-size:30px;font-weight:600;color:var(--plum);padding:8px 0;border-bottom:1px solid var(--line)}
+.mmenu .btn{margin-top:24px;border-bottom:0;font-size:16px;color:#fff}
 .menu-open .mmenu{opacity:1;pointer-events:auto}
 
-/* ---------- hero (phone mockup, light: no WebGL, no scroll-locking) ---------- */
-.hero{background:var(--night);color:var(--on-dark);overflow:hidden;padding:clamp(40px,5vw,64px) 0 0}
-.hero:before{content:"";position:absolute;right:-10%;top:-20%;width:70%;height:120%;background:radial-gradient(closest-side,rgba(61,190,110,.16),rgba(61,190,110,0));pointer-events:none}
-.hero:after{content:"";position:absolute;left:-15%;bottom:-30%;width:60%;height:80%;background:radial-gradient(closest-side,rgba(90,33,96,.32),rgba(90,33,96,0));pointer-events:none}
+/* ---------- hero (light, phone mockup) ---------- */
+.hero{background:linear-gradient(180deg,#F5F8F3 0%,#EAF3EC 100%);overflow:hidden;padding:clamp(40px,5vw,64px) 0 0}
+.hero:before{content:"";position:absolute;right:-8%;top:-12%;width:58%;height:110%;background:#DDEDE1;border-radius:60% 0 60% 0;opacity:.7;pointer-events:none}
+.hero:after{content:"";position:absolute;left:-12%;bottom:-40%;width:40%;height:70%;background:#E9E1EC;border-radius:0 60% 0 60%;opacity:.55;pointer-events:none}
 .hero .wrap{position:relative;z-index:1;display:grid;grid-template-columns:1.02fr .98fr;gap:clamp(30px,5vw,70px);align-items:center}
-.hero h1{font-size:clamp(42px,5vw,72px);color:var(--on-dark);line-height:1.03;letter-spacing:-.025em}
-.hero h1 .em{color:var(--leaf);display:block}
-.hero .lede{font-size:clamp(16px,1.25vw,18.5px);margin:24px 0 34px;max-width:52ch}
-.hero .ctas{display:flex;gap:14px;flex-wrap:wrap}
-.chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:30px}
-.chip{font-size:13px;padding:7px 14px;border-radius:999px;border:1px solid var(--hair-dark);color:var(--on-dark-2);transition:border-color .3s,color .3s}
-.chip:hover{border-color:var(--leaf);color:var(--on-dark)}
-.stage{position:relative;justify-self:center;width:min(100%,520px);display:grid;place-items:center;padding:24px 0 40px}
-.ghost{position:absolute;left:50%;top:46%;transform:translate(-50%,-50%);font-family:var(--serif);font-weight:600;font-size:clamp(90px,11vw,170px);line-height:.9;letter-spacing:-.03em;color:rgba(243,241,234,.06);white-space:nowrap;text-align:center;filter:blur(1.5px);pointer-events:none;user-select:none}
-.phone{position:relative;z-index:2;width:min(300px,68vw);aspect-ratio:9/19;border-radius:48px;padding:10px;background:linear-gradient(145deg,#f1f3f1 0%,#c9d1cc 45%,#eef1ef 100%);box-shadow:0 60px 90px -40px rgba(0,0,0,.75),0 0 0 1px rgba(255,255,255,.35) inset,0 0 0 1px rgba(0,0,0,.25);animation:phoneIn 1.2s var(--ease) both}
+.hero h1{font-size:clamp(44px,5.2vw,76px);line-height:1.02;letter-spacing:-.035em;font-weight:700}
+.hero h1 .hl{display:block;font-weight:600}
+.hero .lede{font-size:clamp(16px,1.25vw,18.5px);margin:22px 0 32px;max-width:52ch}
+.hero .ctas{display:flex;gap:12px;flex-wrap:wrap}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:26px}
+.chip{font-size:13.5px;font-weight:500;padding:7px 14px;border-radius:12px 4px 12px 4px;background:var(--paper);border:1px solid var(--mint-2);color:var(--ink-2);transition:border-color .3s,color .3s}
+.chip:hover{border-color:var(--green);color:var(--green)}
+.stage{position:relative;justify-self:center;width:min(100%,520px);display:grid;place-items:center;padding:24px 0 44px}
+.ghost{position:absolute;left:50%;top:46%;transform:translate(-50%,-50%);font-family:var(--display);font-weight:700;font-size:clamp(90px,11vw,170px);line-height:.9;letter-spacing:-.05em;color:rgba(11,107,69,.07);white-space:nowrap;text-align:center;pointer-events:none;user-select:none}
+.phone{position:relative;z-index:2;width:min(300px,68vw);aspect-ratio:9/19;border-radius:48px;padding:10px;background:linear-gradient(150deg,#3a403c 0%,#151a17 50%,#2c322e 100%);box-shadow:0 60px 80px -40px rgba(10,50,30,.55),0 0 0 1.5px rgba(255,255,255,.18) inset;animation:phoneIn 1.2s var(--ease) both}
 @keyframes phoneIn{from{opacity:0;transform:translateY(40px) rotate(-2deg)}}
 .screen{position:relative;width:100%;height:100%;border-radius:38px;overflow:hidden;background:#06140f}
 .island{position:absolute;top:11px;left:50%;transform:translateX(-50%);width:92px;height:26px;border-radius:20px;background:#000;z-index:5}
@@ -144,232 +134,244 @@ h3{font-size:22px;font-weight:500;letter-spacing:-.01em;line-height:1.2}
 .slide img{width:100%;height:100%;object-fit:cover}
 .slide.on img{animation:kb 6s ease-out both}
 @keyframes kb{from{transform:scale(1.12)}to{transform:scale(1)}}
-.screen:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(6,20,15,.75) 0%,rgba(6,20,15,0) 26%,rgba(6,20,15,0) 52%,rgba(6,20,15,.92) 100%);pointer-events:none;z-index:2}
+.screen:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(6,20,15,.7) 0%,rgba(6,20,15,0) 26%,rgba(6,20,15,0) 50%,rgba(6,20,15,.92) 100%);pointer-events:none;z-index:2}
 .sbars{position:absolute;top:48px;left:16px;right:16px;display:flex;gap:4px;z-index:4}
 .sbars i{flex:1;height:3px;border-radius:2px;background:rgba(255,255,255,.3);overflow:hidden}
 .sbars i b{display:block;height:100%;width:0;background:#fff}
 .sbars i.done b{width:100%}
-.sbars i.cur b{animation:fill var(--dur,4.5s) linear forwards}
+.sbars i.cur b{animation:fill 4.5s linear forwards}
 .paused .sbars i.cur b{animation-play-state:paused}
 @keyframes fill{to{width:100%}}
-.app{position:absolute;top:62px;left:16px;right:16px;display:flex;align-items:center;justify-content:space-between;z-index:4}
+.app{position:absolute;top:62px;left:16px;z-index:4}
 .app img{height:26px;width:auto}
-.app span{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.75);border:1px solid rgba(255,255,255,.3);border-radius:999px;padding:4px 9px}
 .cap{position:absolute;left:18px;right:18px;bottom:22px;z-index:4;color:#fff}
-.cap small{display:block;font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--lime);margin-bottom:6px;font-weight:600}
-.cap b{display:block;font-family:var(--serif);font-weight:600;font-size:21px;line-height:1.12;letter-spacing:-.01em}
-.cap p{font-size:12.5px;color:rgba(255,255,255,.75);margin-top:6px;line-height:1.45}
-.tapzone{position:absolute;inset:0;z-index:3;cursor:pointer;background:none}
-.bub{position:absolute;z-index:3;border-radius:50%;overflow:hidden;border:3px solid rgba(243,241,234,.75);box-shadow:0 20px 40px -18px rgba(0,0,0,.7);animation:float 7s ease-in-out infinite}
+.cap small{display:inline-block;font-size:11px;font-weight:600;color:var(--forest);background:var(--lime);padding:3px 9px;border-radius:8px 3px 8px 3px;margin-bottom:8px}
+.cap b{display:block;font-family:var(--display);font-weight:600;font-size:21px;line-height:1.12;letter-spacing:-.015em}
+.cap p{font-size:12.5px;color:rgba(255,255,255,.78);margin-top:6px;line-height:1.45}
+.tapzone{position:absolute;inset:0;z-index:3;cursor:pointer}
+.bub{position:absolute;z-index:3;overflow:hidden;border:4px solid #fff;box-shadow:var(--shadow);animation:float 7s ease-in-out infinite}
 .bub img{width:100%;height:100%;object-fit:cover}
-.b1{width:92px;height:92px;left:4%;top:12%}
-.b2{width:70px;height:70px;right:6%;top:58%;animation-delay:-2.5s}
-.b3{width:58px;height:58px;right:12%;bottom:8%;animation-delay:-4s}
-.glass{position:absolute;background:rgba(7,31,23,.62);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid rgba(243,241,234,.18);border-radius:16px;padding:14px 18px;color:var(--on-dark);box-shadow:0 24px 50px -20px rgba(0,0,0,.6);z-index:4}
-.glass b{display:block;font-family:var(--serif);font-weight:600;font-size:17px;letter-spacing:-.01em}
-.glass small{font-size:12.5px;color:var(--on-dark-2)}
-.glass .pulse{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--leaf);box-shadow:0 0 0 0 rgba(61,190,110,.6);animation:pulse 2.4s infinite;margin-right:8px;vertical-align:1px}
-@keyframes pulse{70%{box-shadow:0 0 0 10px rgba(61,190,110,0)}100%{box-shadow:0 0 0 0 rgba(61,190,110,0)}}
+.b1{width:96px;height:96px;left:4%;top:12%;border-radius:48px 12px 48px 12px}
+.b2{width:74px;height:74px;right:6%;top:58%;border-radius:12px 37px 12px 37px;animation-delay:-2.5s}
+.b3{width:60px;height:60px;right:14%;bottom:8%;border-radius:30px 8px 30px 8px;animation-delay:-4s}
 @keyframes float{50%{transform:translateY(-8px)}}
-.g1{animation:float 7s ease-in-out infinite}
-.g2{text-align:center;padding:12px 16px;animation:float 8s ease-in-out -3s infinite}
-.g2 b{font-size:26px;line-height:1}
-.g2 .st{color:var(--lime);letter-spacing:.12em;font-size:12px}
-.hero .g1{left:-6%;top:56%;display:flex;align-items:center;gap:12px;padding:10px 16px 10px 10px;max-width:280px}
-.hero .g1 img{width:46px;height:46px;border-radius:50%;object-fit:cover;border:2px solid var(--leaf);flex:none}
-.hero .g2{right:0;top:20%}
-.arch{position:relative;aspect-ratio:46/58;border-radius:260px 260px 26px 26px;overflow:hidden}
-.arch:after{content:"";position:absolute;inset:14px;border:1px solid rgba(217,199,167,.45);border-radius:248px 248px 16px 16px;pointer-events:none}
-.arch img{position:absolute;left:50%;bottom:0;transform:translateX(-50%);height:96%;width:auto;max-width:none}
-.hero-foot{position:relative;z-index:1;margin-top:clamp(30px,4vw,48px);border-top:1px solid var(--hair-dark);overflow:hidden}
-.marq{display:flex;width:max-content;animation:marq 42s linear infinite}
-.marq>span{display:inline-flex;align-items:center;gap:18px;padding:20px 18px;font-size:14px;color:var(--on-dark-2);white-space:nowrap}
-.marq>span:before{content:"";width:6px;height:6px;transform:rotate(45deg);background:var(--leaf)}
-@keyframes marq{to{transform:translateX(-50%)}}
+.card-f{position:absolute;z-index:4;background:var(--paper);border:1px solid var(--mint-2);border-radius:var(--leaf-sm);box-shadow:var(--shadow);padding:12px 16px}
+.card-f b{display:block;font-family:var(--display);font-weight:600;font-size:16px;color:var(--plum);letter-spacing:-.01em}
+.card-f small{font-size:12.5px;color:var(--ink-3)}
+.c-dr{left:-6%;top:56%;display:flex;align-items:center;gap:12px;padding:10px 16px 10px 10px;animation:float 7s ease-in-out infinite}
+.c-dr img{width:48px;height:48px;border-radius:24px 6px 24px 6px;object-fit:cover;flex:none;background:var(--mint)}
+.c-dr .ck{display:inline-grid;place-items:center;width:16px;height:16px;border-radius:50%;background:var(--leafc);color:#fff;margin-left:6px;vertical-align:-2px}
+.c-dr .ck svg{width:10px;height:10px}
+.c-rt{right:0;top:20%;text-align:center;animation:float 8s ease-in-out -3s infinite}
+.c-rt b{font-size:28px;line-height:1}
+.c-rt .st{color:#E0A100;letter-spacing:.1em;font-size:13px}
+.trust{position:relative;z-index:1;margin-top:clamp(20px,3vw,36px);background:var(--paper);border-top:1px solid var(--mint-2)}
+.trust .wrap{display:grid;grid-template-columns:repeat(4,1fr)}
+.trust div{display:flex;align-items:center;gap:12px;padding:22px 18px;font-size:14px;color:var(--ink-2);line-height:1.35}
+.trust div+div{border-left:1px solid var(--line)}
+.trust b{display:block;font-family:var(--display);font-weight:600;color:var(--plum);font-size:15.5px}
+.trust svg{width:34px;height:34px;flex:none;color:var(--green);background:var(--mint);border-radius:12px 4px 12px 4px;padding:7px}
 
 /* ---------- results ---------- */
-.results{background:var(--mint)}
-.tabs{display:flex;gap:8px;flex-wrap:wrap}
-.tab{padding:9px 18px;border-radius:999px;border:1px solid var(--mint-2);background:var(--paper);font-size:14px;font-weight:500;color:var(--ink-2);transition:all .3s}
-.tab[aria-selected="true"]{background:var(--green);border-color:var(--green);color:#fff}
+.results{background:var(--paper)}
+.tabs{display:flex;gap:6px;flex-wrap:wrap;background:var(--mint);padding:5px;border-radius:16px 6px 16px 6px}
+.tab{padding:9px 18px;border-radius:12px 4px 12px 4px;font-family:var(--display);font-size:15px;font-weight:500;color:var(--ink-2);transition:all .3s}
+.tab[aria-selected="true"]{background:var(--green);color:#fff}
 .res-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
-.case{background:var(--paper);border-radius:20px;padding:12px 12px 16px;border:1px solid var(--mint-2);transition:transform .5s var(--ease),box-shadow .5s,opacity .4s}
-.case:hover{transform:translateY(-4px);box-shadow:0 24px 40px -28px rgba(11,107,69,.5)}
+.case{background:var(--cream);border-radius:var(--leaf-md);padding:12px 12px 16px;border:1px solid var(--line);transition:transform .5s var(--ease),box-shadow .5s}
+.case:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
 .case.hide{display:none}
 .case .meta{display:flex;justify-content:space-between;align-items:baseline;padding:14px 6px 0;gap:10px}
-.case .meta b{font-family:var(--serif);font-weight:600;font-size:19px;color:var(--plum)}
+.case .meta b{font-family:var(--display);font-weight:600;font-size:18px;color:var(--plum)}
 .case .meta span{font-size:13px;color:var(--ink-3);text-align:right}
-.ba{position:relative;aspect-ratio:4/5;border-radius:12px;overflow:hidden;background:#dfe7e1;touch-action:pan-y;cursor:ew-resize;user-select:none}
+.ba{position:relative;aspect-ratio:4/5;border-radius:26px 8px 26px 8px;overflow:hidden;background:#dfe7e1;touch-action:pan-y;cursor:ew-resize;user-select:none}
 .ba img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;pointer-events:none}
 .ba .aft{clip-path:inset(0 0 0 50%)}
 .ba .hd{position:absolute;top:0;bottom:0;left:50%;width:2px;background:#fff;transform:translateX(-1px);pointer-events:none}
-.ba .hd:after{content:"";position:absolute;top:50%;left:50%;width:42px;height:42px;border-radius:50%;transform:translate(-50%,-50%);background:var(--green) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round'%3E%3Cpath d='M9 6l-6 6 6 6M15 6l6 6-6 6'/%3E%3C/svg%3E") center/20px no-repeat;border:3px solid #fff;box-shadow:0 6px 18px rgba(0,0,0,.25)}
-.ba .lb{position:absolute;bottom:10px;font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;background:rgba(255,255,255,.9);color:var(--ink);padding:5px 10px;border-radius:999px;pointer-events:none}
+.ba .hd:after{content:"";position:absolute;top:50%;left:50%;width:42px;height:42px;border-radius:14px 4px 14px 4px;transform:translate(-50%,-50%);background:var(--green) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round'%3E%3Cpath d='M9 6l-6 6 6 6M15 6l6 6-6 6'/%3E%3C/svg%3E") center/20px no-repeat;border:3px solid #fff;box-shadow:0 6px 18px rgba(0,0,0,.25)}
+.ba .lb{position:absolute;bottom:10px;font-size:11px;font-weight:600;background:rgba(255,255,255,.92);color:var(--ink);padding:4px 10px;border-radius:8px 3px 8px 3px;pointer-events:none}
 .ba .lb.l{left:10px}.ba .lb.r{right:10px}
 .note{font-size:13px;color:var(--ink-3)}
 .res-foot{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;margin-top:26px}
 
+/* ---------- growth timeline ---------- */
+.grow{background:var(--mint)}
+.tl{position:relative;display:grid;grid-template-columns:repeat(6,1fr);gap:16px;padding-top:56px}
+.tl:before{content:"";position:absolute;left:4%;right:4%;top:22px;height:4px;border-radius:4px;background:var(--mint-3)}
+.tl:after{content:"";position:absolute;left:4%;top:22px;height:4px;border-radius:4px;background:linear-gradient(90deg,var(--green),var(--lime));width:0;transition:width 2.2s var(--ease)}
+.tl.in:after{width:92%}
+.tl .st{position:relative}
+.tl .st:before{content:"";position:absolute;top:-44px;left:0;width:24px;height:24px;border-radius:12px 3px 12px 3px;background:var(--paper);border:4px solid var(--green);box-shadow:0 0 0 4px var(--mint)}
+.tl .st:last-child:before{background:var(--lime);border-color:var(--lime)}
+.tl .when{font-family:var(--display);font-weight:600;font-size:14px;color:var(--green)}
+.tl h3{font-size:19px;margin:6px 0 8px}
+.tl p{font-size:14px;color:var(--ink-2);line-height:1.5}
+
 /* ---------- doctor ---------- */
 .doc .wrap{display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(40px,6vw,90px);align-items:center}
 .doc-art{position:relative;width:min(100%,440px);justify-self:center}
-.doc .arch{background:radial-gradient(80% 60% at 50% 35%,#fff,rgba(255,255,255,0) 70%),linear-gradient(180deg,var(--mint) 0%,var(--mint-2) 100%)}
-.doc .arch:after{border-color:rgba(11,107,69,.3)}
-.doc .arch img{filter:drop-shadow(0 30px 40px rgba(20,40,30,.25))}
-.doc .g1{left:auto;right:-26px;bottom:40px}
-.doc-quote{font-family:var(--serif);font-style:italic;font-weight:500;font-size:clamp(20px,1.8vw,24px);line-height:1.35;color:var(--plum);border-left:2px solid var(--green);padding:4px 0 4px 22px;margin:28px 0}
-.ledger{list-style:none;border-top:1px solid var(--line);margin:8px 0 34px}
-.ledger li{position:relative;display:grid;grid-template-columns:54px 1fr;gap:10px;padding:15px 0;border-bottom:1px solid var(--line);font-size:15.5px;color:var(--ink-2)}
-.ledger li:before{content:"";position:absolute;left:0;top:-1px;height:1px;width:0;background:var(--green);transition:width .6s var(--ease)}
-.ledger li:hover:before{width:100%}
-.ledger i{font-family:var(--serif);font-style:italic;color:var(--green);font-size:18px}
-.ledger b{color:var(--ink);font-weight:600}
+.leafframe{position:relative;aspect-ratio:46/58;border-radius:var(--leaf-lg);overflow:hidden;background:linear-gradient(170deg,var(--mint) 0%,var(--mint-2) 100%)}
+.leafframe:before{content:"";position:absolute;right:-20%;top:-10%;width:80%;height:60%;background:rgba(255,255,255,.55);border-radius:60% 0 60% 0}
+.leafframe img{position:absolute;left:50%;bottom:0;transform:translateX(-50%);height:95%;width:auto;max-width:none;filter:drop-shadow(0 24px 30px rgba(20,60,40,.22))}
+.doc .card-f{right:-22px;bottom:34px}
+.doc .card-f b{font-size:26px;line-height:1}
+.doc-quote{position:relative;font-family:var(--display);font-weight:500;font-size:clamp(19px,1.7vw,22px);line-height:1.4;color:var(--plum);background:var(--mint);border-radius:var(--leaf-md);padding:22px 24px 22px 60px;margin:26px 0}
+.doc-quote svg{position:absolute;left:20px;top:22px;width:26px;height:26px;color:var(--green)}
+.creds{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:0 0 30px}
+.cred{display:flex;gap:12px;align-items:flex-start;background:var(--paper);border:1px solid var(--line);border-radius:var(--leaf-sm);padding:14px 14px}
+.cred svg{width:22px;height:22px;flex:none;color:var(--green);margin-top:1px}
+.cred b{display:block;font-family:var(--display);font-weight:600;color:var(--plum);font-size:16px;line-height:1.2}
+.cred span{font-size:13px;color:var(--ink-3);line-height:1.4}
 
-/* ---------- why ---------- */
-.why{background:var(--forest);color:var(--on-dark);overflow:hidden}
-.why:before{content:"";position:absolute;right:-20%;top:-30%;width:60%;height:90%;background:radial-gradient(closest-side,rgba(61,190,110,.12),rgba(61,190,110,0))}
-.stats{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--hair-dark);border-bottom:1px solid var(--hair-dark);margin-bottom:clamp(40px,5vw,64px)}
-.stat{padding:30px 24px 28px 0}
-.stat+.stat{padding-left:24px;border-left:1px solid var(--hair-dark)}
-.stat b{display:block;font-family:var(--serif);font-weight:600;font-size:clamp(40px,4.4vw,60px);line-height:1;color:var(--leaf);letter-spacing:-.02em}
-.stat span{display:block;margin-top:10px;font-size:14px;color:var(--on-dark-2)}
-.reasons{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-.reason{background:linear-gradient(170deg,var(--forest-2),var(--forest) 85%);border:1px solid var(--hair-dark);border-radius:20px;padding:28px 26px;transition:transform .5s var(--ease),border-color .4s}
-.reason:hover{transform:translateY(-5px);border-color:rgba(61,190,110,.45)}
-.ic{width:52px;height:52px;border-radius:16px;display:grid;place-items:center;background:rgba(61,190,110,.12);color:var(--leaf);margin-bottom:22px}
-.ic svg{width:26px;height:26px}
-.reason p{color:var(--on-dark-2);font-size:15px;margin-top:10px}
+/* ---------- why (brand green band) ---------- */
+.why{background:var(--green-2);color:#fff;overflow:hidden}
+.why:before{content:"";position:absolute;right:-12%;top:-30%;width:46%;height:90%;background:rgba(255,255,255,.04);border-radius:60% 0 60% 0}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:clamp(36px,5vw,56px)}
+.stat{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:var(--leaf-md);padding:24px 22px}
+.stat b{display:block;font-family:var(--display);font-weight:700;font-size:clamp(38px,4.2vw,56px);line-height:1;color:var(--lime);letter-spacing:-.03em}
+.stat span{display:block;margin-top:10px;font-size:14px;color:rgba(255,255,255,.78)}
+.reasons{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.reason{display:flex;gap:16px;align-items:flex-start;padding:22px 4px;border-top:1px solid rgba(255,255,255,.14)}
+.ic{width:50px;height:50px;border-radius:16px 5px 16px 5px;display:grid;place-items:center;background:#fff;color:var(--green);flex:none}
+.ic svg{width:24px;height:24px}
+.reason p{color:rgba(255,255,255,.75);font-size:15px;margin-top:6px}
+.why-foot{margin-top:30px}
+.why .link{color:var(--lime)}
 
 /* ---------- awards ---------- */
-.awards-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-.award{position:relative;background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:28px 26px 26px;transition:transform .5s var(--ease),border-color .4s,box-shadow .5s}
-.award:hover{transform:translateY(-4px);border-color:var(--mint-2);box-shadow:0 26px 40px -30px rgba(59,18,64,.45)}
-.award .yr{font-family:var(--serif);font-weight:600;font-size:15px;color:var(--green);letter-spacing:.02em}
-.award h3{font-size:21px;margin:12px 0 10px;color:var(--plum);padding-right:36px}
-.award p{font-size:14px;color:var(--ink-3)}
-.award svg.laurel{position:absolute;right:22px;top:22px;width:34px;height:34px;color:var(--mint-2)}
-.award[data-feat]{background:var(--plum);border-color:var(--plum)}
-.award[data-feat] .yr{color:var(--lime)}
-.award[data-feat] h3{color:#fff}
-.award[data-feat] p{color:rgba(255,255,255,.7)}
-.award[data-feat] svg.laurel{color:rgba(255,255,255,.25)}
+.awards-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.award{position:relative;background:var(--paper);border:1px solid var(--line);border-radius:var(--leaf-md);padding:26px 24px 24px;display:flex;gap:16px;align-items:flex-start;transition:transform .5s var(--ease),box-shadow .5s}
+.award:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.award .medal{width:52px;height:52px;flex:none;border-radius:50%;display:grid;place-items:center;background:linear-gradient(145deg,#F3E7B8,#D9B95B);color:#6B5310}
+.award .medal svg{width:26px;height:26px}
+.award .yr{font-family:var(--display);font-weight:600;font-size:14px;color:var(--green)}
+.award h3{font-size:18.5px;margin:4px 0 6px}
+.award p{font-size:13.5px;color:var(--ink-3)}
+.award[data-feat]{background:var(--mint);border-color:var(--mint-2)}
 
 /* ---------- treatments ---------- */
-.treat{background:var(--mint)}
+.treat{background:var(--paper)}
 .tr-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
-.tr{display:flex;flex-direction:column;background:var(--paper);border-radius:20px;overflow:hidden;border:1px solid var(--mint-2);transition:transform .5s var(--ease),box-shadow .5s}
-.tr:hover{transform:translateY(-5px);box-shadow:0 26px 40px -28px rgba(11,107,69,.55)}
+.tr{display:flex;flex-direction:column;background:var(--cream);border-radius:var(--leaf-md);overflow:hidden;border:1px solid var(--line);transition:transform .5s var(--ease),box-shadow .5s}
+.tr:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
 .tr .ph{aspect-ratio:4/3;overflow:hidden;background:var(--mint-2)}
 .tr .ph img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s var(--ease)}
 .tr:hover .ph img{transform:scale(1.05)}
 .tr .ph.empty{display:grid;place-items:center;color:var(--green);font-size:13px;text-align:center;padding:20px}
-.tr .bd{padding:20px 20px 22px;display:flex;flex-direction:column;gap:8px;flex:1}
-.tr h3{font-size:20px}
+.tr .bd{padding:18px 20px 20px;display:flex;flex-direction:column;gap:6px;flex:1}
+.tr h3{font-size:19px}
 .tr p{font-size:14px;color:var(--ink-3);flex:1}
-.tr .link{font-size:14px;margin-top:6px}
+.tr .link{font-size:15px;margin-top:6px}
 
-/* ---------- plan + estimator ---------- */
+/* ---------- plan + graft guide ---------- */
+.plan{background:var(--cream)}
 .plan .grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:stretch}
-.prog{background:var(--plum);color:#fff;border-radius:26px;padding:clamp(30px,4vw,48px);position:relative;overflow:hidden;display:flex;flex-direction:column}
-.prog:before{content:"";position:absolute;right:-30%;top:-30%;width:80%;height:80%;background:radial-gradient(closest-side,rgba(155,217,74,.18),rgba(155,217,74,0));pointer-events:none}
-.prog .tag{align-self:flex-start;font-size:12px;letter-spacing:.18em;text-transform:uppercase;font-weight:600;color:var(--lime);border:1px solid rgba(155,217,74,.45);padding:6px 12px;border-radius:999px}
-.prog h3{color:#fff;font-size:clamp(28px,2.8vw,38px);font-weight:600;margin:20px 0 12px}
-.prog h3 .em{color:var(--lime)}
-.prog>p{color:rgba(255,255,255,.75);max-width:44ch}
-.incl{list-style:none;margin:26px 0 30px;display:grid;gap:12px}
-.incl li{display:flex;gap:12px;align-items:flex-start;font-size:15.5px;color:rgba(255,255,255,.9)}
-.incl svg{width:20px;height:20px;flex:none;color:var(--lime);margin-top:2px}
+.prog{background:var(--plum);color:#fff;border-radius:44px 12px 44px 12px;padding:clamp(30px,4vw,46px);position:relative;overflow:hidden;display:flex;flex-direction:column}
+.prog:before{content:"";position:absolute;right:-18%;top:-18%;width:60%;height:55%;background:rgba(140,198,63,.14);border-radius:60% 0 60% 0;pointer-events:none}
+.prog .badge{align-self:flex-start;font-size:13px;font-weight:600;color:var(--plum);background:var(--lime);padding:6px 12px;border-radius:10px 3px 10px 3px}
+.prog h3{color:#fff;font-size:clamp(28px,2.8vw,38px);font-weight:600;margin:18px 0 12px;letter-spacing:-.025em}
+.prog h3 .hl{color:var(--lime)}
+.prog>p{color:rgba(255,255,255,.78);max-width:44ch}
+.incl{list-style:none;margin:24px 0 30px;display:grid;gap:12px}
+.incl li{display:flex;gap:12px;align-items:flex-start;font-size:15.5px;color:rgba(255,255,255,.92)}
+.incl svg{width:22px;height:22px;flex:none;color:var(--lime);margin-top:1px}
 .prog .ctas{margin-top:auto;display:flex;gap:12px;flex-wrap:wrap;position:relative}
-.prog .btn-g{background:var(--lime);color:var(--plum)}
-.prog .btn-g:hover{background:#b3e66f}
-.prog .btn-o{border-color:rgba(255,255,255,.45);color:#fff}
+.prog .btn-g{background:var(--lime);color:var(--plum);box-shadow:none}
+.prog .btn-g:hover{background:#a4d65c}
+.prog .btn-o{border-color:rgba(255,255,255,.5);color:#fff}
 .prog .btn-o:hover{background:#fff;color:var(--plum)}
-.est{background:var(--paper);border:1px solid var(--line);border-radius:26px;padding:clamp(26px,3.4vw,40px);display:flex;flex-direction:column}
+.est{background:var(--paper);border:1px solid var(--line);border-radius:12px 44px 12px 44px;padding:clamp(26px,3.4vw,40px);display:flex;flex-direction:column}
 .est h3{font-size:clamp(24px,2.2vw,30px);font-weight:600}
 .est>p.lede{font-size:15px;margin:10px 0 22px}
-.q{margin-bottom:20px}
-.q .lab{font-size:12px;letter-spacing:.16em;text-transform:uppercase;font-weight:600;color:var(--ink-3);margin-bottom:10px;display:block}
+.q{margin-bottom:18px}
+.q .lab{font-family:var(--display);font-size:14px;font-weight:600;color:var(--plum);margin-bottom:10px;display:block}
 .seg{display:flex;gap:8px;flex-wrap:wrap}
-.opt{min-width:46px;height:42px;padding:0 14px;border-radius:12px;border:1px solid var(--line);background:var(--cream);font-size:14px;font-weight:500;color:var(--ink-2);transition:all .25s}
+.opt{min-width:46px;height:42px;padding:0 14px;border-radius:12px 4px 12px 4px;border:1px solid var(--line);background:var(--cream);font-size:14px;font-weight:500;color:var(--ink-2);transition:all .25s}
 .opt:hover{border-color:var(--green)}
 .opt[aria-pressed="true"]{background:var(--green);border-color:var(--green);color:#fff}
 .q .hint{font-size:13px;color:var(--ink-3);margin-top:8px;min-height:20px}
-.out{margin-top:auto;background:var(--mint);border-radius:18px;padding:22px 22px 20px}
-.out .big{font-family:var(--serif);font-weight:600;font-size:clamp(34px,3.4vw,46px);color:var(--plum);line-height:1;letter-spacing:-.02em}
+.out{margin-top:auto;background:var(--mint);border-radius:var(--leaf-md);padding:22px 22px 20px}
+.out .big{font-family:var(--display);font-weight:700;font-size:clamp(34px,3.4vw,46px);color:var(--plum);line-height:1;letter-spacing:-.03em}
 .out .big small{font-family:var(--sans);font-size:14px;font-weight:500;color:var(--ink-2);letter-spacing:0;margin-left:8px}
 .out dl{display:grid;grid-template-columns:1fr auto;gap:8px 16px;margin:16px 0 4px;font-size:14px}
 .out dt{color:var(--ink-2)}.out dd{font-weight:600;text-align:right;color:var(--ink)}
 .out .fine{font-size:12.5px;color:var(--ink-3);margin-top:12px}
 .est .ctas{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
-.est .btn{height:48px;font-size:14px;padding:0 22px}
+.est .btn{height:48px;font-size:15px;padding:0 22px}
 
 /* ---------- reviews ---------- */
-.rev-top{display:grid;grid-template-columns:auto 1fr;gap:clamp(30px,6vw,80px);align-items:end;margin-bottom:clamp(36px,5vw,52px);padding-bottom:clamp(30px,4vw,44px);border-bottom:1px solid var(--line)}
-.score b{display:block;font-family:var(--serif);font-weight:600;font-size:clamp(72px,8vw,104px);line-height:.9;color:var(--plum);letter-spacing:-.03em}
-.score .st{color:var(--green);font-size:20px;letter-spacing:.14em;margin:12px 0 8px}
-.score p{font-size:14px;color:var(--ink-3)}
+.reviews{background:var(--paper)}
+.rev-top{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;flex-wrap:wrap;margin-bottom:clamp(30px,4vw,44px)}
+.gscore{display:flex;align-items:center;gap:16px;background:var(--mint);border-radius:var(--leaf-md);padding:16px 22px}
+.gscore b{font-family:var(--display);font-weight:700;font-size:48px;line-height:1;color:var(--plum);letter-spacing:-.03em}
+.gscore .st{color:#E0A100;font-size:17px;letter-spacing:.1em}
+.gscore small{display:block;font-size:13px;color:var(--ink-3)}
 .quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-.quote{background:var(--cream);border:1px solid var(--line);border-radius:18px;padding:24px 22px;display:flex;flex-direction:column;gap:18px;justify-content:space-between}
-.quote blockquote{font-family:var(--serif);font-weight:500;font-size:17.5px;line-height:1.38;color:var(--ink);letter-spacing:-.005em}
-.quote blockquote:before{content:"\201C";display:block;font-size:40px;line-height:.6;color:var(--green);margin-bottom:10px}
-.quote figcaption{display:flex;justify-content:space-between;gap:10px;font-size:13px;border-top:1px solid var(--line);padding-top:12px;color:var(--ink-3)}
-.quote figcaption b{color:var(--ink);font-weight:600}
-.vids{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:clamp(40px,5vw,60px)}
-.vid{position:relative;border-radius:18px;overflow:hidden;aspect-ratio:16/10;background:var(--night)}
-.vid img{width:100%;height:100%;object-fit:cover;opacity:.85;transition:transform 1s var(--ease),opacity .4s}
-.vid:hover img{transform:scale(1.04);opacity:1}
-.vid:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(7,31,23,0) 40%,rgba(7,31,23,.85))}
-.vid .play{position:absolute;left:18px;top:18px;width:48px;height:48px;border-radius:50%;background:rgba(255,255,255,.92);display:grid;place-items:center;z-index:1;color:var(--green)}
+.quote{background:var(--cream);border:1px solid var(--line);border-radius:var(--leaf-md);padding:22px 22px 18px;display:flex;flex-direction:column;gap:16px;justify-content:space-between}
+.quote .st{color:#E0A100;font-size:14px;letter-spacing:.1em}
+.quote blockquote{font-size:16px;line-height:1.55;color:var(--ink)}
+.quote figcaption{display:flex;align-items:center;gap:10px;font-size:13px;color:var(--ink-3)}
+.quote figcaption i{width:32px;height:32px;border-radius:12px 4px 12px 4px;background:var(--green);color:#fff;display:grid;place-items:center;font-style:normal;font-family:var(--display);font-weight:600;font-size:14px;flex:none}
+.quote figcaption b{display:block;color:var(--ink);font-weight:600}
+.vids{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:clamp(36px,5vw,52px)}
+.vid{position:relative;border-radius:var(--leaf-md);overflow:hidden;aspect-ratio:16/10;background:var(--forest)}
+.vid img{width:100%;height:100%;object-fit:cover;opacity:.9;transition:transform 1s var(--ease)}
+.vid:hover img{transform:scale(1.04)}
+.vid:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,42,30,0) 40%,rgba(10,42,30,.85))}
+.vid .play{position:absolute;left:18px;top:18px;width:48px;height:48px;border-radius:16px 5px 16px 5px;background:var(--lime);display:grid;place-items:center;z-index:1;color:var(--forest)}
 .vid .play svg{width:18px;height:18px;margin-left:3px}
-.vid .vt{position:absolute;left:18px;right:18px;bottom:16px;z-index:1;color:#fff;font-family:var(--serif);font-weight:500;font-size:17px;line-height:1.25}
+.vid .vt{position:absolute;left:18px;right:18px;bottom:16px;z-index:1;color:#fff;font-family:var(--display);font-weight:600;font-size:17px;line-height:1.25}
 
 /* ---------- faq ---------- */
+.faq{background:var(--cream)}
 .faq .wrap{display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(30px,6vw,90px);align-items:start}
 .faq .side{position:sticky;top:110px}
-.faq .side .lede{margin:16px 0 26px}
-.acc{border-top:1px solid var(--line)}
-.acc-i{border-bottom:1px solid var(--line)}
-.acc-b{width:100%;display:flex;justify-content:space-between;align-items:center;gap:20px;text-align:left;padding:22px 0;font-family:var(--serif);font-weight:500;font-size:clamp(18px,1.6vw,21px);color:var(--plum);letter-spacing:-.01em}
-.acc-b i{position:relative;width:30px;height:30px;border-radius:50%;border:1px solid var(--line);flex:none;transition:transform .4s var(--ease),background .3s,border-color .3s}
-.acc-b i:before,.acc-b i:after{content:"";position:absolute;left:50%;top:50%;width:12px;height:1.5px;background:var(--green);transform:translate(-50%,-50%)}
+.faq .side .lede{margin:14px 0 24px}
+.acc{display:grid;gap:10px}
+.acc-i{background:var(--paper);border:1px solid var(--line);border-radius:var(--leaf-sm);transition:border-color .3s}
+.acc-i.open{border-color:var(--mint-3)}
+.acc-b{width:100%;display:flex;justify-content:space-between;align-items:center;gap:20px;text-align:left;padding:18px 20px;font-family:var(--display);font-weight:600;font-size:clamp(17px,1.5vw,19px);color:var(--plum);letter-spacing:-.01em}
+.acc-b i{position:relative;width:30px;height:30px;border-radius:10px 3px 10px 3px;background:var(--mint);flex:none;transition:transform .4s var(--ease),background .3s}
+.acc-b i:before,.acc-b i:after{content:"";position:absolute;left:50%;top:50%;width:12px;height:2px;border-radius:2px;background:var(--green);transform:translate(-50%,-50%)}
 .acc-b i:after{transform:translate(-50%,-50%) rotate(90deg)}
-.acc-b[aria-expanded="true"] i{transform:rotate(45deg);background:var(--mint);border-color:var(--mint-2)}
+.acc-b[aria-expanded="true"] i{transform:rotate(45deg);background:var(--lime)}
 .acc-p{display:grid;grid-template-rows:0fr;transition:grid-template-rows .45s var(--ease)}
 .acc-p>div{overflow:hidden}
-.acc-p p{padding:0 50px 22px 0;color:var(--ink-2);font-size:15.5px}
+.acc-p p{padding:0 56px 20px 20px;color:var(--ink-2);font-size:15.5px}
 .acc-i.open .acc-p{grid-template-rows:1fr}
 
 /* ---------- book ---------- */
-.book{background:var(--night);color:var(--on-dark);overflow:hidden}
-.book:before{content:"";position:absolute;left:-20%;top:-20%;width:60%;height:90%;background:radial-gradient(closest-side,rgba(90,33,96,.38),rgba(90,33,96,0));pointer-events:none}
+.book{background:var(--mint);overflow:hidden}
+.book:before{content:"";position:absolute;left:-10%;bottom:-30%;width:45%;height:90%;background:var(--mint-2);border-radius:0 60% 0 60%;opacity:.8}
 .book .wrap{position:relative;display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(36px,6vw,80px);align-items:start}
-.perks{list-style:none;margin:28px 0 34px;display:grid;gap:14px}
-.perks li{display:flex;gap:12px;color:var(--on-dark-2);font-size:15.5px}
-.perks svg{width:20px;height:20px;flex:none;color:var(--leaf);margin-top:3px}
-.contact-mini{border-top:1px solid var(--hair-dark);padding-top:24px;display:grid;grid-template-columns:1fr 1fr;gap:18px;font-size:14px;color:var(--on-dark-2)}
-.contact-mini b{display:block;color:var(--on-dark);font-weight:600;margin-bottom:4px;font-size:12px;letter-spacing:.14em;text-transform:uppercase}
-.contact-mini a:hover{color:var(--leaf)}
-.fx{background:var(--paper);color:var(--ink);border-radius:26px;padding:clamp(24px,3vw,36px);box-shadow:0 40px 80px -40px rgba(0,0,0,.6)}
-.fx h3{color:var(--plum);font-size:clamp(24px,2.2vw,28px);font-weight:600}
-.fx .em{color:var(--green)}
-.bar{display:flex;gap:6px;margin-bottom:22px}.bar span{flex:1;height:4px;border-radius:2px;background:var(--mint-2);transition:background .4s}.bar span.on{background:var(--green)}
+.perks{list-style:none;margin:26px 0 30px;display:grid;gap:12px}
+.perks li{display:flex;gap:12px;color:var(--ink-2);font-size:15.5px}
+.perks svg{width:22px;height:22px;flex:none;color:var(--green);margin-top:2px}
+.contact-mini{display:grid;grid-template-columns:1fr 1fr;gap:12px;font-size:14px;color:var(--ink-2)}
+.contact-mini>div{background:var(--paper);border-radius:var(--leaf-sm);padding:14px 16px;border:1px solid var(--mint-2)}
+.contact-mini b{display:block;font-family:var(--display);color:var(--plum);font-weight:600;margin-bottom:2px;font-size:15px}
+.contact-mini a:hover{color:var(--green)}
+.fx{background:var(--paper);color:var(--ink);border-radius:44px 12px 44px 12px;padding:clamp(24px,3vw,36px);box-shadow:0 40px 70px -40px rgba(11,60,40,.45)}
+.fx h3{font-size:clamp(24px,2.2vw,28px);font-weight:600}
+.bar{display:flex;gap:6px;margin-bottom:22px}.bar span{flex:1;height:5px;border-radius:5px;background:var(--mint-2);transition:background .4s}.bar span.on{background:var(--green)}
 .fx .sub{font-size:14px;color:var(--ink-3);margin:6px 0 18px}
 .step{display:none}.step.on{display:block;animation:stepIn .5s var(--ease)}
 @keyframes stepIn{from{opacity:0;transform:translateX(14px)}}
 .areas{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
-.area{display:flex;flex-direction:column;align-items:flex-start;gap:6px;text-align:left;padding:14px 12px;border:1px solid var(--line);border-radius:14px;background:var(--cream);font-size:14px;font-weight:600;color:var(--ink);transition:all .25s}
-.area small{font-size:12px;font-weight:400;color:var(--ink-3);line-height:1.35}
+.area{display:flex;flex-direction:column;align-items:flex-start;gap:6px;text-align:left;padding:14px 12px;border:1px solid var(--line);border-radius:var(--leaf-sm);background:var(--cream);font-family:var(--display);font-size:15px;font-weight:600;color:var(--plum);transition:all .25s}
+.area small{font-family:var(--sans);font-size:12px;font-weight:400;color:var(--ink-3);line-height:1.35}
 .area svg{width:24px;height:24px;color:var(--green)}
 .area:hover{border-color:var(--green)}
 .area[aria-pressed="true"]{border-color:var(--green);background:var(--mint);box-shadow:inset 0 0 0 1px var(--green)}
-.fx .lab{display:block;font-size:13px;font-weight:600;color:var(--ink-2);margin:14px 0 8px}
+.fx .lab{display:block;font-family:var(--display);font-size:14.5px;font-weight:600;color:var(--plum);margin:14px 0 8px}
 .pills{display:flex;gap:8px;flex-wrap:wrap}
-.pill{padding:9px 15px;border-radius:999px;border:1px solid var(--line);background:var(--cream);font-size:14px;color:var(--ink-2);transition:all .25s}
+.pill{padding:9px 15px;border-radius:12px 4px 12px 4px;border:1px solid var(--line);background:var(--cream);font-size:14px;color:var(--ink-2);transition:all .25s}
 .pill:hover{border-color:var(--green)}
 .pill[aria-pressed="true"]{background:var(--green);border-color:var(--green);color:#fff}
-.fld{width:100%;height:50px;border:1px solid var(--line);border-radius:12px;padding:0 14px;font:inherit;font-size:15px;color:var(--ink);background:var(--cream);transition:border-color .3s,background .3s}
+.fld{width:100%;height:50px;border:1px solid var(--line);border-radius:12px 4px 12px 4px;padding:0 14px;font:inherit;font-size:15px;color:var(--ink);background:var(--cream);transition:border-color .3s,background .3s}
 .fld:focus{outline:none;border-color:var(--green);background:#fff}
 .ph-row{display:grid;grid-template-columns:104px 1fr;gap:8px}
-select.fld{appearance:none;-webkit-appearance:none;background:var(--cream) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2386857F' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E") right 10px center/16px no-repeat;padding-right:30px}
+select.fld{appearance:none;-webkit-appearance:none;background:var(--cream) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2383857F' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E") right 10px center/16px no-repeat;padding-right:30px}
 .consent{display:flex;gap:10px;align-items:flex-start;font-size:13px;color:var(--ink-3);margin-top:14px;line-height:1.5}
 .consent input{width:18px;height:18px;accent-color:var(--green);margin-top:1px;flex:none}
 .consent a{color:var(--green);text-decoration:underline}
@@ -378,76 +380,80 @@ select.fld{appearance:none;-webkit-appearance:none;background:var(--cream) url("
 .fx-nav{display:flex;justify-content:space-between;align-items:center;margin-top:22px;gap:12px}
 .fx-nav .back{font-size:14px;color:var(--ink-3)}
 .fx-nav .back:hover{color:var(--ink)}
-.fx .btn{height:50px;font-size:15px}
-.fx .btn-g{background:var(--green);color:#fff}
-.fx .btn-g:hover{background:var(--green-d)}
+.fx .btn{height:50px}
 .fx .alt{font-size:13px;color:var(--ink-3);text-align:center;margin-top:16px}
 .fx .alt a{color:var(--green);font-weight:600}
 
 /* ---------- footer ---------- */
-footer{background:var(--night);color:var(--on-dark-2);padding:80px 0 30px;border-top:1px solid var(--hair-dark)}
-.ft{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:36px;padding-bottom:50px;border-bottom:1px solid var(--hair-dark)}
-.ft img{height:56px;width:auto;margin-bottom:20px}
-.ft h4{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--champ);font-weight:600;margin-bottom:16px}
+footer{background:var(--forest);color:rgba(255,255,255,.72);padding:76px 0 30px}
+.ft{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:36px;padding-bottom:46px;border-bottom:1px solid rgba(255,255,255,.12)}
+.ft img{height:56px;width:auto;margin-bottom:18px}
+.ft h4{font-size:15px;color:#fff;font-weight:600;margin-bottom:14px;letter-spacing:0}
 .ft p,.ft a{font-size:14.5px;line-height:1.95}
 .ft a{display:block}
-.ft a:hover{color:var(--leaf)}
-.fb{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;padding-top:24px;font-size:13px;color:var(--on-dark-3)}
-.fb a:hover{color:var(--on-dark)}
+.ft a:hover{color:var(--lime)}
+.fb{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;padding-top:22px;font-size:13px;color:rgba(255,255,255,.5)}
+.fb a:hover{color:#fff}
 .fb .legal{display:flex;gap:20px}
-.disc{font-size:12.5px;color:var(--on-dark-3);margin-top:22px;max-width:90ch}
+.disc{font-size:12.5px;color:rgba(255,255,255,.5);margin-top:20px;max-width:90ch}
 
 /* ---------- floating + mobile bar ---------- */
-.wa-fab{position:fixed;right:22px;bottom:22px;z-index:40;width:58px;height:58px;border-radius:50%;background:var(--leaf);color:var(--night);display:grid;place-items:center;box-shadow:0 16px 34px -12px rgba(7,31,23,.6);transition:transform .4s var(--ease)}
+.wa-fab{position:fixed;right:22px;bottom:22px;z-index:40;width:58px;height:58px;border-radius:20px 6px 20px 6px;background:var(--green);color:#fff;display:grid;place-items:center;box-shadow:0 16px 34px -12px rgba(11,107,69,.7);transition:transform .4s var(--ease)}
 .wa-fab:hover{transform:scale(1.07)}
 .wa-fab svg{width:28px;height:28px}
 .mbar{display:none}
 
 /* ---------- responsive ---------- */
 @media (max-width:1080px){
-  .nav ul{gap:20px}.soc{display:none}
+  .nav ul{gap:18px}.soc{display:none}
   .res-grid,.tr-grid{grid-template-columns:repeat(2,1fr)}
   .reasons,.awards-grid,.quotes,.vids{grid-template-columns:repeat(2,1fr)}
   .stats{grid-template-columns:repeat(2,1fr)}
-  .stat:nth-child(3){padding-left:0;border-left:0}
-  .stat:nth-child(n+3){border-top:1px solid var(--hair-dark)}
   .plan .grid{grid-template-columns:1fr}
-  .rev-top{grid-template-columns:1fr;align-items:start}
+  .tl{grid-template-columns:repeat(3,1fr);row-gap:80px}
+  .tl:before,.tl:after{display:none}
+  .trust .wrap{grid-template-columns:repeat(2,1fr)}
+  .trust div:nth-child(3){border-left:0}
+  .trust div:nth-child(n+3){border-top:1px solid var(--line)}
   .ft{grid-template-columns:1fr 1fr}
 }
 @media (max-width:860px){
   .nav ul,.nav .right .btn{display:none}
   .burger{display:grid}
-  .nav .wrap{height:66px}.nav .logo img{height:36px}
-  .topbar .wrap{justify-content:flex-start;gap:16px;font-size:12px}
+  .nav .wrap{height:68px}.nav .logo img{height:40px}
+  .topbar .wrap{justify-content:flex-start;gap:14px;font-size:12px}
   .hero .wrap,.doc .wrap,.faq .wrap,.book .wrap{grid-template-columns:1fr}
   .stage{width:100%;padding:10px 0 10px}
-  .hero{padding-top:26px}
+  .hero{padding-top:28px}
   .phone{width:min(250px,64vw)}
-  .ghost{font-size:24vw}
-  .b1{width:66px;height:66px;left:0;top:10%}.b2{width:54px;height:54px;right:2%}.b3{display:none}
-  .hero .g1{position:relative;left:auto;top:auto;margin-top:-18px;max-width:none;padding:8px 14px 8px 8px}.hero .g1 img{width:38px;height:38px}
-  .hero .g1 b{font-size:15px}.hero .g1 small{font-size:11.5px}
-  .hero .g2{display:none}
+  .ghost{display:none}
+  .b1{width:68px;height:68px;left:0;top:10%}.b2{width:56px;height:56px;right:2%}.b3{display:none}
+  .c-dr{position:relative;left:auto;top:auto;margin-top:-16px}
+  .c-rt{display:none}
   .cap b{font-size:19px}
   .doc-art{width:min(86%,360px)}
-  .doc .g1{right:-12px;bottom:26px;padding:11px 14px}
+  .doc .card-f{right:-10px;bottom:24px}
   .faq .side{position:static}
+  .creds{grid-template-columns:1fr}
   .areas{grid-template-columns:repeat(2,1fr)}
   .wa-fab{display:none}
-  .mbar{display:grid;grid-template-columns:1fr 1fr;gap:10px;position:fixed;left:0;right:0;bottom:0;z-index:40;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:rgba(247,246,241,.92);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-top:1px solid var(--line)}
-  .mbar .btn{height:48px;font-size:14px}
+  .mbar{display:grid;grid-template-columns:1fr 1fr;gap:10px;position:fixed;left:0;right:0;bottom:0;z-index:40;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:rgba(250,249,245,.94);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-top:1px solid var(--line)}
+  .mbar .btn{height:48px;font-size:15px}
   body{padding-bottom:72px}
 }
 @media (max-width:560px){
   .res-grid,.tr-grid{grid-template-columns:1fr 1fr;gap:10px}
-  .case{padding:8px 8px 12px;border-radius:16px}
+  .case{padding:8px 8px 12px}
   .case .meta{flex-direction:column;gap:2px;padding:10px 4px 0}
   .case .meta b{font-size:16px}.case .meta span{text-align:left;font-size:12px}
   .ba .hd:after{width:34px;height:34px;background-size:16px}
-  .ba .lb{font-size:9.5px;padding:4px 8px;bottom:8px}
+  .ba .lb{font-size:10px;padding:3px 7px;bottom:8px}
   .tr .bd{padding:14px 14px 16px}.tr h3{font-size:17px}.tr p{font-size:13px}
-  .reasons,.awards-grid,.quotes,.vids{grid-template-columns:1fr}
+  .reasons,.awards-grid,.quotes,.vids,.stats{grid-template-columns:1fr}
+  .stats{grid-template-columns:1fr 1fr}
+  .tl{grid-template-columns:1fr 1fr}
+  .trust .wrap{grid-template-columns:1fr}
+  .trust div+div{border-left:0;border-top:1px solid var(--line)}
   .ft{grid-template-columns:1fr}
   .hero .ctas .btn{flex:1}
   .contact-mini{grid-template-columns:1fr}
@@ -455,6 +461,7 @@ footer{background:var(--night);color:var(--on-dark-2);padding:80px 0 30px;border
 @media (prefers-reduced-motion:reduce){
   *,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
   .rv{opacity:1;transform:none}
+  .tl:after{width:92%}
 }
 </style>
 <script type="application/ld+json">
@@ -484,7 +491,7 @@ footer{background:var(--night);color:var(--on-dark-2);padding:80px 0 30px;border
 </div></div>
 
 <header class="nav" id="nav"><div class="wrap">
-  <a class="logo" href="index.html" aria-label="FUE Malaysia home"><img src="images/logo-white.webp" alt="FUE Malaysia" width="300" height="143" decoding="async"></a>
+  <a class="logo" href="index.html" aria-label="FUE Malaysia home"><img src="images/logo.webp" alt="FUE Malaysia" width="667" height="266" decoding="async"></a>
   <nav aria-label="Primary"><ul>
     <li><a href="index.html" aria-current="page">Home</a></li>
     <li><a href="how-it-is-done.html">How It’s Done</a></li>
@@ -494,27 +501,27 @@ footer{background:var(--night);color:var(--on-dark-2);padding:80px 0 30px;border
     <li><a href="contact.html">Contact</a></li>
   </ul></nav>
   <div class="right">
-    <span class="soc"><a href="https://www.instagram.com/fuemalaysia/" target="_blank" rel="noopener" aria-label="FUE Malaysia on Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor"/></svg></a><a href="https://www.facebook.com/FUEMALAYSIA" target="_blank" rel="noopener" aria-label="FUE Malaysia on Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 21v-7.5h2.6l.4-3h-3V8.6c0-.9.3-1.5 1.6-1.5h1.5V4.4c-.3 0-1.2-.1-2.2-.1-2.2 0-3.7 1.3-3.7 3.8v2.4H8v3h2.7V21z" fill="currentColor"/></svg></a></span>
+    <span class="soc"><a href="https://www.instagram.com/fuemalaysia/" target="_blank" rel="noopener" aria-label="FUE Malaysia on Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor"/></svg></a><a href="https://www.facebook.com/FUEMALAYSIA" target="_blank" rel="noopener" aria-label="FUE Malaysia on Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 21v-7.5h2.6l.4-3h-3V8.6c0-.9.3-1.5 1.6-1.5h1.5V4.4c-.3 0-1.2-.1-2.2-.1-2.2 0-3.7 1.3-3.7 3.8v2.4H8v3h2.7V21z" fill="currentColor"/></svg></a></span>
     <a class="btn btn-g" href="#book">Free assessment</a>
     <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="mmenu"><span></span><span></span></button>
   </div>
 </div></header>
-<div class="mmenu dark" id="mmenu" aria-hidden="true">
+<div class="mmenu" id="mmenu" aria-hidden="true">
   <a href="index.html">Home</a><a href="how-it-is-done.html">How It’s Done</a><a href="about-us.html">About Us</a><a href="fue-candidate.html">FUE Candidate</a><a href="fue-results.html">Results</a><a href="contact.html">Contact</a>
   <a class="btn btn-g" href="#book">Book a free assessment</a>
 </div>
 
 <main id="main">
 
-<!-- 1. HERO — phone mockup (light version of the original hero) -->
-<section class="hero dark" id="hero" aria-labelledby="hero-h">
+<!-- 1. HERO — light, phone mockup -->
+<section class="hero" id="hero" aria-labelledby="hero-h">
   <div class="wrap">
     <div>
-      <p class="eyebrow rv">FUE hair transplant · Kuala Lumpur</p>
-      <h1 id="hero-h" class="rv">Transform your hairline. <span class="em">Transform your life.</span></h1>
+      <p class="tagp rv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 19c0-8 6-14 14-14 0 8-6 14-14 14z"/><path d="M5 19l8-8"/></svg>FUE hair transplant in Kuala Lumpur</p>
+      <h1 id="hero-h" class="rv">Transform your hairline. <span class="hl">Transform your life.</span></h1>
       <p class="lede rv">Natural-looking FUE hair transplants planned and led by Datuk Dr Inder, an ABHRS-certified hair restoration surgeon with over 30 years in practice. Welcoming patients from Malaysia, Singapore and Australia.</p>
       <div class="ctas rv">
-        <a class="btn btn-g" href="#book">Book a free assessment <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="btn btn-g" href="#book">Book a free assessment <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
         <a class="btn btn-o" href="#results">See real results</a>
       </div>
       <div class="chips rv" aria-label="Treatments">
@@ -529,20 +536,27 @@ footer{background:var(--night);color:var(--on-dark-2);padding:80px 0 30px;border
       <div class="phone" role="region" aria-roledescription="carousel" aria-label="Inside an FUE hair transplant, step by step">
         <div class="screen" id="screen">
           <span class="island" aria-hidden="true"></span>
-          <div class="slide on" data-i="0" data-cap="Step 1 · Design|Your hairline, drawn by hand|Planned to suit your face, your age and how your hair will change."><img src="images/hero/s07.webp" alt="Your hairline, drawn by hand" fetchpriority="high" decoding="async"></div><div class="slide" data-i="1" data-cap="Step 2 · Planning|Every detail mapped out|Donor and recipient areas are checked before anything begins."><img src="images/hero/s05.webp" alt="Every detail mapped out" loading="lazy" decoding="async"></div><div class="slide" data-i="2" data-cap="Step 3 · Extraction|One follicle at a time|No strip, no stitches. Tiny openings that heal within days."><img src="images/hero/s12.webp" alt="One follicle at a time" loading="lazy" decoding="async"></div><div class="slide" data-i="3" data-cap="Step 4 · Checking|Every graft examined|Follicles are inspected under magnification to protect each one."><img src="images/hero/h20.webp" alt="Every graft examined" loading="lazy" decoding="async"></div><div class="slide" data-i="4" data-cap="Step 5 · Placement|Set at a natural angle|Grafts follow your own growth pattern for density and realism."><img src="images/hero/s18.webp" alt="Set at a natural angle" loading="lazy" decoding="async"></div><div class="slide" data-i="5" data-cap="Result|Natural, permanent hair|New growth from around 3 months, full result by 6 to 12 months."><img src="images/hero/s03.webp" alt="Natural, permanent hair" loading="lazy" decoding="async"></div>
-          <div class="sbars" aria-hidden="true"><i class="cur"><b></b></i><i class=""><b></b></i><i class=""><b></b></i><i class=""><b></b></i><i class=""><b></b></i><i class=""><b></b></i></div>
+          <div class="slide on" data-cap="Step 1 · Design|Your hairline, drawn by hand|Planned to suit your face, your age and how your hair will change."><img src="images/hero/s07.webp" alt="Your hairline, drawn by hand" fetchpriority="high" decoding="async"></div>
+          <div class="slide" data-cap="Step 2 · Planning|Every detail mapped out|Donor and recipient areas are checked before anything begins."><img src="images/hero/s05.webp" alt="Every detail mapped out" loading="lazy" decoding="async"></div>
+          <div class="slide" data-cap="Step 3 · Extraction|One follicle at a time|No strip, no stitches. Tiny openings that heal within days."><img src="images/hero/s12.webp" alt="One follicle at a time" loading="lazy" decoding="async"></div>
+          <div class="slide" data-cap="Step 4 · Checking|Every graft examined|Follicles are inspected under magnification to protect each one."><img src="images/hero/h20.webp" alt="Every graft examined" loading="lazy" decoding="async"></div>
+          <div class="slide" data-cap="Step 5 · Placement|Set at a natural angle|Grafts follow your own growth pattern for density and realism."><img src="images/hero/s18.webp" alt="Set at a natural angle" loading="lazy" decoding="async"></div>
+          <div class="slide" data-cap="Result|Natural, permanent hair|New growth from around 3 months, full result by 6 to 12 months."><img src="images/hero/s03.webp" alt="Natural, permanent hair" loading="lazy" decoding="async"></div>
+          <div class="sbars" aria-hidden="true"><i class="cur"><b></b></i><i><b></b></i><i><b></b></i><i><b></b></i><i><b></b></i><i><b></b></i></div>
           <div class="app"><img src="images/logo-white.webp" alt="FUE Malaysia" width="300" height="143" decoding="async"></div>
           <div class="cap" aria-live="polite"><small>Step 1 · Design</small><b>Your hairline, drawn by hand</b><p>Planned to suit your face, your age and how your hair will change.</p></div>
           <button type="button" class="tapzone" aria-label="Next step"></button>
         </div>
       </div>
-      <div class="glass g1"><img src="images/dr-inder-avatar.webp" alt="" width="160" height="160" decoding="async"><div><b><span class="pulse"></span>Datuk Dr Inder</b><small>ABHRS Diplomate · 30+ years</small></div></div>
-      <div class="glass g2"><b>4.8</b><div class="st">&#9733;&#9733;&#9733;&#9733;&#9733;</div><small>29 Google reviews</small></div>
+      <div class="card-f c-dr"><img src="images/dr-inder-avatar.webp" alt="" width="160" height="160" decoding="async"><div><b>Datuk Dr Inder<span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg></span></b><small>ABHRS Diplomate · 30+ years</small></div></div>
+      <div class="card-f c-rt"><b>4.8</b><div class="st">&#9733;&#9733;&#9733;&#9733;&#9733;</div><small>29 Google reviews</small></div>
     </div>
   </div>
-  <div class="hero-foot" aria-label="Why patients trust us"><div class="marq">
-    <span>ABHRS Diplomate surgeon</span><span>Fellow, International Society of Hair Restoration Surgery</span><span>Hair Transplant Clinic of the Year, Asia Pacific</span><span>10,000+ hair transplants</span><span>International patients welcome</span><span>Free virtual assessment on WhatsApp</span>
-    <span aria-hidden="true">ABHRS Diplomate surgeon</span><span aria-hidden="true">Fellow, International Society of Hair Restoration Surgery</span><span aria-hidden="true">Hair Transplant Clinic of the Year, Asia Pacific</span><span aria-hidden="true">10,000+ hair transplants</span><span aria-hidden="true">International patients welcome</span><span aria-hidden="true">Free virtual assessment on WhatsApp</span>
+  <div class="trust" aria-label="Why patients trust us"><div class="wrap">
+    <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 5 6v6c0 4.5 3 7.5 7 9 4-1.5 7-4.5 7-9V6z"/><path d="m9 12 2 2 4-4"/></svg><span><b>ABHRS Diplomate</b>Certified hair restoration surgeon</span></div>
+    <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="9" r="5"/><path d="M8.5 13.5 7 21l5-3 5 3-1.5-7.5"/></svg><span><b>Clinic of the Year</b>Hair transplant, Asia Pacific</span></div>
+    <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3 2.6 5.6 6 .7-4.5 4.1 1.2 6L12 16.4 6.7 19.4l1.2-6L3.4 9.3l6-.7z"/></svg><span><b>4.8 on Google</b>From 29 patient reviews</span></div>
+    <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z"/></svg><span><b>International patients</b>Free virtual assessment</span></div>
   </div></div>
 </section>
 
@@ -550,7 +564,7 @@ footer{background:var(--night);color:var(--on-dark-2);padding:80px 0 30px;border
 <section class="results sec" id="results" aria-labelledby="res-h">
   <div class="wrap">
     <div class="sec-head">
-      <div><p class="eyebrow rv">Real results</p><h2 id="res-h" class="rv">Results that look like <span class="em">nothing was done.</span></h2></div>
+      <div><p class="tagp rv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 19c0-8 6-14 14-14 0 8-6 14-14 14z"/><path d="M5 19l8-8"/></svg>Before and after</p><h2 id="res-h" class="rv">Real patients. <span class="hl">Real hairlines.</span></h2></div>
       <div class="tabs rv" role="tablist" aria-label="Filter results">
         <button class="tab" role="tab" aria-selected="true" data-f="all">All</button>
         <button class="tab" role="tab" aria-selected="false" data-f="hairline">Hairline</button>
@@ -565,41 +579,57 @@ footer{background:var(--night);color:var(--on-dark-2);padding:80px 0 30px;border
     </div>
     <div class="res-foot">
       <p class="note">Real FUE Malaysia patients, shown with permission. Drag the handle to compare. Results vary by individual.</p>
-      <a class="link" href="fue-results.html">See all patient results <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <a class="link" href="fue-results.html">See all patient results <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
     </div>
   </div>
 </section>
 
-<!-- 3. MEET DR INDER -->
+<!-- 3. HAIR GROWTH TIMELINE -->
+<section class="grow sec" id="growth" aria-labelledby="gr-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><p class="tagp rv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>What to expect</p><h2 id="gr-h" class="rv">Your new hair, <span class="hl">month by month.</span></h2></div>
+      <p class="lede rv" style="max-width:42ch">Hair grows slowly, so knowing the timeline helps. This is how most patients progress.</p>
+    </div>
+    <div class="tl rv" id="tl">
+      <div class="st"><p class="when">Day 1</p><h3>Procedure day</h3><p>Usually completed in one day, under local anaesthesia. You go home the same evening.</p></div>
+      <div class="st"><p class="when">Week 1</p><h3>Quick healing</h3><p>The tiny openings heal and most people are back to daily life within a few days.</p></div>
+      <div class="st"><p class="when">Weeks 2–8</p><h3>Normal shedding</h3><p>Transplanted hairs fall out. This is expected: the roots stay and rest.</p></div>
+      <div class="st"><p class="when">Months 3–4</p><h3>New growth</h3><p>Fine new hairs start to appear in the treated area.</p></div>
+      <div class="st"><p class="when">Month 6</p><h3>Visible change</h3><p>Density is clearly noticeable and the hair starts to thicken.</p></div>
+      <div class="st"><p class="when">Months 6–12</p><h3>Full result</h3><p>Your new hairline matures, growing naturally for life.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 4. MEET DR INDER -->
 <section class="doc sec" id="dr-inder" aria-labelledby="doc-h">
   <div class="wrap">
     <div class="doc-art rv">
-      <div class="arch"><img src="images/dr-inder-coat.webp" alt="Datuk Dr Inder, ABHRS-certified hair restoration surgeon, in her white clinic coat" width="820" height="1668" loading="lazy" decoding="async"></div>
-      <div class="glass g1"><b><span class="pulse"></span>30+ years</b><small>in clinical practice</small></div>
+      <div class="leafframe"><img src="images/dr-inder-coat.webp" alt="Datuk Dr Inder, ABHRS-certified hair restoration surgeon, in her white clinic coat" width="820" height="1668" loading="lazy" decoding="async"></div>
+      <div class="card-f"><b>30+</b><small>years in clinical practice</small></div>
     </div>
     <div>
-      <p class="eyebrow rv">Meet your surgeon</p>
-      <h2 id="doc-h" class="rv">Datuk Dr Inder. <span class="em">Every hairline, personally designed.</span></h2>
-      <p class="lede rv" style="margin-top:20px">Datuk Dr Inderjit Kaur, DPSM, has spent more than three decades in medicine and hair restoration. She plans every hairline herself, to suit your face, your age and how your hair will change over time.</p>
-      <p class="doc-quote rv">“Hair restoration should never look artificial, and results should age naturally with the patient.”</p>
-      <ul class="ledger rv">
-        <li><i>i.</i><span><b>Diplomate,</b> American Board of Hair Restoration Surgery (ABHRS)</span></li>
-        <li><i>ii.</i><span><b>Board certified,</b> International Board of Hair Restoration Surgery (IBHRS)</span></li>
-        <li><i>iii.</i><span><b>Fellow</b> and life member, International Society of Hair Restoration Surgery (FISHRS)</span></li>
-        <li><i>iv.</i><span><b>Life member,</b> Asian Association of Hair Restoration Surgeons (AAHRS)</span></li>
-        <li><i>v.</i><span><b>President,</b> FUE Society Malaysia</span></li>
-      </ul>
+      <p class="tagp rv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/></svg>Your surgeon</p>
+      <h2 id="doc-h" class="rv">Your hairline, designed by <span class="hl">Datuk Dr Inder.</span></h2>
+      <p class="lede rv" style="margin-top:18px">Datuk Dr Inderjit Kaur, DPSM, has spent more than three decades in medicine and hair restoration. She plans each hairline herself, so it suits your face today and still looks natural years from now.</p>
+      <p class="doc-quote rv"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M10 7H6a3 3 0 0 0-3 3v4h5v-4H5.5A1.5 1.5 0 0 1 7 8.5h3zm11 0h-4a3 3 0 0 0-3 3v4h5v-4h-2.5A1.5 1.5 0 0 1 18 8.5h3z"/></svg>Hair restoration should never look artificial, and results should age naturally with the patient.</p>
+      <div class="creds rv">
+        <div class="cred"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></svg><div><b>ABHRS Diplomate</b><span>American Board of Hair Restoration Surgery</span></div></div>
+        <div class="cred"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></svg><div><b>IBHRS certified</b><span>International Board of Hair Restoration Surgery</span></div></div>
+        <div class="cred"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></svg><div><b>Fellow, ISHRS</b><span>International Society of Hair Restoration Surgery</span></div></div>
+        <div class="cred"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></svg><div><b>President</b><span>FUE Society Malaysia</span></div></div>
+      </div>
       <a class="btn btn-g rv" href="#book">Book a consultation with Dr Inder</a>
     </div>
   </div>
 </section>
 
-<!-- 4. WHY FUE MALAYSIA -->
-<section class="why sec dark" id="why" aria-labelledby="why-h">
+<!-- 5. WHY FUE MALAYSIA -->
+<section class="why sec on-green" id="why" aria-labelledby="why-h">
   <div class="wrap">
     <div class="sec-head">
-      <div><p class="eyebrow rv">Why FUE Malaysia</p><h2 id="why-h" class="rv">Chosen for reasons <span class="em">that last a lifetime.</span></h2></div>
-      <a class="link rv" href="how-it-is-done.html">See how it’s done <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <div><p class="tagp rv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 19c0-8 6-14 14-14 0 8-6 14-14 14z"/><path d="M5 19l8-8"/></svg>Why FUE Malaysia</p><h2 id="why-h" class="rv">Why patients <span class="hl">choose us.</span></h2></div>
     </div>
     <div class="stats rv">
       <div class="stat"><b>30+</b><span>years of Dr Inder’s experience</span></div>
@@ -608,41 +638,42 @@ footer{background:var(--night);color:var(--on-dark-2);padding:80px 0 30px;border
       <div class="stat"><b>4.8&#9733;</b><span>Google rating, 29 reviews</span></div>
     </div>
     <div class="reasons">
-      <div class="reason rv"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3c-2 3-6 4-6 9a6 6 0 0 0 12 0c0-5-4-6-6-9z"/><path d="M12 21V11"/></svg></div><h3>Hair transplant specialists</h3><p>Hair restoration is our main focus, not a side service, so every day is spent perfecting it.</p></div>
-      <div class="reason rv"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="9" r="5"/><path d="M8.5 13.5 7 21l5-3 5 3-1.5-7.5"/></svg></div><h3>Multi-award-winning</h3><p>Dr Inder and her clinics are recognised across Malaysia and Asia Pacific for hair transplant care.</p></div>
-      <div class="reason rv"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 5 6v6c0 4.5 3 7.5 7 9 4-1.5 7-4.5 7-9V6z"/><path d="m9 12 2 2 4-4"/></svg></div><h3>Safety first</h3><p>Medical-grade care in a licensed clinic, led by an ABHRS-certified doctor from consultation to aftercare.</p></div>
-      <div class="reason rv"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 14c3-6 13-6 16 0"/><path d="M7 11V8M12 9V5M17 11V8"/></svg></div><h3>Natural results</h3><p>Every hairline is designed to suit your face and to keep looking natural as you get older.</p></div>
-      <div class="reason rv"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="4"/><path d="M8 9h8M8 13h8M8 17h5"/></svg></div><h3>A plan made for you</h3><p>From hairline and crown to beard, moustache, eyebrows and repair of earlier transplants.</p></div>
-      <div class="reason rv"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a9 9 0 1 1-4-7.5L21 3v5h-5"/><path d="M12 7v5l3 2"/></svg></div><h3>Care that keeps going</h3><p>Our team answers WhatsApp <span class="todo" title="To confirm">daily from 8 am to midnight</span>, before and long after your procedure.</p></div>
+      <div class="reason rv"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 19c0-8 6-14 14-14 0 8-6 14-14 14z"/><path d="M5 19l8-8"/></svg></div><div><h3>Hair is our focus</h3><p>Hair restoration is what we do every day, not a side service.</p></div></div>
+      <div class="reason rv"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="9" r="5"/><path d="M8.5 13.5 7 21l5-3 5 3-1.5-7.5"/></svg></div><div><h3>Award-winning care</h3><p>Dr Inder and her clinics are recognised across Malaysia and Asia Pacific.</p></div></div>
+      <div class="reason rv"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 5 6v6c0 4.5 3 7.5 7 9 4-1.5 7-4.5 7-9V6z"/><path d="m9 12 2 2 4-4"/></svg></div><div><h3>Safe, licensed clinic</h3><p>Medical-grade care led by an ABHRS-certified doctor, start to finish.</p></div></div>
+      <div class="reason rv"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 14c3-6 13-6 16 0"/><path d="M7 11V8M12 9V5M17 11V8"/></svg></div><div><h3>Natural-looking results</h3><p>Hairlines designed for your face that keep looking right as you age.</p></div></div>
+      <div class="reason rv"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="4"/><path d="M8 9h8M8 13h8M8 17h5"/></svg></div><div><h3>Every area treated</h3><p>Hairline, crown, beard, moustache, eyebrows and repair work.</p></div></div>
+      <div class="reason rv"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a9 9 0 1 1-4-7.5L21 3v5h-5"/><path d="M12 7v5l3 2"/></svg></div><div><h3>Support when you need it</h3><p>WhatsApp support <span class="todo" title="To confirm">daily, 8 am to midnight</span>, before and after.</p></div></div>
     </div>
+    <div class="why-foot"><a class="link" href="how-it-is-done.html">See how FUE is done <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
   </div>
 </section>
 
-<!-- 5. AWARDS -->
+<!-- 6. AWARDS -->
 <section class="sec" id="awards" aria-labelledby="aw-h">
   <div class="wrap">
     <div class="sec-head c">
-      <p class="eyebrow rv">Recognition</p>
-      <h2 id="aw-h" class="rv">Awarded, <span class="em">year after year.</span></h2>
+      <p class="tagp rv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="9" r="5"/><path d="M8.5 13.5 7 21l5-3 5 3-1.5-7.5"/></svg>Awards</p>
+      <h2 id="aw-h" class="rv">Recognised across <span class="hl">Asia Pacific.</span></h2>
       <p class="lede rv">Awards received by Datuk Dr Inder and the clinics she leads.</p>
     </div>
     <div class="awards-grid" data-gallery="home-awards" data-gallery-label="Awards">
-      <article class="award rv" data-feat><svg class="laurel" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M7 20c-3-3-4-8-1-13M17 20c3-3 4-8 1-13M5 11c1 1 3 1 4 0M4 15c1.5.8 3.5.6 4.5-.5M19 11c-1 1-3 1-4 0M20 15c-1.5.8-3.5.6-4.5-.5"/><circle cx="12" cy="9" r="3"/></svg><p class="yr">2021 · 2022 · 2023 · 2025</p><h3>Hair Transplant Clinic of the Year, Asia Pacific</h3><p>Global Health Asia-Pacific Awards</p></article>
-      <article class="award rv"><svg class="laurel" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M7 20c-3-3-4-8-1-13M17 20c3-3 4-8 1-13M5 11c1 1 3 1 4 0M4 15c1.5.8 3.5.6 4.5-.5M19 11c-1 1-3 1-4 0M20 15c-1.5.8-3.5.6-4.5-.5"/><circle cx="12" cy="9" r="3"/></svg><p class="yr">2023</p><h3>Woman Innovator in the Haircare Industry</h3><p>Global Health Asia-Pacific Awards</p></article>
-      <article class="award rv"><svg class="laurel" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M7 20c-3-3-4-8-1-13M17 20c3-3 4-8 1-13M5 11c1 1 3 1 4 0M4 15c1.5.8 3.5.6 4.5-.5M19 11c-1 1-3 1-4 0M20 15c-1.5.8-3.5.6-4.5-.5"/><circle cx="12" cy="9" r="3"/></svg><p class="yr">2022</p><h3>Best Hair Restoration Service Provider of the Year</h3><p>Made for the World Excellence Awards</p></article>
-      <article class="award rv"><svg class="laurel" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M7 20c-3-3-4-8-1-13M17 20c3-3 4-8 1-13M5 11c1 1 3 1 4 0M4 15c1.5.8 3.5.6 4.5-.5M19 11c-1 1-3 1-4 0M20 15c-1.5.8-3.5.6-4.5-.5"/><circle cx="12" cy="9" r="3"/></svg><p class="yr">2022 · 2023</p><h3>Pioneer in the Haircare Industry</h3><p>Global Health Asia-Pacific Awards</p></article>
-      <article class="award rv"><svg class="laurel" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M7 20c-3-3-4-8-1-13M17 20c3-3 4-8 1-13M5 11c1 1 3 1 4 0M4 15c1.5.8 3.5.6 4.5-.5M19 11c-1 1-3 1-4 0M20 15c-1.5.8-3.5.6-4.5-.5"/><circle cx="12" cy="9" r="3"/></svg><p class="yr">2020 · 2021</p><h3>Female Entrepreneur of the Year</h3><p>Star Outstanding Business Awards (SOBA)</p></article>
-      <article class="award rv"><svg class="laurel" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M7 20c-3-3-4-8-1-13M17 20c3-3 4-8 1-13M5 11c1 1 3 1 4 0M4 15c1.5.8 3.5.6 4.5-.5M19 11c-1 1-3 1-4 0M20 15c-1.5.8-3.5.6-4.5-.5"/><circle cx="12" cy="9" r="3"/></svg><p class="yr">2020</p><h3>Icon of the Year, Hair Transplant &amp; Aesthetic Medicine</h3><p>Malaysia Entrepreneur &amp; Industry Personality Awards</p></article>
+      <article class="award rv" data-feat><span class="medal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0z"/><path d="M7 6H4v1a3 3 0 0 0 3 3M17 6h3v1a3 3 0 0 1-3 3"/></svg></span><div><p class="yr">2021 · 2022 · 2023 · 2025</p><h3>Hair Transplant Clinic of the Year, Asia Pacific</h3><p>Global Health Asia-Pacific Awards</p></div></article>
+      <article class="award rv"><span class="medal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0z"/><path d="M7 6H4v1a3 3 0 0 0 3 3M17 6h3v1a3 3 0 0 1-3 3"/></svg></span><div><p class="yr">2023</p><h3>Woman Innovator in the Haircare Industry</h3><p>Global Health Asia-Pacific Awards</p></div></article>
+      <article class="award rv"><span class="medal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0z"/><path d="M7 6H4v1a3 3 0 0 0 3 3M17 6h3v1a3 3 0 0 1-3 3"/></svg></span><div><p class="yr">2022</p><h3>Best Hair Restoration Service Provider of the Year</h3><p>Made for the World Excellence Awards</p></div></article>
+      <article class="award rv"><span class="medal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0z"/><path d="M7 6H4v1a3 3 0 0 0 3 3M17 6h3v1a3 3 0 0 1-3 3"/></svg></span><div><p class="yr">2022 · 2023</p><h3>Pioneer in the Haircare Industry</h3><p>Global Health Asia-Pacific Awards</p></div></article>
+      <article class="award rv"><span class="medal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0z"/><path d="M7 6H4v1a3 3 0 0 0 3 3M17 6h3v1a3 3 0 0 1-3 3"/></svg></span><div><p class="yr">2020 · 2021</p><h3>Female Entrepreneur of the Year</h3><p>Star Outstanding Business Awards (SOBA)</p></div></article>
+      <article class="award rv"><span class="medal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0z"/><path d="M7 6H4v1a3 3 0 0 0 3 3M17 6h3v1a3 3 0 0 1-3 3"/></svg></span><div><p class="yr">2020</p><h3>Icon of the Year, Hair Transplant &amp; Aesthetic Medicine</h3><p>Malaysia Entrepreneur &amp; Industry Personality Awards</p></div></article>
     </div>
   </div>
 </section>
 
-<!-- 6. TREATMENTS -->
+<!-- 7. TREATMENTS -->
 <section class="treat sec" id="treatments" aria-labelledby="tr-h">
   <div class="wrap">
     <div class="sec-head">
-      <div><p class="eyebrow rv">Our hair transplants</p><h2 id="tr-h" class="rv">Every area. <span class="em">One standard of care.</span></h2></div>
-      <p class="lede rv" style="max-width:40ch">Tell us which area worries you and Dr Inder will plan the right approach for it.</p>
+      <div><p class="tagp rv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 19c0-8 6-14 14-14 0 8-6 14-14 14z"/><path d="M5 19l8-8"/></svg>Treatments</p><h2 id="tr-h" class="rv">Hair transplants <span class="hl">for every area.</span></h2></div>
+      <p class="lede rv" style="max-width:40ch">Tap the area that worries you and we’ll prepare your free assessment around it.</p>
     </div>
     <div class="tr-grid" data-gallery="home-treatments" data-gallery-label="Hair transplant types">
       <a class="tr rv" href="#book" data-area="hairline"><div class="ph"><img src="images/res-20.webp" alt="Rebuilt hairline after an FUE hair transplant" loading="lazy" decoding="async"></div><div class="bd"><h3>M-shape hairline</h3><p>Rebuild receding temples for a balanced, natural frame.</p><span class="link">Ask about this</span></div></a>
@@ -657,49 +688,49 @@ footer{background:var(--night);color:var(--on-dark-2);padding:80px 0 30px;border
   </div>
 </section>
 
-<!-- 7. YOUR PLAN + GRAFT ESTIMATOR (no prices, per clinic policy) -->
+<!-- 8. CARE PLAN + GRAFT GUIDE (no prices, per clinic policy) -->
 <section class="plan sec" id="plan" aria-labelledby="plan-h">
   <div class="wrap">
     <div class="sec-head c">
-      <p class="eyebrow rv">Your personal plan</p>
-      <h2 id="plan-h" class="rv">Everything you need, <span class="em">in one programme.</span></h2>
-      <p class="lede rv">Get a feel for how many grafts you might need, then let Dr Inder confirm your exact plan at a free consultation.</p>
+      <p class="tagp rv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="4"/><path d="m8 12 3 3 5-6"/></svg>Your plan</p>
+      <h2 id="plan-h" class="rv">From first visit <span class="hl">to full growth.</span></h2>
+      <p class="lede rv">See roughly how many grafts you might need, then Dr Inder confirms your exact plan at a free consultation.</p>
     </div>
     <div class="grid">
       <div class="prog rv">
-        <span class="tag">The FUE Restoration Programme</span>
-        <h3>From first consultation <span class="em">to full regrowth.</span></h3>
-        <p>One clear programme, planned around you. Your quotation is personal and given after your consultation.</p>
+        <span class="badge">FUE Complete Care Plan</span>
+        <h3>Everything included, <span class="hl">planned around you.</span></h3>
+        <p>Your quotation is personal and given after your consultation.</p>
         <ul class="incl">
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg><span>Free consultation and hairline design with Dr Inder</span></li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg><span>Your FUE procedure, usually completed in one day</span></li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg><span>First wash and dressing at the clinic, <span class="todo" title="To confirm">plus a take-home care kit</span></span></li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg><span>Follow-up reviews for <span class="todo" title="To confirm">12 months</span>, in person or by video call</span></li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg><span class="todo" title="To confirm">Flexible payment plans available</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg><span>Free consultation and hairline design with Dr Inder</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg><span>Your FUE procedure, usually completed in one day</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg><span>First wash and dressing at the clinic, <span class="todo" title="To confirm">plus a take-home care kit</span></span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg><span>Follow-up reviews for <span class="todo" title="To confirm">12 months</span>, in person or by video call</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg><span class="todo" title="To confirm">Flexible payment plans available</span></li>
         </ul>
         <div class="ctas">
           <a class="btn btn-g" href="#book">Get your personal plan</a>
-          <a class="btn btn-o" href="https://wa.me/60125588572?text=Hello%20FUE%20Malaysia%2C%20I%27d%20like%20to%20know%20more%20about%20the%20FUE%20Restoration%20Programme." target="_blank" rel="noopener">Ask on WhatsApp</a>
+          <a class="btn btn-o" href="https://wa.me/60125588572?text=Hello%20FUE%20Malaysia%2C%20I%27d%20like%20to%20know%20more%20about%20the%20FUE%20Complete%20Care%20Plan." target="_blank" rel="noopener">Ask on WhatsApp</a>
         </div>
       </div>
 
       <div class="est rv" id="estimator">
-        <h3>Roughly how many <span class="em">grafts?</span></h3>
-        <p class="lede">Three taps for a realistic range. This is a guide, not a diagnosis.</p>
-        <div class="q"><span class="lab">1 · I’m looking at</span>
+        <h3>Graft guide: <span class="hl">how many might you need?</span></h3>
+        <p class="lede">Choose what fits you best. This is a guide, not a diagnosis.</p>
+        <div class="q"><span class="lab">1. I’m looking at</span>
           <div class="seg" data-q="type"><button type="button" class="opt" aria-pressed="true" data-v="men">Men’s hair loss</button><button type="button" class="opt" aria-pressed="false" data-v="women">Women’s thinning</button><button type="button" class="opt" aria-pressed="false" data-v="face">Beard or brows</button></div>
         </div>
-        <div class="q"><span class="lab" id="q2-lab">2 · Your stage</span>
+        <div class="q"><span class="lab" id="q2-lab">2. Your stage</span>
           <div class="seg" data-q="stage" id="q2"></div>
           <p class="hint" id="q2-hint"></p>
         </div>
-        <div class="q" id="q3wrap"><span class="lab">3 · Density you have in mind</span>
+        <div class="q" id="q3wrap"><span class="lab">3. Density you’d like</span>
           <div class="seg" data-q="density"><button type="button" class="opt" aria-pressed="true" data-v="natural">Natural coverage</button><button type="button" class="opt" aria-pressed="false" data-v="full">Fuller</button></div>
         </div>
         <div class="out" aria-live="polite">
           <div class="big" id="est-big">—</div>
           <dl><dt>Approximate hairs</dt><dd id="est-hairs">—</dd><dt>Likely sessions</dt><dd id="est-sess">—</dd><dt>Time in clinic</dt><dd id="est-time">—</dd></dl>
-          <p class="fine">Estimate only. Your donor area, hair type and goals change the number, and Dr Inder confirms your exact plan at consultation.</p>
+          <p class="fine">A guide only. Your donor area, hair type and goals change the number, and Dr Inder confirms your exact plan at consultation.</p>
         </div>
         <div class="ctas"><button type="button" class="btn btn-g" id="est-go">Get my exact plan</button><a class="btn btn-o" id="est-wa" href="https://wa.me/60125588572" target="_blank" rel="noopener">WhatsApp us</a></div>
       </div>
@@ -707,28 +738,21 @@ footer{background:var(--night);color:var(--on-dark-2);padding:80px 0 30px;border
   </div>
 </section>
 
-<!-- 8. REVIEWS + VIDEOS -->
-<section class="sec" id="reviews" aria-labelledby="rv-h" style="background:var(--paper)">
+<!-- 9. REVIEWS + VIDEOS -->
+<section class="reviews sec" id="reviews" aria-labelledby="rv-h">
   <div class="wrap">
     <div class="rev-top">
-      <div class="score rv">
-        <b>4.8</b><div class="st" aria-label="4.8 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-        <p>From 29 Google reviews of FUE Malaysia.</p>
-      </div>
-      <div>
-        <p class="eyebrow rv">Patient reviews</p>
-        <h2 id="rv-h" class="rv">In our patients’ <span class="em">own words.</span></h2>
-        <a class="link rv" style="margin-top:18px" href="https://share.google/C1Uwd6uBSv2d24stg" target="_blank" rel="noopener">Read all reviews on Google <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-      </div>
+      <div><p class="tagp rv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 5h16v11H8l-4 4z"/></svg>Patient reviews</p><h2 id="rv-h" class="rv">What our <span class="hl">patients say.</span></h2></div>
+      <a class="gscore rv" href="https://share.google/C1Uwd6uBSv2d24stg" target="_blank" rel="noopener"><b>4.8</b><span><span class="st">&#9733;&#9733;&#9733;&#9733;&#9733;</span><small>29 Google reviews · Read all</small></span></a>
     </div>
     <div class="quotes" data-gallery="home-reviews" data-gallery-label="Google reviews">
-          <figure class="quote rv"><blockquote>I had an amazing experience at FUE Malaysia for my hair transplant. From the first consultation to the post-procedure care, the entire team was extremely professional.</blockquote><figcaption><b>Md. Sakhiruj Jaman Salim</b><span>Google review</span></figcaption></figure>
-          <figure class="quote rv"><blockquote>Dr Inder was very detailed in her explanation and the entire procedure was very smooth.</blockquote><figcaption><b>Thinakaran Vasudevan</b><span>Google review</span></figcaption></figure>
-          <figure class="quote rv"><blockquote>I only had minor discomfort whilst having the local anesthetic, during the procedure I felt no pain at all.</blockquote><figcaption><b>BHP reunion</b><span>Google review</span></figcaption></figure>
-          <figure class="quote rv"><blockquote>Staff are very humble and professional. Worth every penny to have treatment here.</blockquote><figcaption><b>shaiful arif</b><span>Google review</span></figcaption></figure>
-          <figure class="quote rv"><blockquote>Very good experience, high quality top notch skills and facilities.</blockquote><figcaption><b>M Azhan</b><span>Google review</span></figcaption></figure>
-          <figure class="quote rv"><blockquote>Easy to book and the staff got explain the procedure and payment plan.</blockquote><figcaption><b>Brian Khor</b><span>Google review</span></figcaption></figure>
-        </div>
+      <figure class="quote rv"><span class="st" aria-label="5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><blockquote>I had an amazing experience at FUE Malaysia for my hair transplant. From the first consultation to the post-procedure care, the entire team was extremely professional.</blockquote><figcaption><i aria-hidden="true">M</i><span><b>Md. Sakhiruj Jaman Salim</b>Google review</span></figcaption></figure>
+      <figure class="quote rv"><span class="st" aria-label="5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><blockquote>Dr Inder was very detailed in her explanation and the entire procedure was very smooth.</blockquote><figcaption><i aria-hidden="true">T</i><span><b>Thinakaran Vasudevan</b>Google review</span></figcaption></figure>
+      <figure class="quote rv"><span class="st" aria-label="5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><blockquote>I only had minor discomfort whilst having the local anesthetic, during the procedure I felt no pain at all.</blockquote><figcaption><i aria-hidden="true">B</i><span><b>BHP reunion</b>Google review</span></figcaption></figure>
+      <figure class="quote rv"><span class="st" aria-label="5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><blockquote>Staff are very humble and professional. Worth every penny to have treatment here.</blockquote><figcaption><i aria-hidden="true">S</i><span><b>shaiful arif</b>Google review</span></figcaption></figure>
+      <figure class="quote rv"><span class="st" aria-label="5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><blockquote>Very good experience, high quality top notch skills and facilities.</blockquote><figcaption><i aria-hidden="true">M</i><span><b>M Azhan</b>Google review</span></figcaption></figure>
+      <figure class="quote rv"><span class="st" aria-label="5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><blockquote>Easy to book and the staff got explain the procedure and payment plan.</blockquote><figcaption><i aria-hidden="true">B</i><span><b>Brian Khor</b>Google review</span></figcaption></figure>
+    </div>
     <div class="vids">
       <a class="vid rv" href="https://www.youtube.com/shorts/ZXkeT711pTI" target="_blank" rel="noopener"><img src="images/testimonials/ZXkeT711pTI.webp" alt="" loading="lazy" decoding="async"><i class="play"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 4v16l13-8z"/></svg></i><span class="vt">Nazrief Nazri, 4 months after his hair transplant</span></a>
       <a class="vid rv" href="https://www.youtube.com/shorts/H6HEkOKkAWE" target="_blank" rel="noopener"><img src="images/testimonials/H6HEkOKkAWE.webp" alt="" loading="lazy" decoding="async"><i class="play"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 4v16l13-8z"/></svg></i><span class="vt">Five years after a hair transplant: natural and permanent</span></a>
@@ -737,12 +761,12 @@ footer{background:var(--night);color:var(--on-dark-2);padding:80px 0 30px;border
   </div>
 </section>
 
-<!-- 9. FAQ -->
+<!-- 10. FAQ -->
 <section class="faq sec" id="faq" aria-labelledby="faq-h">
   <div class="wrap">
     <div class="side">
-      <p class="eyebrow rv">Questions</p>
-      <h2 id="faq-h" class="rv">Asked often, <span class="em">answered honestly.</span></h2>
+      <p class="tagp rv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M9.5 9a2.5 2.5 0 1 1 3.5 2.3c-.6.3-1 .9-1 1.7M12 17h.01"/></svg>FAQ</p>
+      <h2 id="faq-h" class="rv">Your questions, <span class="hl">answered.</span></h2>
       <p class="lede rv">Something else on your mind? Our team will answer on WhatsApp.</p>
       <a class="btn btn-o rv" href="https://wa.me/60125588572" target="_blank" rel="noopener">Ask on WhatsApp</a>
     </div>
@@ -754,24 +778,24 @@ footer{background:var(--night);color:var(--on-dark-2);padding:80px 0 30px;border
       <div class="acc-i"><button type="button" class="acc-b" aria-expanded="false">How much does a hair transplant cost?<i aria-hidden="true"></i></button><div class="acc-p"><div><p>The cost depends mainly on how many grafts you need and which areas are treated. You receive a personal plan and quotation after your free consultation with Dr Inder.</p></div></div></div>
       <div class="acc-i"><button type="button" class="acc-b" aria-expanded="false">Who performs my procedure?<i aria-hidden="true"></i></button><div class="acc-p"><div><p>Datuk Dr Inder designs your hairline and leads your procedure from start to finish, supported by her trained clinical team.</p></div></div></div>
       <div class="acc-i"><button type="button" class="acc-b" aria-expanded="false">Do you treat patients from Singapore and Australia?<i aria-hidden="true"></i></button><div class="acc-p"><div><p>Yes. You can start with a free virtual assessment by sending photos on WhatsApp. The procedure itself usually takes one day, and follow-ups after you fly home can be done by video call.</p></div></div></div>
-      <div class="acc-i"><button type="button" class="acc-b" aria-expanded="false">Am I a good candidate?<i aria-hidden="true"></i></button><div class="acc-p"><div><p>It depends on the stage of your hair loss and the strength of your donor area. Dr Inder assesses this at your consultation, and some patients are better served by medical treatment first. <a class="link" href="fue-candidate.html">Read more about candidates</a></p></div></div></div>
+      <div class="acc-i"><button type="button" class="acc-b" aria-expanded="false">Am I a good candidate?<i aria-hidden="true"></i></button><div class="acc-p"><div><p>It depends on the stage of your hair loss and the strength of your donor area. Dr Inder assesses this at your consultation, and some patients are better served by medical treatment first. <a class="link" style="font-size:15px" href="fue-candidate.html">Read more about candidates</a></p></div></div></div>
     </div>
   </div>
 </section>
 
-<!-- 10. BOOK A CONSULTATION -->
-<section class="book sec dark" id="book" aria-labelledby="bk-h">
+<!-- 11. BOOK -->
+<section class="book sec" id="book" aria-labelledby="bk-h">
   <div class="wrap">
     <div>
-      <p class="eyebrow rv">Free hair assessment</p>
-      <h2 id="bk-h" class="rv">Your consultation is <span class="em">the first step.</span></h2>
+      <p class="tagp rv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="4" y="5" width="16" height="15" rx="3"/><path d="M8 3v4M16 3v4M4 10h16"/></svg>Free hair assessment</p>
+      <h2 id="bk-h" class="rv">Start with a <span class="hl">free hair assessment.</span></h2>
       <ul class="perks rv">
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Free, with no obligation to go ahead</li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>A reply within one business day</li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Overseas? Start with a virtual assessment by WhatsApp photos</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Free, with no obligation to go ahead</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>A reply within one business day</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Overseas? Start with a virtual assessment by WhatsApp photos</li>
       </ul>
       <div class="contact-mini rv">
-        <div><b>Clinic</b>Level 33, Ilham Tower<br>No 8, Jalan Binjai, 50450 Kuala Lumpur</div>
+        <div><b>Clinic</b>Level 33, Ilham Tower, No 8, Jalan Binjai, 50450 Kuala Lumpur</div>
         <div><b>Hours</b>Mon–Fri 9:00–18:00<br>Sat 9:00–14:00</div>
         <div><b>WhatsApp</b><a href="https://wa.me/60125588572" target="_blank" rel="noopener">+60 12-558 8572</a></div>
         <div><b>Phone</b><a href="tel:+60379321818">+603 7932 1818</a></div>
@@ -781,21 +805,21 @@ footer{background:var(--night);color:var(--on-dark-2);padding:80px 0 30px;border
     <form class="fx rv" id="fx" novalidate aria-labelledby="fx-t">
       <div class="bar" aria-hidden="true"><span class="on"></span><span></span><span></span></div>
       <div class="step on" data-s="1">
-        <h3 id="fx-t">Where is your <span class="em">hair loss?</span></h3>
+        <h3 id="fx-t">Where is your <span class="hl">hair loss?</span></h3>
         <p class="sub">Tap all that apply. It takes about 30 seconds.</p>
         <div class="areas">
-          <button type="button" class="area" aria-pressed="false" data-v="hairline"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M5 13c0-5 3-8 7-8s7 3 7 8"/><path d="M7 9c1.5 1 3 1.2 5 .5 2 .7 3.5.5 5-.5"/></svg>Hairline<small>temples or M-shape</small></button>
-          <button type="button" class="area" aria-pressed="false" data-v="receding"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M5 14c0-5 3-9 7-9s7 4 7 9"/><path d="M8 7h8"/><path d="M12 3v3"/></svg>Receding<small>whole front moving back</small></button>
-          <button type="button" class="area" aria-pressed="false" data-v="crown"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3.5" stroke-dasharray="2 2"/></svg>Crown<small>top back thinning</small></button>
-          <button type="button" class="area" aria-pressed="false" data-v="beard"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M6 8v4c0 4 3 8 6 8s6-4 6-8V8"/><path d="M9 14c1 .8 5 .8 6 0"/></svg>Beard or moustache<small>patchy or no growth</small></button>
-          <button type="button" class="area" aria-pressed="false" data-v="brows"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M3 10c2-2 5-2 7-1M14 9c2-1 5-1 7 1"/><path d="M5 14c1 1 3 1 4 0M15 14c1 1 3 1 4 0"/></svg>Eyebrows<small>thin or uneven</small></button>
-          <button type="button" class="area" aria-pressed="false" data-v="repair"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M14 6a4 4 0 0 0-5 5l-5 5 3 3 5-5a4 4 0 0 0 5-5l-2 2-2-2z"/></svg>Repair<small>previous transplant</small></button>
+          <button type="button" class="area" aria-pressed="false" data-v="hairline"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M5 13c0-5 3-8 7-8s7 3 7 8"/><path d="M7 9c1.5 1 3 1.2 5 .5 2 .7 3.5.5 5-.5"/></svg>Hairline<small>temples or M-shape</small></button>
+          <button type="button" class="area" aria-pressed="false" data-v="receding"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M5 14c0-5 3-9 7-9s7 4 7 9"/><path d="M8 7h8"/><path d="M12 3v3"/></svg>Receding<small>whole front moving back</small></button>
+          <button type="button" class="area" aria-pressed="false" data-v="crown"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3.5" stroke-dasharray="2 2"/></svg>Crown<small>top back thinning</small></button>
+          <button type="button" class="area" aria-pressed="false" data-v="beard"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M6 8v4c0 4 3 8 6 8s6-4 6-8V8"/><path d="M9 14c1 .8 5 .8 6 0"/></svg>Beard or moustache<small>patchy or no growth</small></button>
+          <button type="button" class="area" aria-pressed="false" data-v="brows"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M3 10c2-2 5-2 7-1M14 9c2-1 5-1 7 1"/><path d="M5 14c1 1 3 1 4 0M15 14c1 1 3 1 4 0"/></svg>Eyebrows<small>thin or uneven</small></button>
+          <button type="button" class="area" aria-pressed="false" data-v="repair"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M14 6a4 4 0 0 0-5 5l-5 5 3 3 5-5a4 4 0 0 0 5-5l-2 2-2-2z"/></svg>Repair<small>previous transplant</small></button>
         </div>
         <p class="err" id="e1"></p>
         <div class="fx-nav"><span></span><button type="button" class="btn btn-g" data-next="2">Next</button></div>
       </div>
       <div class="step" data-s="2">
-        <h3>A little <span class="em">about you.</span></h3>
+        <h3>A little <span class="hl">about you.</span></h3>
         <p class="sub">This helps Dr Inder’s team prepare for your consultation.</p>
         <span class="lab">How long have you noticed it?</span>
         <div class="pills" data-k="since"><button type="button" class="pill" aria-pressed="false">Under 1 year</button><button type="button" class="pill" aria-pressed="false">1 to 3 years</button><button type="button" class="pill" aria-pressed="false">Over 3 years</button></div>
@@ -807,7 +831,7 @@ footer{background:var(--night);color:var(--on-dark-2);padding:80px 0 30px;border
         <div class="fx-nav"><button type="button" class="back" data-next="1">&larr; Back</button><button type="button" class="btn btn-g" data-next="3">Next</button></div>
       </div>
       <div class="step" data-s="3">
-        <h3>Where can we <span class="em">reach you?</span></h3>
+        <h3>Where can we <span class="hl">reach you?</span></h3>
         <p class="sub">We reply within one business day, usually much sooner.</p>
         <label class="lab" for="f-name">Name</label>
         <input class="fld" id="f-name" name="name" autocomplete="name" placeholder="Ahmad Rizal">
@@ -850,9 +874,8 @@ footer{background:var(--night);color:var(--on-dark-2);padding:80px 0 30px;border
   /* reveal on scroll */
   if('IntersectionObserver' in window){
     const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.1,rootMargin:'0px 0px -40px 0px'});
-    $$('.rv').forEach(el=>{const g=el.parentElement&&el.parentElement.matches('.res-grid,.reasons,.awards-grid,.tr-grid,.quotes,.vids');if(g)el.style.transitionDelay=([...el.parentElement.children].indexOf(el)%4)*80+'ms';io.observe(el)});
+    $$('.rv').forEach(el=>{const p=el.parentElement;if(p&&p.matches('.res-grid,.reasons,.awards-grid,.tr-grid,.quotes,.vids'))el.style.transitionDelay=([...p.children].indexOf(el)%4)*80+'ms';io.observe(el)});
   }else $$('.rv').forEach(el=>el.classList.add('in'));
-
 
   /* hero phone: story-style slideshow (pauses off-screen, on hover, and for reduced motion) */
   (function(){
@@ -906,15 +929,15 @@ footer{background:var(--night);color:var(--on-dark-2);padding:80px 0 30px;border
     if(open){it.classList.add('open');b.setAttribute('aria-expanded','true')}
   }));
 
-  /* ---------- graft estimator (grafts only, no prices, per clinic policy) ---------- */
+  /* ---------- graft guide (grafts only, no prices, per clinic policy) ---------- */
   const STAGES={
-    men:{label:'2 · Your Norwood stage',opts:['II','III','IV','V','VI','VII'],
+    men:{label:'2. Your Norwood stage',opts:['II','III','IV','V','VI','VII'],
       range:{II:[800,1300],III:[1500,2300],IV:[2000,2800],V:[2500,3400],VI:[3000,4000],VII:[3500,4500]},
-      hint:{II:'Slight recession at the temples. Often a small, precise session.',III:'A defined recession. The stage at which most patients get a result that looks like nothing was done.',IV:'Recession plus early thinning at the crown.',V:'Front and crown are joining. Careful planning of the donor area matters most here.',VI:'A large area of loss, usually planned in one or two sessions.',VII:'Extensive loss. Dr Inder will check how much donor hair is available.'}},
-    women:{label:'2 · Your thinning pattern',opts:['Mild','Moderate','Advanced'],
+      hint:{II:'Slight recession at the temples. Often a small, precise session.',III:'Clear recession at the temples and front. One of the most common stages we treat.',IV:'Recession plus early thinning at the crown.',V:'Front and crown are joining. Careful use of the donor area matters most here.',VI:'A large area of loss, usually planned in one or two sessions.',VII:'Extensive loss. Dr Inder will check how much donor hair is available.'}},
+    women:{label:'2. Your thinning pattern',opts:['Mild','Moderate','Advanced'],
       range:{Mild:[800,1200],Moderate:[1200,2000],Advanced:[2000,3000]},
       hint:{Mild:'A slightly wider parting. Medical treatment is often tried first.',Moderate:'Clear thinning on top. A transplant can restore density if the donor area is stable.',Advanced:'Widespread thinning. Suitability depends on a full assessment.'}},
-    face:{label:'2 · Which area',opts:['Moustache','Goatee','Patchy beard','Full beard','Eyebrows'],
+    face:{label:'2. Which area',opts:['Moustache','Goatee','Patchy beard','Full beard','Eyebrows'],
       range:{Moustache:[300,600],Goatee:[600,1000],'Patchy beard':[800,1500],'Full beard':[2000,3000],Eyebrows:[300,600]},
       hint:{Moustache:'Grafts are angled to grow flat, like natural moustache hair.',Goatee:'The shape is designed around your jawline.','Patchy beard':'Filling the gaps so the beard grows evenly.','Full beard':'A complete beard, usually in one long session.',Eyebrows:'Both brows, placed hair by hair for shape and direction.'}}
   };
@@ -936,7 +959,7 @@ footer{background:var(--night);color:var(--on-dark-2);padding:80px 0 30px;border
     $('#est-time').textContent=hi<=1300?'4–6 hours':hi<=3000?'6–8 hours':'8–10 hours';
     $('#q2-hint').textContent=S.hint[st.stage]||'';
     const what=st.type==='men'?'Norwood '+st.stage:st.type==='women'?st.stage.toLowerCase()+' thinning':st.stage.toLowerCase();
-    $('#est-wa').href='https://wa.me/60125588572?text='+encodeURIComponent(`Hello FUE Malaysia, I used the graft estimator on your website (${what}, about ${fmt(lo)}–${fmt(hi)} grafts). I'd like a free assessment.`);
+    $('#est-wa').href='https://wa.me/60125588572?text='+encodeURIComponent(`Hello FUE Malaysia, I used the graft guide on your website (${what}, about ${fmt(lo)}–${fmt(hi)} grafts). I'd like a free assessment.`);
   }
   $('#estimator').addEventListener('click',e=>{
     const b=e.target.closest('.opt');if(!b)return;
@@ -976,7 +999,7 @@ footer{background:var(--night);color:var(--on-dark-2);padding:80px 0 30px;border
     location.href='/thank-you';
   });
 
-  /* treatment cards and the estimator pre-select areas in the form */
+  /* treatment cards and the graft guide pre-select areas in the form */
   const pick=v=>{const b=$(`.area[data-v="${v}"]`,fx);if(b&&b.getAttribute('aria-pressed')!=='true')b.click()};
   $$('.tr[data-area]').forEach(c=>c.addEventListener('click',()=>{if(c.dataset.area!=='women')pick(c.dataset.area);go(1)}));
   $('#est-go').addEventListener('click',()=>{
