@@ -1961,12 +1961,12 @@ function initHeroIntro() {
   }
   gsap.set(feel, { opacity: 0, y: 16 });
   const tl = gsap.timeline({ delay: 0 });
-  tl.to(feel, { opacity: 1, y: 0, duration: .3, ease: 'power3.out' }, 0)
-    .to(feel, { opacity: 0, y: -18, duration: .25, ease: 'power2.in' }, .3)
-    .to(E, { e: 1, duration: 1, ease: 'power3.out' }, .15)
-    .to(E, { bg: 1, duration: .8, ease: 'power1.inOut' }, .3)
-    .to(lines, { yPercent: 0, duration: .7, ease: 'expo.out', stagger: .07 }, .3)
-    .to(rest, { opacity: 1, y: 0, duration: .5, ease: 'power2.out', stagger: .06 }, .5);
+  tl.to(feel, { opacity: 1, y: 0, duration: .4, ease: 'power3.out' }, 0)
+    .to(feel, { opacity: 0, y: -18, duration: .3, ease: 'power2.in' }, 2.4)
+    .to(E, { e: 1, duration: 1, ease: 'power3.out' }, 2.65)
+    .to(E, { bg: 1, duration: .8, ease: 'power1.inOut' }, 2.8)
+    .to(lines, { yPercent: 0, duration: .7, ease: 'expo.out', stagger: .07 }, 2.8)
+    .to(rest, { opacity: 1, y: 0, duration: .5, ease: 'power2.out', stagger: .06 }, 3.0);
   const skip = () => tl.timeScale(5);
   ['wheel', 'touchstart', 'keydown', 'pointerdown'].forEach(ev => addEventListener(ev, skip, { once: true, passive: true }));
   return { E, tl };
