@@ -1,0 +1,98 @@
+/* FUE Malaysia colour theme: "Calm clinic green" (direction A)
+   Colours taken from the logo: leaf greens + plum lettering.
+   Loaded after each page's own <style>, so it only recolours; layout is untouched.
+   To turn the theme off, remove the <link href="/theme.css"> line from the templates. */
+:root{
+  --green:#0B6B45;      /* main brand green: buttons, links, accents */
+  --green-d:#08553A;    /* hover / pressed */
+  --plum:#3B1240;       /* headings, prices (logo lettering) */
+  --mint:#E8F1EA;       /* soft section bands */
+  --mint-2:#D3E6D9;     /* borders on mint, selection */
+  --lime:#7CC242;       /* tiny highlights (logo stem) */
+  --forest:#0A291E;     /* footer */
+}
+::selection{background:var(--mint-2);color:var(--plum)}
+
+/* headings in plum, italic accents in green */
+h1,h2,h3,.h-xl,.h-l,.h-m,.h-s,.hx-h1{color:var(--plum)}
+h1 .it,h2 .it,h3 .it,.h-xl .it,.h-l .it,.h-m .it,.h-s .it,.hx-h1 .it,.hx-h1 em,h2 em,h3 em{color:var(--green)}
+.label{color:var(--green)}
+
+/* buttons */
+.btn{border-color:var(--green);color:var(--green)}
+.btn:hover{background:var(--green);color:#fff}
+.btn.solid{background:var(--green);border-color:var(--green);color:#fff}
+.btn.solid:hover{background:var(--green-d);border-color:var(--green-d);color:#fff}
+
+/* navigation */
+.nav ul a:hover,.nav ul a.active{color:var(--green)}
+.nav .cta{border-color:var(--green);color:var(--green)}
+.nav .cta:hover,.nav .cta.neon:hover,.nav .cta.neon:focus-visible,.nav .cta.neon:active{background:var(--green);color:#fff;box-shadow:0 10px 30px -14px rgba(11,107,69,.6)}
+.nav-soc a{border-color:var(--green);color:var(--green)}
+.nav-soc a:hover{background:var(--green);color:#fff}
+.topbar{background:var(--green);color:#fff}
+
+/* first-screen price / WhatsApp bar */
+.hxs-price strong{color:var(--plum)}
+.hxs-btns .qd{border-color:var(--green);color:var(--green)}
+.hxs-btns .qd.wa{background:var(--green);color:#fff}
+
+/* phone bottom bar */
+.qb{border-color:var(--green);color:var(--green)}
+.qb.wa{background:var(--green);border-color:var(--green);color:#fff}
+
+/* consultation form buttons */
+.cta-sec .form-actions .btn{background:var(--green);border-color:var(--green);color:#fff}
+.cta-sec .form-actions .btn:hover,.cta-sec .form-actions .btn.solid:hover{background:var(--green-d);border-color:var(--green-d);color:#fff;box-shadow:0 18px 34px -16px rgba(11,107,69,.6)}
+
+/* floating WhatsApp button */
+.wa-float .wa-btn{background:var(--green)}
+.wa-float .wa-waves path{fill:var(--green)}
+
+/* key numbers */
+.intro .stat b,.gr-big b{color:var(--green)}
+.gr-stars{color:var(--green)}
+.price{color:var(--plum)}
+.process-step .big{color:var(--green);opacity:.35}
+
+/* soft mint bands to break up the cream */
+#results,#reviews{background:var(--mint)}
+#reviews .says figure{border-color:var(--mint-2)}
+.says blockquote:before{color:var(--green)}
+.cost-card{border-color:var(--mint-2)}
+.cost-card .r{background:var(--mint)}
+.appt p{color:var(--plum)}
+
+/* before / after slider handle */
+.ba .handle{background:var(--green)}
+.ba .handle:after{border-color:var(--green)}
+.ba .handle:before{color:var(--green)}
+
+/* footer */
+footer{background:var(--forest)}
+footer .big{color:#F2F7F3}
+footer a:hover{color:var(--lime)}
+
+/* ---------- Headline font: Fraunces ----------
+   Semibold (600) for big, short headlines; medium (500) for long sentence-style headings.
+   SOFT 50 = slightly rounded edges, WONK 0 = no quirky letter shapes. */
+:root{--serif:"Fraunces",Georgia,serif}
+html{font-variation-settings:'SOFT' 50,'WONK' 0}
+
+/* big, short headlines */
+.h-xl,.h-l,.hx-h1,.page-hero h1,.cta-card h2,.cloud-sec .hero-copy h2,.hx-vid h2,.hx-what h2,
+footer .big,.price,.gr-big b,.intro .stat b,.hxs-price strong,.case h3,.cta-card .tel-big{font-weight:600;letter-spacing:-.022em}
+.h-xl .it,.h-l .it,.hx-h1 .it,.hx-h1 em,.page-hero h1 .it,.cta-card h2 .it,footer .big .it,footer .big em{font-weight:500}
+
+/* long or smaller headings */
+.h-m,.h-s,.appt p,.says blockquote,.benefit h3,.card h3,.igrid h3,.ngrid h3,.contact-grid h3,.partner h3,
+.legal-body article h2,.yt b,.mobile-menu a,.pull,.signs b,.dl dt,.figure figcaption b,.compare thead th,.case .meta b{font-weight:500;letter-spacing:-.01em}
+
+/* Fraunces is wider than the old narrow font, so the largest sizes come down a little */
+.h-xl{font-size:clamp(36px,5.4vw,78px)}
+.h-l{font-size:clamp(28px,3.4vw,46px)}
+.h-m{font-size:clamp(22px,2.2vw,30px);line-height:1.15}
+footer .big{font-size:clamp(40px,7vw,120px);line-height:.95}
+.price{font-size:clamp(40px,5vw,78px)}
+.hx-h1{font-size:min(5.8vh,4.6vw)}
+@media (max-width:820px){.hx-h1{font-size:min(5.6vh,7.4vw)}}
