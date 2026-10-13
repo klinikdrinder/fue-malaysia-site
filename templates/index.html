@@ -121,6 +121,14 @@ h3{font-size:21px;font-weight:600;letter-spacing:-.015em;line-height:1.22}
 .hero .lede{font-size:clamp(16px,1.25vw,18.5px);margin:22px 0 32px;max-width:52ch}
 .hero .ctas{display:flex;gap:12px;flex-wrap:wrap}
 .chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:26px}
+.happy{display:inline-flex;align-items:center;gap:14px;margin-top:26px;padding:8px 18px 8px 8px;background:#fff;border:1px solid var(--mint-2);border-radius:var(--leaf-md);box-shadow:0 14px 30px -22px rgba(10,50,30,.45);transition:transform .3s var(--ease)}
+.happy:hover{transform:translateY(-2px)}
+.faces{display:flex;flex-shrink:0}
+.faces img{width:46px;height:46px;border-radius:50%;object-fit:cover;border:3px solid #fff;margin-left:-12px;box-shadow:0 4px 10px -4px rgba(0,0,0,.25)}
+.faces img:first-child{margin-left:0}
+.hp-t{display:flex;flex-direction:column;line-height:1.25}
+.hp-t b{font-family:var(--display);font-weight:600;font-size:16px;color:var(--plum)}
+.hp-t span{font-size:13px;color:var(--ink-2)}.hp-t i{font-style:normal;color:#E9A825;letter-spacing:1px}
 .chip{font-size:13.5px;font-weight:500;padding:7px 14px;border-radius:12px 4px 12px 4px;background:var(--paper);border:1px solid var(--mint-2);color:var(--ink-2);transition:border-color .3s,color .3s}
 .chip:hover{border-color:var(--green);color:var(--green)}
 .stage{position:relative;justify-self:center;width:min(100%,520px);display:grid;place-items:center;padding:24px 0 44px}
@@ -456,6 +464,7 @@ footer{background:var(--forest);color:rgba(255,255,255,.72);padding:76px 0 30px}
   .trust div+div{border-left:0;border-top:1px solid var(--line)}
   .ft{grid-template-columns:1fr}
   .hero .ctas .btn{flex:1}
+  .happy{gap:10px;padding-right:14px}.faces img{width:38px;height:38px;margin-left:-10px}.hp-t b{font-size:15px}.hp-t span{font-size:12px}
   .contact-mini{grid-template-columns:1fr}
 }
 @media (prefers-reduced-motion:reduce){
@@ -524,27 +533,28 @@ footer{background:var(--forest);color:rgba(255,255,255,.72);padding:76px 0 30px}
         <a class="btn btn-g" href="#book">Book a free assessment <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
         <a class="btn btn-o" href="#results">See real results</a>
       </div>
-      <div class="chips rv" aria-label="Treatments">
-        <a class="chip" href="#treatments">Hairline</a><a class="chip" href="#treatments">Crown</a><a class="chip" href="#treatments">Beard &amp; moustache</a><a class="chip" href="#treatments">Eyebrows</a><a class="chip" href="#treatments">Repair</a>
-      </div>
+      <a class="happy rv" href="#reviews">
+        <span class="faces"><img src="images/happy/av1.webp" alt="" width="200" height="200" decoding="async"><img src="images/happy/av3.webp" alt="" width="200" height="200" decoding="async"><img src="images/happy/av4.webp" alt="" width="200" height="200" decoding="async"><img src="images/happy/av5.webp" alt="" width="200" height="200" decoding="async"></span>
+        <span class="hp-t"><b>Happy patients, every week</b><span><i aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</i> 4.8 from 29 Google reviews</span></span>
+      </a>
     </div>
     <div class="stage" id="stage">
       <div class="ghost" aria-hidden="true">Transform<br>your hairline.</div>
-      <div class="bub b1"><img src="images/res-20.webp" alt="" loading="lazy" decoding="async"></div>
-      <div class="bub b2"><img src="images/res-26.webp" alt="" loading="lazy" decoding="async"></div>
-      <div class="bub b3"><img src="images/res-22.webp" alt="" loading="lazy" decoding="async"></div>
-      <div class="phone" role="region" aria-roledescription="carousel" aria-label="Inside an FUE hair transplant, step by step">
+      <div class="bub b1"><img src="images/happy/duo2.webp" alt="" loading="lazy" decoding="async"></div>
+      <div class="bub b2"><img src="images/happy/duo4.webp" alt="" loading="lazy" decoding="async"></div>
+      <div class="bub b3"><img src="images/happy/duo1.webp" alt="" loading="lazy" decoding="async"></div>
+      <div class="phone" role="region" aria-roledescription="carousel" aria-label="Our happy patients with Datuk Dr Inder">
         <div class="screen" id="screen">
           <span class="island" aria-hidden="true"></span>
-          <div class="slide on" data-cap="Step 1 · Design|Your hairline, drawn by hand|Planned to suit your face, your age and how your hair will change."><img src="images/hero/s07.webp" alt="Your hairline, drawn by hand" fetchpriority="high" decoding="async"></div>
-          <div class="slide" data-cap="Step 2 · Planning|Every detail mapped out|Donor and recipient areas are checked before anything begins."><img src="images/hero/s05.webp" alt="Every detail mapped out" loading="lazy" decoding="async"></div>
-          <div class="slide" data-cap="Step 3 · Extraction|One follicle at a time|No strip, no stitches. Tiny openings that heal within days."><img src="images/hero/s12.webp" alt="One follicle at a time" loading="lazy" decoding="async"></div>
-          <div class="slide" data-cap="Step 4 · Checking|Every graft examined|Follicles are inspected under magnification to protect each one."><img src="images/hero/h20.webp" alt="Every graft examined" loading="lazy" decoding="async"></div>
-          <div class="slide" data-cap="Step 5 · Placement|Set at a natural angle|Grafts follow your own growth pattern for density and realism."><img src="images/hero/s18.webp" alt="Set at a natural angle" loading="lazy" decoding="async"></div>
+          <div class="slide on" data-cap="Happy patients|All smiles with Datuk Dr Inder|Every hairline is planned and led by Dr Inder herself."><img src="images/happy/slide-p1.webp" style="object-position:54% 50%" alt="A smiling patient giving a thumbs up with Datuk Dr Inder" fetchpriority="high" decoding="async"></div>
+          <div class="slide" data-cap="Procedure day|Calm, comfortable, cared for|Local anaesthesia and a friendly team beside you all day."><img src="images/happy/slide-p3.webp" style="object-position:47% 50%" alt="A patient smiling in the treatment chair with Dr Inder and her team" loading="lazy" decoding="async"></div>
+          <div class="slide" data-cap="Your hairline|Drawn by hand, just for you|Planned to suit your face, your age and how your hair will change."><img src="images/hero/s07.webp" alt="Dr Inder drawing a new hairline" loading="lazy" decoding="async"></div>
+          <div class="slide" data-cap="Happy patients|A fresh start, a big smile|Most patients go home the same day and feel the difference soon after."><img src="images/happy/slide-p4.webp" style="object-position:55% 50%" alt="A happy patient with Datuk Dr Inder after his procedure" loading="lazy" decoding="async"></div>
+          <div class="slide" data-cap="Done in a day|Thumbs up from the whole team|Your procedure is usually completed in a single day."><img src="images/happy/slide-p5.webp" style="object-position:66% 50%" alt="A patient with Dr Inder and her team after his procedure" loading="lazy" decoding="async"></div>
           <div class="slide" data-cap="Result|Natural, permanent hair|New growth from around 3 months, full result by 6 to 12 months."><img src="images/hero/s03.webp" alt="Natural, permanent hair" loading="lazy" decoding="async"></div>
           <div class="sbars" aria-hidden="true"><i class="cur"><b></b></i><i><b></b></i><i><b></b></i><i><b></b></i><i><b></b></i><i><b></b></i></div>
           <div class="app"><img src="images/logo-white.webp" alt="FUE Malaysia" width="300" height="143" decoding="async"></div>
-          <div class="cap" aria-live="polite"><small>Step 1 · Design</small><b>Your hairline, drawn by hand</b><p>Planned to suit your face, your age and how your hair will change.</p></div>
+          <div class="cap" aria-live="polite"><small>Happy patients</small><b>All smiles with Datuk Dr Inder</b><p>Every hairline is planned and led by Dr Inder herself.</p></div>
           <button type="button" class="tapzone" aria-label="Next step"></button>
         </div>
       </div>
