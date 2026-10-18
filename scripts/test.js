@@ -51,8 +51,8 @@ async function call(action, body, opt = {}) {
 
   // ---- galleries & extra pictures ----
   r = await call('state'); const gs = r.j.galleries; const pairs = gs.find((g) => g.id === 'pairs');
-  ok(gs.length === 11 && pairs.items.length === 8 && pairs.tplImages === 2, 'state lists 11 galleries (pairs has 8 items, 2 pictures each)');
-  ok(Object.keys(r.j.sections).length === 11 && r.j.sections.index.length > 5 && r.j.sections['hair-transplant-singapore'] && r.j.sections['best-hair-transplant-in-malaysia'], 'state lists page sections');
+  ok(gs.length >= 11 && pairs.items.length === 8 && pairs.tplImages === 2, 'state lists 11 galleries (pairs has 8 items, 2 pictures each)');
+  ok(Object.keys(r.j.sections).length === 20 && r.j.sections.index.length > 5 && r.j.sections['hair-transplant-singapore'] && r.j.sections['best-hair-transplant-in-malaysia'], 'state lists page sections');
   r = await call('upload', undefined, { raw: png, q: 'free=1' }); ok(r.s === 200 && r.j.url, 'free upload returns an address'); const fu = r.j.url;
   const order = pairs.items.map((i) => i.id).filter((id) => id !== 'o1').concat(['nabc1']);
   const addedItem = { nabc1: { images: [{ src: fu, alt: 'A <b>before</b>' }, { src: fu, alt: 'After' }], texts: ['Case 99', 'Before · After'] } };

@@ -44,3 +44,13 @@ npm run dev
 - Admin: http://localhost:3000/admin  (setup code: `dev-setup`)
 
 Do not invent photos, prices, or medical wording. Keep the Singapore ads page price as **From SGD 4,999** and the Malaysia ads page price as **From RM 8,999** unless Salim changes them. The Malaysia ads page has no year-end promo popup.
+
+## Tanam Rambut Malaysia (added 9 Oct, replaced with the finished site 18 Oct)
+
+The second clinic website (tanamrambutmalaysia.com, Bahasa Malaysia only) is edited from this same admin.
+
+- Public pages: `/tanam-rambut`, `/tanam-rambut/cara-ia-dilakukan`, `/tanam-rambut/doktor`, `/tanam-rambut/hasil`, `/tanam-rambut/hubungi`, `/tanam-rambut/rawatan`, `/tanam-rambut/privasi`, `/tanam-rambut/terma`, `/tanam-rambut/terima-kasih`
+- Thank-you page: the Hubungi form opens WhatsApp with the visitor's details, then goes to `/tanam-rambut/terima-kasih` (noindex; greets them by name, shows their details, pushes the `thank_you_page` dataLayer event for Google Ads).
+- Admin labels: **Tanam Rambut: Utama / Cara dilakukan / Doktor / Hasil / Hubungi / Rawatan / Dasar privasi / Terma penggunaan / Terima kasih**
+- Templates: `templates/tr-*.html` (generated). Pictures: `public/images/tr-*.webp` (each one is a replaceable picture in the admin). CSS/JS: `public/tr/assets/` (3D particle heads: `woman.js`, `man.js`; three.js loads from cdnjs).
+- Canonical URLs point at https://tanamrambutmalaysia.com. Tracking codes saved in the admin apply to every page of this project.

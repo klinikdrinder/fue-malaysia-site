@@ -12,6 +12,8 @@ On the **Pictures** tab click **Edit details** under any picture. You get the pi
 
 The **Singapore ads landing** page is the Hair Transplant Singapore ads page. The **Malaysia ads landing** page is the Best Hair Transplant in Malaysia ads page. Change their pictures and Google text the same way as every other page (filter Pictures by that page).
 
+The **Tanam Rambut** pages (labelled *Tanam Rambut: Utama, Cara dilakukan, Doktor, Hasil, Hubungi, Rawatan, Dasar privasi, Terma penggunaan, Terima kasih*) are the tanamrambutmalaysia.com website (Bahasa Malaysia). They live at `/tanam-rambut/...` in this project, and their pictures start with `tr-`. Edit them exactly like the FUE Malaysia pages. *Terima kasih* is the thank-you page visitors see after sending the Hubungi form; it is hidden from Google on purpose.
+
 ## Replace a picture
 1. **Pictures** tab. Search by name, or filter by page.
 2. Click **Replace** under the picture, choose the new photo from your computer.

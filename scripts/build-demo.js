@@ -1,7 +1,7 @@
 // Builds the click-through demo of the admin panel (option C): demo/admin-demo.html + demo/admin/*
 const fs = require('fs'), path = require('path');
 const C = require('../lib/content');
-const out = path.join(__dirname, '..', 'demo');
+const out = path.join(__dirname, '..', process.env.DEMO_OUT || 'demo');
 fs.rmSync(out, { recursive: true, force: true }); fs.mkdirSync(path.join(out, 'admin'), { recursive: true });
 const pages = {}; C.PAGES.forEach((p) => { pages[p] = { label: C.PAGE_LABELS[p], defaults: C.defaults(p) }; });
 const empty = { images: {}, galleries: {}, blocks: [] };
@@ -13,7 +13,7 @@ fs.copyFileSync(path.join(__dirname, '..', 'public', 'admin', 'admin.js'), path.
 fs.copyFileSync(path.join(__dirname, '..', 'public', 'admin', 'admin.css'), path.join(out, 'admin', 'admin.css'));
 fs.writeFileSync(path.join(out, 'admin-demo.html'), `<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow">
-<title>Admin Demo — FUE Malaysia</title>
+<title>Admin Demo — FUE Malaysia &amp; Tanam Rambut</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="admin/admin.css"></head>

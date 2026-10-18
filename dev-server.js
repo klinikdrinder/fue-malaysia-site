@@ -22,6 +22,7 @@ http.createServer(async (req, res) => {
     if (p.startsWith('/__uploads/')) { if (serveFile(res, path.join(process.cwd(), '.devdata', 'uploads', path.basename(p)))) return; }
     let m;
     if (p === '/' ) { req.url = '/api/page?p=index'; return await require('./api/page.js')(req, res); }
+    if ((m = p.match(/^\/tanam-rambut(?:\/(cara-ia-dilakukan|doktor|hasil|hubungi|rawatan|privasi|terma|terima-kasih))?\/?$/))) { req.url = '/api/page?p=' + (m[1] ? 'tr-' + m[1] : 'tr-index'); return await require('./api/page.js')(req, res); }
     if ((m = p.match(new RegExp('^/' + PAGES + '(\\.html)?$')))) { req.url = '/api/page?p=' + m[1]; return await require('./api/page.js')(req, res); }
     if (p === '/admin') p = '/admin/index.html';
     if (p.endsWith('/')) p += 'index.html';
