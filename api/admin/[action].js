@@ -84,7 +84,7 @@ function validateContent(body) {
 const IMG_OK = [
   /^https:\/\/[a-z0-9.-]+\.public\.blob\.vercel-storage\.com\/[\w./%+~-]+$/i,
   /^\/__uploads\/[\w.-]+$/,
-  /^\/?images\/[\w.-]+\.(webp|png|jpe?g|avif)$/i,
+  /^\/?images\/(?:lp\/)?[\w.-]+\.(webp|png|jpe?g|avif)$/i,
 ];
 function safeImg(u) {
   u = typeof u === 'string' ? u.trim() : '';
