@@ -57,7 +57,7 @@
 
   /* ---------------- auth views ---------------- */
   function authShell(inner) {
-    app.innerHTML = '<div class="center"><div class="card auth"><div class="brand">FUE Malaysia · Admin</div>' + inner + '</div></div>';
+    app.innerHTML = '<div class="center"><div class="card auth"><div class="brand">FUE Malaysia · Tanam Rambut · Admin</div>' + inner + '</div></div>';
   }
   function viewNoStorage(m) {
     authShell('<h1>Storage not connected</h1><p>The admin panel needs its database and image store. Your developer can connect them in a few minutes by following <b>SETUP.md</b> in the project (Upstash Redis + Vercel Blob + two environment variables).</p>' +
@@ -76,7 +76,7 @@
     };
   }
   function viewLogin() {
-    authShell('<h1>Sign in</h1><p>Private area for the FUE Malaysia team.</p>' + (DEMO ? '<div class="help"><b>Demo:</b> type anything and press Sign in.</div>' : '') +
+    authShell('<h1>Sign in</h1><p>Private area for the FUE Malaysia and Tanam Rambut Malaysia team (both websites and both ads landing pages).</p>' + (DEMO ? '<div class="help"><b>Demo:</b> type anything and press Sign in.</div>' : '') +
       '<form id="f"><label>Email</label><input type="email" name="email" autocomplete="username" ' + (DEMO ? 'value="agency@example.com" ' : '') + 'required>' +
       '<label>Password</label><input type="password" name="password" autocomplete="current-password" ' + (DEMO ? 'value="demo-password" ' : '') + 'required>' +
       '<div class="err" id="err"></div><button class="btn" style="margin-top:8px">Sign in</button></form>');
@@ -102,7 +102,7 @@
   function render() {
     var d = S.data;
     app.innerHTML =
-      '<header class="top"><div class="wrap"><div class="logo">FUE Malaysia<small>Admin</small></div><div class="grow"></div>' +
+      '<header class="top"><div class="wrap"><div class="logo">FUE · Tanam Rambut<small>Admin</small></div><div class="grow"></div>' +
       '<a class="btn ghost sm" href="' + (DEMO ? '#' : '/') + '" ' + (DEMO ? '' : 'target="_blank" rel="noopener"') + '>View site ↗</a>' +
       '<div class="who"><b>' + E(S.me.name) + '</b><br>' + (S.me.role === 'owner' ? 'Owner' : 'Admin') + '</div>' +
       '<button class="btn ghost sm" id="out">Sign out</button></div>' +
